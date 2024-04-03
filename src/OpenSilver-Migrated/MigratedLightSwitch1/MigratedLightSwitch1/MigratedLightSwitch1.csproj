@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefineSilverlight>true</DefineSilverlight>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="2.1.0-preview-2023-12-21-151506-e464b485" />
+    <PackageReference Include="OpenSilver.LightSwitch" Version="0.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="App.xaml.cs" />
+    <Compile Include="GeneratedArtifacts\AdventureWorksLT2017DataObjectContext.cs" />
+    <Compile Include="GeneratedArtifacts\Application.cs" />
+    <Compile Include="GeneratedArtifacts\ApplicationGenerated.cs" />
+    <Compile Include="GeneratedArtifacts\DataClientImplementation.cs" />
+    <Compile Include="GeneratedArtifacts\DataRuntime.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG01.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG02.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG03.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG04.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG05.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG06.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG07.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG08.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG09.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG10.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG11.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG12.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG13.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG14.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG15.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG16.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG17.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG18.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG19.cs" />
+    <Compile Include="GeneratedArtifacts\EntityG20.cs" />
+    <Compile Include="GeneratedArtifacts\Permissions.cs" />
+    <Compile Include="GeneratedArtifacts\Screen.cs" />
+    <Compile Include="MainPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="GeneratedArtifacts\AdventureWorksLT2017Data.csdl" />
+    <EmbeddedResource Include="GeneratedArtifacts\ClientRuntime.lsml" />
+    <None Include="GeneratedArtifacts\LSCodeGeneratedFiles.lsgen" />
+    <None Include="GeneratedArtifacts\LSResourceGeneratedFiles.lsgen" />
+  </ItemGroup>
+
+</Project>

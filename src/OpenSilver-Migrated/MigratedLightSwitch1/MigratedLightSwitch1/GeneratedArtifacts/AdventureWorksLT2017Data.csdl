@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="BuildVersion">
+    <Key>
+      <PropertyRef Name="SystemInformationID" />
+      <PropertyRef Name="Database_Version" />
+      <PropertyRef Name="VersionDate" />
+      <PropertyRef Name="ModifiedDate" />
+    </Key>
+    <Property Name="SystemInformationID" Type="Edm.Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Database_Version" Type="Edm.String" Nullable="false" MaxLength="25" />
+    <Property Name="VersionDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="ErrorLogID" />
+    </Key>
+    <Property Name="ErrorLogID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ErrorTime" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="UserName" Type="Edm.String" Nullable="false" MaxLength="128" ConcurrencyMode="Fixed" />
+    <Property Name="ErrorNumber" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ErrorSeverity" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ErrorState" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ErrorProcedure" Type="Edm.String" MaxLength="126" ConcurrencyMode="Fixed" />
+    <Property Name="ErrorLine" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ErrorMessage" Type="Edm.String" Nullable="false" MaxLength="4000" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddressLine1" Type="Edm.String" Nullable="false" MaxLength="60" ConcurrencyMode="Fixed" />
+    <Property Name="AddressLine2" Type="Edm.String" MaxLength="60" ConcurrencyMode="Fixed" />
+    <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="30" ConcurrencyMode="Fixed" />
+    <Property Name="StateProvince" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CountryRegion" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="PostalCode" Type="Edm.String" Nullable="false" MaxLength="15" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="CustomerAddresses" Relationship="LightSwitchApplication.FK_CustomerAddress_Address_AddressID" ToRole="CustomerAddress" FromRole="Address" />
+    <NavigationProperty Name="SalesOrderHeaders" Relationship="LightSwitchApplication.FK_SalesOrderHeader_Address_BillTo_AddressID" ToRole="SalesOrderHeader" FromRole="Address" />
+    <NavigationProperty Name="SalesOrderHeaders1" Relationship="LightSwitchApplication.FK_SalesOrderHeader_Address_ShipTo_AddressID" ToRole="SalesOrderHeader" FromRole="Address" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameStyle" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Title" Type="Edm.String" MaxLength="8" ConcurrencyMode="Fixed" />
+    <Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="MiddleName" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Suffix" Type="Edm.String" MaxLength="10" ConcurrencyMode="Fixed" />
+    <Property Name="CompanyName" Type="Edm.String" MaxLength="128" ConcurrencyMode="Fixed" />
+    <Property Name="SalesPerson" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="EmailAddress" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Phone" Type="Edm.String" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="PasswordHash" Type="Edm.String" Nullable="false" MaxLength="128" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="PasswordSalt" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="CustomerAddresses" Relationship="LightSwitchApplication.FK_CustomerAddress_Customer_CustomerID" ToRole="CustomerAddress" FromRole="Customer" />
+    <NavigationProperty Name="SalesOrderHeaders" Relationship="LightSwitchApplication.FK_SalesOrderHeader_Customer_CustomerID" ToRole="SalesOrderHeader" FromRole="Customer" />
+  </EntityType>
+  <EntityType Name="CustomerAddress">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="CustomerID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="AddressID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="AddressType" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Address" Relationship="LightSwitchApplication.FK_CustomerAddress_Address_AddressID" ToRole="Address" FromRole="CustomerAddress" />
+    <NavigationProperty Name="Customer" Relationship="LightSwitchApplication.FK_CustomerAddress_Customer_CustomerID" ToRole="Customer" FromRole="CustomerAddress" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="ProductNumber" Type="Edm.String" Nullable="false" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="Color" Type="Edm.String" MaxLength="15" ConcurrencyMode="Fixed" />
+    <Property Name="StandardCost" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="ListPrice" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="Size" Type="Edm.String" MaxLength="5" ConcurrencyMode="Fixed" />
+    <Property Name="Weight" Type="Edm.Decimal" Precision="8" Scale="2" ConcurrencyMode="Fixed" />
+    <Property Name="SellStartDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="SellEndDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="DiscontinuedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ThumbNailPhoto" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="ThumbnailPhotoFileName" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ProductCategoryID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ProductModelID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="ProductCategory" Relationship="LightSwitchApplication.FK_Product_ProductCategory_ProductCategoryID" ToRole="ProductCategory" FromRole="Product" />
+    <NavigationProperty Name="ProductModel" Relationship="LightSwitchApplication.FK_Product_ProductModel_ProductModelID" ToRole="ProductModel" FromRole="Product" />
+    <NavigationProperty Name="SalesOrderDetails" Relationship="LightSwitchApplication.FK_SalesOrderDetail_Product_ProductID" ToRole="SalesOrderDetail" FromRole="Product" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ParentProductCategoryID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Products" Relationship="LightSwitchApplication.FK_Product_ProductCategory_ProductCategoryID" ToRole="Product" FromRole="ProductCategory" />
+    <NavigationProperty Name="ProductCategories" Relationship="LightSwitchApplication.FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ" ToRole="ProductCategory1" FromRole="ProductCategory" />
+    <NavigationProperty Name="ProductCategory1" Relationship="LightSwitchApplication.FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ" ToRole="ProductCategory" FromRole="ProductCategory1" />
+  </EntityType>
+  <EntityType Name="ProductDescription">
+    <Key>
+      <PropertyRef Name="ProductDescriptionID" />
+    </Key>
+    <Property Name="ProductDescriptionID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="400" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="ProductModelProductDescriptions" Relationship="LightSwitchApplication.FK_ProductModelProductDescription_ProductDescription_ProductDesc" ToRole="ProductModelProductDescription" FromRole="ProductDescription" />
+  </EntityType>
+  <EntityType Name="ProductModel">
+    <Key>
+      <PropertyRef Name="ProductModelID" />
+    </Key>
+    <Property Name="ProductModelID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CatalogDescription" Type="Edm.String" MaxLength="Max" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Products" Relationship="LightSwitchApplication.FK_Product_ProductModel_ProductModelID" ToRole="Product" FromRole="ProductModel" />
+    <NavigationProperty Name="ProductModelProductDescriptions" Relationship="LightSwitchApplication.FK_ProductModelProductDescription_ProductModel_ProductModelID" ToRole="ProductModelProductDescription" FromRole="ProductModel" />
+  </EntityType>
+  <EntityType Name="ProductModelProductDescription">
+    <Key>
+      <PropertyRef Name="ProductModelID" />
+      <PropertyRef Name="ProductDescriptionID" />
+      <PropertyRef Name="Culture" />
+    </Key>
+    <Property Name="ProductModelID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="ProductDescriptionID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Culture" Type="Edm.String" Nullable="false" MaxLength="6" FixedLength="true" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="ProductDescription" Relationship="LightSwitchApplication.FK_ProductModelProductDescription_ProductDescription_ProductDesc" ToRole="ProductDescription" FromRole="ProductModelProductDescription" />
+    <NavigationProperty Name="ProductModel" Relationship="LightSwitchApplication.FK_ProductModelProductDescription_ProductModel_ProductModelID" ToRole="ProductModel" FromRole="ProductModelProductDescription" />
+  </EntityType>
+  <EntityType Name="SalesOrderDetail">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+      <PropertyRef Name="SalesOrderDetailID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="SalesOrderDetailID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderQty" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="UnitPrice" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="UnitPriceDiscount" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="LineTotal" Type="Edm.Decimal" Nullable="false" Precision="38" Scale="6" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ProductID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Product" Relationship="LightSwitchApplication.FK_SalesOrderDetail_Product_ProductID" ToRole="Product" FromRole="SalesOrderDetail" />
+    <NavigationProperty Name="SalesOrderHeader" Relationship="LightSwitchApplication.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" ToRole="SalesOrderHeader" FromRole="SalesOrderDetail" />
+  </EntityType>
+  <EntityType Name="SalesOrderHeader">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RevisionNumber" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="OrderDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="DueDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ShipDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Status" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="OnlineOrderFlag" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="25" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PurchaseOrderNumber" Type="Edm.String" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="AccountNumber" Type="Edm.String" MaxLength="15" ConcurrencyMode="Fixed" />
+    <Property Name="ShipMethod" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CreditCardApprovalCode" Type="Edm.String" MaxLength="15" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="SubTotal" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="TaxAmt" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="Freight" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="TotalDue" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Comment" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="BillToAddressID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ShipToAddressID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="CustomerID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="SalesOrderDetails" Relationship="LightSwitchApplication.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" ToRole="SalesOrderDetail" FromRole="SalesOrderHeader" />
+    <NavigationProperty Name="Address" Relationship="LightSwitchApplication.FK_SalesOrderHeader_Address_BillTo_AddressID" ToRole="Address" FromRole="SalesOrderHeader" />
+    <NavigationProperty Name="Address1" Relationship="LightSwitchApplication.FK_SalesOrderHeader_Address_ShipTo_AddressID" ToRole="Address" FromRole="SalesOrderHeader" />
+    <NavigationProperty Name="Customer" Relationship="LightSwitchApplication.FK_SalesOrderHeader_Customer_CustomerID" ToRole="Customer" FromRole="SalesOrderHeader" />
+  </EntityType>
+  <EntityType Name="vGetAllCategory">
+    <Key>
+      <PropertyRef Name="ParentProductCategoryName" />
+    </Key>
+    <Property Name="ParentProductCategoryName" Type="Edm.String" Nullable="false" MaxLength="50" />
+    <Property Name="ProductCategoryName" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="ProductCategoryID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="vProductAndDescription">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="ProductModel" />
+      <PropertyRef Name="Culture" />
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="ProductID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" />
+    <Property Name="ProductModel" Type="Edm.String" Nullable="false" MaxLength="50" />
+    <Property Name="Culture" Type="Edm.String" Nullable="false" MaxLength="6" FixedLength="true" />
+    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="vProductModelCatalogDescription">
+    <Key>
+      <PropertyRef Name="ProductModelID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="ModifiedDate" />
+    </Key>
+    <Property Name="ProductModelID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" />
+    <Property Name="Summary" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <Property Name="Manufacturer" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <Property Name="Copyright" Type="Edm.String" MaxLength="30" ConcurrencyMode="Fixed" />
+    <Property Name="ProductURL" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="WarrantyPeriod" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="WarrantyDescription" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="NoOfYears" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="MaintenanceDescription" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="Wheel" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="Saddle" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="Pedal" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="BikeFrame" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <Property Name="Crankset" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="PictureAngle" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="PictureSize" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="ProductPhotoID" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="Material" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="Color" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="ProductLine" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="Style" Type="Edm.String" MaxLength="256" ConcurrencyMode="Fixed" />
+    <Property Name="RiderExperience" Type="Edm.String" MaxLength="1024" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK_CustomerAddress_Address_AddressID">
+    <End Role="Address" Type="LightSwitchApplication.Address" Multiplicity="1" />
+    <End Role="CustomerAddress" Type="LightSwitchApplication.CustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="CustomerAddress">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerAddress_Customer_CustomerID">
+    <End Role="Customer" Type="LightSwitchApplication.Customer" Multiplicity="1" />
+    <End Role="CustomerAddress" Type="LightSwitchApplication.CustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="CustomerAddress">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductCategory_ProductCategoryID">
+    <End Role="ProductCategory" Type="LightSwitchApplication.ProductCategory" Multiplicity="0..1" />
+    <End Role="Product" Type="LightSwitchApplication.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductModel_ProductModelID">
+    <End Role="ProductModel" Type="LightSwitchApplication.ProductModel" Multiplicity="0..1" />
+    <End Role="Product" Type="LightSwitchApplication.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductModel">
+        <PropertyRef Name="ProductModelID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ">
+    <End Role="ProductCategory" Type="LightSwitchApplication.ProductCategory" Multiplicity="0..1" />
+    <End Role="ProductCategory1" Type="LightSwitchApplication.ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="ProductCategory1">
+        <PropertyRef Name="ParentProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductModelProductDescription_ProductDescription_ProductDesc">
+    <End Role="ProductDescription" Type="LightSwitchApplication.ProductDescription" Multiplicity="1" />
+    <End Role="ProductModelProductDescription" Type="LightSwitchApplication.ProductModelProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductDescription">
+        <PropertyRef Name="ProductDescriptionID" />
+      </Principal>
+      <Dependent Role="ProductModelProductDescription">
+        <PropertyRef Name="ProductDescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductModelProductDescription_ProductModel_ProductModelID">
+    <End Role="ProductModel" Type="LightSwitchApplication.ProductModel" Multiplicity="1" />
+    <End Role="ProductModelProductDescription" Type="LightSwitchApplication.ProductModelProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductModel">
+        <PropertyRef Name="ProductModelID" />
+      </Principal>
+      <Dependent Role="ProductModelProductDescription">
+        <PropertyRef Name="ProductModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderDetail_Product_ProductID">
+    <End Role="Product" Type="LightSwitchApplication.Product" Multiplicity="1" />
+    <End Role="SalesOrderDetail" Type="LightSwitchApplication.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+    <End Role="SalesOrderHeader" Type="LightSwitchApplication.SalesOrderHeader" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SalesOrderDetail" Type="LightSwitchApplication.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrderHeader">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Address_BillTo_AddressID">
+    <End Role="Address" Type="LightSwitchApplication.Address" Multiplicity="0..1" />
+    <End Role="SalesOrderHeader" Type="LightSwitchApplication.SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="BillToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Address_ShipTo_AddressID">
+    <End Role="Address" Type="LightSwitchApplication.Address" Multiplicity="0..1" />
+    <End Role="SalesOrderHeader" Type="LightSwitchApplication.SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="ShipToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Customer_CustomerID">
+    <End Role="Customer" Type="LightSwitchApplication.Customer" Multiplicity="1" />
+    <End Role="SalesOrderHeader" Type="LightSwitchApplication.SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AdventureWorksLT2017Data" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="BuildVersions" EntityType="LightSwitchApplication.BuildVersion" />
+    <EntitySet Name="ErrorLogs" EntityType="LightSwitchApplication.ErrorLog" />
+    <EntitySet Name="Addresses" EntityType="LightSwitchApplication.Address" />
+    <EntitySet Name="Customers" EntityType="LightSwitchApplication.Customer" />
+    <EntitySet Name="CustomerAddresses" EntityType="LightSwitchApplication.CustomerAddress" />
+    <EntitySet Name="Products" EntityType="LightSwitchApplication.Product" />
+    <EntitySet Name="ProductCategories" EntityType="LightSwitchApplication.ProductCategory" />
+    <EntitySet Name="ProductDescriptions" EntityType="LightSwitchApplication.ProductDescription" />
+    <EntitySet Name="ProductModels" EntityType="LightSwitchApplication.ProductModel" />
+    <EntitySet Name="ProductModelProductDescriptions" EntityType="LightSwitchApplication.ProductModelProductDescription" />
+    <EntitySet Name="SalesOrderDetails" EntityType="LightSwitchApplication.SalesOrderDetail" />
+    <EntitySet Name="SalesOrderHeaders" EntityType="LightSwitchApplication.SalesOrderHeader" />
+    <EntitySet Name="vGetAllCategories" EntityType="LightSwitchApplication.vGetAllCategory" />
+    <EntitySet Name="vProductAndDescriptions" EntityType="LightSwitchApplication.vProductAndDescription" />
+    <EntitySet Name="vProductModelCatalogDescriptions" EntityType="LightSwitchApplication.vProductModelCatalogDescription" />
+    <AssociationSet Name="FK_CustomerAddress_Address_AddressID" Association="LightSwitchApplication.FK_CustomerAddress_Address_AddressID">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="CustomerAddress" EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerAddress_Customer_CustomerID" Association="LightSwitchApplication.FK_CustomerAddress_Customer_CustomerID">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="CustomerAddress" EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductCategory_ProductCategoryID" Association="LightSwitchApplication.FK_Product_ProductCategory_ProductCategoryID">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductModel_ProductModelID" Association="LightSwitchApplication.FK_Product_ProductModel_ProductModelID">
+      <End Role="ProductModel" EntitySet="ProductModels" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ" Association="LightSwitchApplication.FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="ProductCategory1" EntitySet="ProductCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductModelProductDescription_ProductDescription_ProductDesc" Association="LightSwitchApplication.FK_ProductModelProductDescription_ProductDescription_ProductDesc">
+      <End Role="ProductDescription" EntitySet="ProductDescriptions" />
+      <End Role="ProductModelProductDescription" EntitySet="ProductModelProductDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductModelProductDescription_ProductModel_ProductModelID" Association="LightSwitchApplication.FK_ProductModelProductDescription_ProductModel_ProductModelID">
+      <End Role="ProductModel" EntitySet="ProductModels" />
+      <End Role="ProductModelProductDescription" EntitySet="ProductModelProductDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderDetail_Product_ProductID" Association="LightSwitchApplication.FK_SalesOrderDetail_Product_ProductID">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" Association="LightSwitchApplication.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Address_BillTo_AddressID" Association="LightSwitchApplication.FK_SalesOrderHeader_Address_BillTo_AddressID">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Address_ShipTo_AddressID" Association="LightSwitchApplication.FK_SalesOrderHeader_Address_ShipTo_AddressID">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Customer_CustomerID" Association="LightSwitchApplication.FK_SalesOrderHeader_Customer_CustomerID">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <FunctionImport Name="Microsoft_LightSwitch_GetCanInformation" ReturnType="Edm.String" m:HttpMethod="GET">
+      <Parameter Name="dataServiceMembers" Type="Edm.String" Mode="In" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

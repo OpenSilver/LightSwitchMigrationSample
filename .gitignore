@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+src/OpenSilver-Migrated/MigratedLightSwitch1/MigratedLightSwitch1.Browser/wwwroot/libs
+src/OpenSilver-Migrated/MigratedLightSwitch1/MigratedLightSwitch1.Browser/wwwroot/resources

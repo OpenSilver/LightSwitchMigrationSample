@@ -1,0 +1,3540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.LightSwitch1.DesktopClient"
+  TargetPlatform="RichClient"
+  Version="1.0.0.0"
+  DefaultNavigationItem="!module/NavigationItems[Tasks]"
+  Shell="Microsoft.LightSwitch.RichClient:Standard"
+  Theme="Microsoft.LightSwitch.RichClient:Blue" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <ModuleNamespace
+      Namespace="LightSwitchApplication" />
+    <Partial
+      IsPrimary="True" />
+  </Application.Attributes>
+  <EntityContainerGroup
+    Name="DataWorkspace">
+    <EntityContainerGroupProperty
+      Name="SecurityData"
+      EntityContainer="Microsoft.LightSwitch.Security:SecurityData">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName
+          Value="Security Data" />
+        <Description
+          Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      Name="AdventureWorksLT2017Data"
+      EntityContainer="AdventureWorksLT2017Data" />
+  </EntityContainerGroup>
+  <GlobalAttributeGroup
+    Name="LightSwitchServiceApplicationGroup">
+    <GlobalAttributeGroup.Attributes>
+      <AutomaticDisplayName
+        Expression="(\p{Ll})(\p{Lu})|_+"
+        Replacement="$1 $2" />
+    </GlobalAttributeGroup.Attributes>
+  </GlobalAttributeGroup>
+  <EntityType
+    Name="BuildVersion">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="SystemInformationID"
+        IsReadOnly="True"
+        PropertyType=":Byte">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Database_Version"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="25" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="VersionDate"
+        PropertyType=":DateTime">
+        <KeyProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <KeyProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ErrorLog">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ErrorLogID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="ErrorTime"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UserName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="128" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ErrorNumber"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ErrorSeverity"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ErrorState"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ErrorProcedure"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="126" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ErrorLine"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ErrorMessage"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="4000" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Address">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="AddressID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="AddressLine1"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="60" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AddressLine2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="City"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateProvince"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CountryRegion"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PostalCode"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="15" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="CustomerAddresses"
+        Association="FK_CustomerAddress_Address_AddressID"
+        FromEnd="Address"
+        ToEnd="CustomerAddress" />
+      <NavigationProperty
+        Name="SalesOrderHeaders"
+        Association="FK_SalesOrderHeader_Address_BillTo_AddressID"
+        FromEnd="Address"
+        ToEnd="SalesOrderHeader" />
+      <NavigationProperty
+        Name="SalesOrderHeaders1"
+        Association="FK_SalesOrderHeader_Address_ShipTo_AddressID"
+        FromEnd="Address"
+        ToEnd="SalesOrderHeader" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Customer">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="CustomerID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="NameStyle"
+        PropertyType=":Boolean">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Title"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="8" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FirstName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MiddleName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LastName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Suffix"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CompanyName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="128" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SalesPerson"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailAddress"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Phone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PasswordHash"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="128" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PasswordSalt"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="CustomerAddresses"
+        Association="FK_CustomerAddress_Customer_CustomerID"
+        FromEnd="Customer"
+        ToEnd="CustomerAddress" />
+      <NavigationProperty
+        Name="SalesOrderHeaders"
+        Association="FK_SalesOrderHeader_Customer_CustomerID"
+        FromEnd="Customer"
+        ToEnd="SalesOrderHeader" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="CustomerAddress">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="CustomerID"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="AddressID"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="AddressType"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Address"
+        Association="FK_CustomerAddress_Address_AddressID"
+        FromEnd="CustomerAddress"
+        ToEnd="Address" />
+      <NavigationProperty
+        Name="Customer"
+        Association="FK_CustomerAddress_Customer_CustomerID"
+        FromEnd="CustomerAddress"
+        ToEnd="Customer" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Product">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductNumber"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Color"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="15" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StandardCost"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ListPrice"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Size"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Weight"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="8"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SellStartDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SellEndDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiscontinuedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ThumbNailPhoto"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ThumbnailPhotoFileName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ProductCategory"
+        Association="FK_Product_ProductCategory_ProductCategoryID"
+        FromEnd="Product"
+        ToEnd="ProductCategory" />
+      <NavigationProperty
+        Name="ProductModel"
+        Association="FK_Product_ProductModel_ProductModelID"
+        FromEnd="Product"
+        ToEnd="ProductModel" />
+      <NavigationProperty
+        Name="SalesOrderDetails"
+        Association="FK_SalesOrderDetail_Product_ProductID"
+        FromEnd="Product"
+        ToEnd="SalesOrderDetail" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ProductCategory">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductCategoryID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Products"
+        Association="FK_Product_ProductCategory_ProductCategoryID"
+        FromEnd="ProductCategory"
+        ToEnd="Product" />
+      <NavigationProperty
+        Name="ProductCategories"
+        Association="FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ"
+        FromEnd="ProductCategory"
+        ToEnd="ProductCategory1" />
+      <NavigationProperty
+        Name="ProductCategory1"
+        Association="FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ"
+        FromEnd="ProductCategory1"
+        ToEnd="ProductCategory" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ProductDescription">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductDescriptionID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="400" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ProductModelProductDescriptions"
+        Association="FK_ProductModelProductDescription_ProductDescription_ProductDesc"
+        FromEnd="ProductDescription"
+        ToEnd="ProductModelProductDescription" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ProductModel">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductModelID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CatalogDescription"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <NotSortable />
+          <NotSearchable />
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Products"
+        Association="FK_Product_ProductModel_ProductModelID"
+        FromEnd="ProductModel"
+        ToEnd="Product" />
+      <NavigationProperty
+        Name="ProductModelProductDescriptions"
+        Association="FK_ProductModelProductDescription_ProductModel_ProductModelID"
+        FromEnd="ProductModel"
+        ToEnd="ProductModelProductDescription" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ProductModelProductDescription">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductModelID"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="ProductDescriptionID"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Culture"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="6" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ProductDescription"
+        Association="FK_ProductModelProductDescription_ProductDescription_ProductDesc"
+        FromEnd="ProductModelProductDescription"
+        ToEnd="ProductDescription" />
+      <NavigationProperty
+        Name="ProductModel"
+        Association="FK_ProductModelProductDescription_ProductModel_ProductModelID"
+        FromEnd="ProductModelProductDescription"
+        ToEnd="ProductModel" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="SalesOrderDetail">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="SalesOrderID"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="SalesOrderDetailID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="OrderQty"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UnitPrice"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UnitPriceDiscount"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LineTotal"
+        IsReadOnly="True"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="38"
+            Scale="6" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Product"
+        Association="FK_SalesOrderDetail_Product_ProductID"
+        FromEnd="SalesOrderDetail"
+        ToEnd="Product" />
+      <NavigationProperty
+        Name="SalesOrderHeader"
+        Association="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID"
+        FromEnd="SalesOrderDetail"
+        ToEnd="SalesOrderHeader" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="SalesOrderHeader">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="SalesOrderID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RevisionNumber"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OrderDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DueDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OnlineOrderFlag"
+        PropertyType=":Boolean">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SalesOrderNumber"
+        IsReadOnly="True"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PurchaseOrderNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AccountNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="15" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipMethod"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreditCardApprovalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="15" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SubTotal"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TaxAmt"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Freight"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalDue"
+        IsReadOnly="True"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Comment"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="SalesOrderDetails"
+        Association="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID"
+        FromEnd="SalesOrderHeader"
+        ToEnd="SalesOrderDetail" />
+      <NavigationProperty
+        Name="Address"
+        Association="FK_SalesOrderHeader_Address_BillTo_AddressID"
+        FromEnd="SalesOrderHeader"
+        ToEnd="Address" />
+      <NavigationProperty
+        Name="Address1"
+        Association="FK_SalesOrderHeader_Address_ShipTo_AddressID"
+        FromEnd="SalesOrderHeader"
+        ToEnd="Address" />
+      <NavigationProperty
+        Name="Customer"
+        Association="FK_SalesOrderHeader_Customer_CustomerID"
+        FromEnd="SalesOrderHeader"
+        ToEnd="Customer" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="vGetAllCategory">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ParentProductCategoryName"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="ProductCategoryName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductCategoryID"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="vProductAndDescription">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductID"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Name"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="ProductModel"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Culture"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="6" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Description"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="400" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="vProductModelCatalogDescription">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductModelID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Name"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Summary"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Manufacturer"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Copyright"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductURL"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WarrantyPeriod"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WarrantyDescription"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NoOfYears"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MaintenanceDescription"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Wheel"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Saddle"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Pedal"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BikeFrame"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Crankset"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PictureAngle"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PictureSize"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductPhotoID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Color"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductLine"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Style"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RiderExperience"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="1024" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <KeyProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_CustomerAddress_Address_AddressID">
+    <AssociationEnd
+      Name="Address"
+      Multiplicity="One"
+      EntityType="Address">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CustomerAddress"
+      Multiplicity="Many"
+      EntityType="CustomerAddress" />
+  </Association>
+  <Association
+    Name="FK_CustomerAddress_Customer_CustomerID">
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CustomerAddress"
+      Multiplicity="Many"
+      EntityType="CustomerAddress" />
+  </Association>
+  <Association
+    Name="FK_Product_ProductCategory_ProductCategoryID">
+    <AssociationEnd
+      Name="ProductCategory"
+      EntityType="ProductCategory">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Product"
+      Multiplicity="Many"
+      EntityType="Product" />
+  </Association>
+  <Association
+    Name="FK_Product_ProductModel_ProductModelID">
+    <AssociationEnd
+      Name="ProductModel"
+      EntityType="ProductModel">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Product"
+      Multiplicity="Many"
+      EntityType="Product" />
+  </Association>
+  <Association
+    Name="FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ">
+    <AssociationEnd
+      Name="ProductCategory"
+      EntityType="ProductCategory">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ProductCategory1"
+      Multiplicity="Many"
+      EntityType="ProductCategory" />
+  </Association>
+  <Association
+    Name="FK_ProductModelProductDescription_ProductDescription_ProductDesc">
+    <AssociationEnd
+      Name="ProductDescription"
+      Multiplicity="One"
+      EntityType="ProductDescription">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ProductModelProductDescription"
+      Multiplicity="Many"
+      EntityType="ProductModelProductDescription" />
+  </Association>
+  <Association
+    Name="FK_ProductModelProductDescription_ProductModel_ProductModelID">
+    <AssociationEnd
+      Name="ProductModel"
+      Multiplicity="One"
+      EntityType="ProductModel">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ProductModelProductDescription"
+      Multiplicity="Many"
+      EntityType="ProductModelProductDescription" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderDetail_Product_ProductID">
+    <AssociationEnd
+      Name="Product"
+      Multiplicity="One"
+      EntityType="Product">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderDetail"
+      Multiplicity="Many"
+      EntityType="SalesOrderDetail" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+    <AssociationEnd
+      Name="SalesOrderHeader"
+      Multiplicity="One"
+      EntityType="SalesOrderHeader">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Cascade" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderDetail"
+      Multiplicity="Many"
+      EntityType="SalesOrderDetail" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderHeader_Address_BillTo_AddressID">
+    <AssociationEnd
+      Name="Address"
+      EntityType="Address">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderHeader"
+      Multiplicity="Many"
+      EntityType="SalesOrderHeader" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderHeader_Address_ShipTo_AddressID">
+    <AssociationEnd
+      Name="Address"
+      EntityType="Address">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderHeader"
+      Multiplicity="Many"
+      EntityType="SalesOrderHeader" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderHeader_Customer_CustomerID">
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderHeader"
+      Multiplicity="Many"
+      EntityType="SalesOrderHeader" />
+  </Association>
+  <EntityContainer
+    Name="AdventureWorksLT2017Data"
+    DataProvider="EntityFrameworkDataProvider">
+    <EntityContainer.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </EntityContainer.Attributes>
+    <SubmitOperation
+      Name="SaveChanges" />
+    <EntitySet
+      Name="Addresses"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Address" />
+    <AssociationSet
+      Name="FK_CustomerAddress_Address_AddressID"
+      Association="FK_CustomerAddress_Address_AddressID">
+      <AssociationSetEnd
+        Name="Address"
+        EntitySet="Addresses" />
+      <AssociationSetEnd
+        Name="CustomerAddress"
+        EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_SalesOrderHeader_Address_BillTo_AddressID"
+      Association="FK_SalesOrderHeader_Address_BillTo_AddressID">
+      <AssociationSetEnd
+        Name="Address"
+        EntitySet="Addresses" />
+      <AssociationSetEnd
+        Name="SalesOrderHeader"
+        EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_SalesOrderHeader_Address_ShipTo_AddressID"
+      Association="FK_SalesOrderHeader_Address_ShipTo_AddressID">
+      <AssociationSetEnd
+        Name="Address"
+        EntitySet="Addresses" />
+      <AssociationSetEnd
+        Name="SalesOrderHeader"
+        EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Addresses_Single"
+      ReturnType="Address">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Addresses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="AddressID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'AddressID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Addresses_SingleOrDefault"
+      ReturnType="Address">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Addresses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="AddressID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'AddressID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="BuildVersions"
+      EntityType="BuildVersion" />
+    <QueryOperation
+      Name="BuildVersions_Single"
+      ReturnType="BuildVersion">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="BuildVersions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SystemInformationID"
+        ParameterType="Microsoft.LightSwitch:Byte?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SystemInformationID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Database_Version"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Database_Version' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="VersionDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'VersionDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ModifiedDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ModifiedDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="BuildVersions_SingleOrDefault"
+      ReturnType="BuildVersion">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="BuildVersions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SystemInformationID"
+        ParameterType="Microsoft.LightSwitch:Byte?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SystemInformationID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Database_Version"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Database_Version' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="VersionDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'VersionDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ModifiedDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ModifiedDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="CustomerAddresses"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="CustomerAddress" />
+    <QueryOperation
+      Name="CustomerAddresses_Single"
+      ReturnType="CustomerAddress">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CustomerAddresses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CustomerID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CustomerID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="AddressID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'AddressID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CustomerAddresses_SingleOrDefault"
+      ReturnType="CustomerAddress">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CustomerAddresses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CustomerID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CustomerID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="AddressID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'AddressID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="Customers"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Customer" />
+    <AssociationSet
+      Name="FK_CustomerAddress_Customer_CustomerID"
+      Association="FK_CustomerAddress_Customer_CustomerID">
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+      <AssociationSetEnd
+        Name="CustomerAddress"
+        EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_SalesOrderHeader_Customer_CustomerID"
+      Association="FK_SalesOrderHeader_Customer_CustomerID">
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+      <AssociationSetEnd
+        Name="SalesOrderHeader"
+        EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Customers_Single"
+      ReturnType="Customer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Customers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CustomerID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CustomerID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Customers_SingleOrDefault"
+      ReturnType="Customer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Customers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CustomerID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CustomerID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="ErrorLogs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ErrorLog" />
+    <QueryOperation
+      Name="ErrorLogs_Single"
+      ReturnType="ErrorLog">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ErrorLogs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ErrorLogID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ErrorLogID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ErrorLogs_SingleOrDefault"
+      ReturnType="ErrorLog">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ErrorLogs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ErrorLogID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ErrorLogID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="ProductCategories"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ProductCategory" />
+    <AssociationSet
+      Name="FK_Product_ProductCategory_ProductCategoryID"
+      Association="FK_Product_ProductCategory_ProductCategoryID">
+      <AssociationSetEnd
+        Name="ProductCategory"
+        EntitySet="ProductCategories" />
+      <AssociationSetEnd
+        Name="Product"
+        EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ"
+      Association="FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ">
+      <AssociationSetEnd
+        Name="ProductCategory"
+        EntitySet="ProductCategories" />
+      <AssociationSetEnd
+        Name="ProductCategory1"
+        EntitySet="ProductCategories" />
+    </AssociationSet>
+    <QueryOperation
+      Name="ProductCategories_Single"
+      ReturnType="ProductCategory">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductCategories" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductCategoryID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductCategoryID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ProductCategories_SingleOrDefault"
+      ReturnType="ProductCategory">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductCategories" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductCategoryID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductCategoryID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="ProductDescriptions"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ProductDescription" />
+    <AssociationSet
+      Name="FK_ProductModelProductDescription_ProductDescription_ProductDesc"
+      Association="FK_ProductModelProductDescription_ProductDescription_ProductDesc">
+      <AssociationSetEnd
+        Name="ProductDescription"
+        EntitySet="ProductDescriptions" />
+      <AssociationSetEnd
+        Name="ProductModelProductDescription"
+        EntitySet="ProductModelProductDescriptions" />
+    </AssociationSet>
+    <QueryOperation
+      Name="ProductDescriptions_Single"
+      ReturnType="ProductDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductDescriptionID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductDescriptionID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ProductDescriptions_SingleOrDefault"
+      ReturnType="ProductDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductDescriptionID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductDescriptionID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="ProductModelProductDescriptions"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ProductModelProductDescription" />
+    <QueryOperation
+      Name="ProductModelProductDescriptions_Single"
+      ReturnType="ProductModelProductDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductModelProductDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ProductDescriptionID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductDescriptionID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Culture"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Culture' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ProductModelProductDescriptions_SingleOrDefault"
+      ReturnType="ProductModelProductDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductModelProductDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ProductDescriptionID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductDescriptionID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Culture"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Culture' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="ProductModels"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ProductModel" />
+    <AssociationSet
+      Name="FK_Product_ProductModel_ProductModelID"
+      Association="FK_Product_ProductModel_ProductModelID">
+      <AssociationSetEnd
+        Name="ProductModel"
+        EntitySet="ProductModels" />
+      <AssociationSetEnd
+        Name="Product"
+        EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_ProductModelProductDescription_ProductModel_ProductModelID"
+      Association="FK_ProductModelProductDescription_ProductModel_ProductModelID">
+      <AssociationSetEnd
+        Name="ProductModel"
+        EntitySet="ProductModels" />
+      <AssociationSetEnd
+        Name="ProductModelProductDescription"
+        EntitySet="ProductModelProductDescriptions" />
+    </AssociationSet>
+    <QueryOperation
+      Name="ProductModels_Single"
+      ReturnType="ProductModel">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductModels" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ProductModels_SingleOrDefault"
+      ReturnType="ProductModel">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductModels" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="Products"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Product" />
+    <AssociationSet
+      Name="FK_SalesOrderDetail_Product_ProductID"
+      Association="FK_SalesOrderDetail_Product_ProductID">
+      <AssociationSetEnd
+        Name="Product"
+        EntitySet="Products" />
+      <AssociationSetEnd
+        Name="SalesOrderDetail"
+        EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Products_Single"
+      ReturnType="Product">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Products" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Products_SingleOrDefault"
+      ReturnType="Product">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Products" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="SalesOrderDetails"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="SalesOrderDetail" />
+    <QueryOperation
+      Name="SalesOrderDetails_Single"
+      ReturnType="SalesOrderDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SalesOrderDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SalesOrderID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SalesOrderID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="SalesOrderDetailID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SalesOrderDetailID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="SalesOrderDetails_SingleOrDefault"
+      ReturnType="SalesOrderDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SalesOrderDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SalesOrderID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SalesOrderID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="SalesOrderDetailID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SalesOrderDetailID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="SalesOrderHeaders"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="SalesOrderHeader" />
+    <AssociationSet
+      Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID"
+      Association="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+      <AssociationSetEnd
+        Name="SalesOrderHeader"
+        EntitySet="SalesOrderHeaders" />
+      <AssociationSetEnd
+        Name="SalesOrderDetail"
+        EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <QueryOperation
+      Name="SalesOrderHeaders_Single"
+      ReturnType="SalesOrderHeader">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SalesOrderHeaders" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SalesOrderID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SalesOrderID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="SalesOrderHeaders_SingleOrDefault"
+      ReturnType="SalesOrderHeader">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SalesOrderHeaders" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SalesOrderID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'SalesOrderID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="vGetAllCategories"
+      EntityType="vGetAllCategory" />
+    <QueryOperation
+      Name="vGetAllCategories_Single"
+      ReturnType="vGetAllCategory">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vGetAllCategories" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ParentProductCategoryName"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ParentProductCategoryName' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="vGetAllCategories_SingleOrDefault"
+      ReturnType="vGetAllCategory">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vGetAllCategories" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ParentProductCategoryName"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ParentProductCategoryName' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="vProductAndDescriptions"
+      EntityType="vProductAndDescription" />
+    <QueryOperation
+      Name="vProductAndDescriptions_Single"
+      ReturnType="vProductAndDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vProductAndDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Name"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Name' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ProductModel"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModel' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Culture"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Culture' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Description"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Description' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="vProductAndDescriptions_SingleOrDefault"
+      ReturnType="vProductAndDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vProductAndDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Name"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Name' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ProductModel"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModel' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Culture"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Culture' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Description"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Description' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      Name="vProductModelCatalogDescriptions"
+      EntityType="vProductModelCatalogDescription" />
+    <QueryOperation
+      Name="vProductModelCatalogDescriptions_Single"
+      ReturnType="vProductModelCatalogDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vProductModelCatalogDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Name"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Name' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="rowguid"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'rowguid' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ModifiedDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ModifiedDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="vProductModelCatalogDescriptions_SingleOrDefault"
+      ReturnType="vProductModelCatalogDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vProductModelCatalogDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Name"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Name' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="rowguid"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'rowguid' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ModifiedDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ModifiedDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <Screen
+    Name="CustomersListDetail">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="AdventureWorksLT2017Data" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group"
+          View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+          <ContentItem
+            Name="ListColumn"
+            Kind="Group">
+            <ContentItem
+              Name="CustomerList"
+              Kind="Collection"
+              DataType="CollectionView$Customer"
+              View="Microsoft.LightSwitch.RichClient:List">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="CustomersListDetail/Properties[Customers]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="RowTemplate"
+                Kind="Details"
+                DataType="Customer">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="NameStyle"
+                  Kind="Value"
+                  DataType=":Boolean">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[NameStyle]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Title"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[Title]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="FirstName"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[FirstName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="MiddleName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[MiddleName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="LastName"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[LastName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Suffix"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[Suffix]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="CompanyName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[CompanyName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="SalesPerson"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[SalesPerson]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="EmailAddress"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[EmailAddress]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Phone"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[Phone]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PasswordHash"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[PasswordHash]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PasswordSalt"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[PasswordSalt]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="rowguid"
+                  Kind="Value"
+                  DataType=":Guid">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[rowguid]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ModifiedDate"
+                  Kind="Value"
+                  DataType=":DateTime">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Customer/Properties[ModifiedDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem.CommandItems>
+                <ContentItem
+                  Name="Customers_AddAndEditNew"
+                  Kind="Command">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="CustomersListDetail/Properties[Customers]" />
+                        <CallExpression
+                          Target="AddAndEditNew" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Customers_EditSelected"
+                  Kind="Command">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="CustomersListDetail/Properties[Customers]" />
+                        <CallExpression
+                          Target="EditSelected" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Customers_DeleteSelected"
+                  Kind="Command">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="CustomersListDetail/Properties[Customers]" />
+                        <CallExpression
+                          Target="DeleteSelected" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem.CommandItems>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="Collapsed"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="Stretch"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:ColumnsLayout/Properties[WeightedColumnWidth]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="2"
+                      ResultType=":Double" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Name="DetailsColumn"
+            Kind="Group">
+            <ContentItem
+              Name="CustomerDetails"
+              Kind="Details"
+              DataType="Customer">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Customer Details" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="CustomersListDetail/Properties[Customers]" />
+                    <MemberExpression
+                      Member="SelectedItem" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="NameStyle1"
+                Kind="Value"
+                DataType=":Boolean">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[NameStyle]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Title1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[Title]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="FirstName1"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[FirstName]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="MiddleName1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[MiddleName]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="LastName1"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[LastName]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Suffix1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[Suffix]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="CompanyName1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[CompanyName]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="SalesPerson1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[SalesPerson]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="EmailAddress1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[EmailAddress]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Phone1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[Phone]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="PasswordHash1"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[PasswordHash]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="PasswordSalt1"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[PasswordSalt]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="rowguid1"
+                Kind="Value"
+                DataType=":Guid">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[rowguid]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="ModifiedDate1"
+                Kind="Value"
+                DataType=":DateTime">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Customer/Properties[ModifiedDate]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="Top"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="True"
+                      ResultType=":Boolean" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:ColumnsLayout/Properties[WeightedColumnWidth]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="3"
+                      ResultType=":Double" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="CustomersListDetail/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="CustomersListDetail/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Customers"
+        PageSize="45"
+        PropertyType="CollectionView$Customer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="CustomersQuery"
+            ReturnType="Customer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="AdventureWorksLT2017Data/Members[Customers]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="CustomersListDetail/Properties[Customers]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <Application.Commands>
+    <ApplicationCommand
+      Name="ScreenCommandShowCustomersListDetail"
+      Target="!module/Methods[ShowCustomersListDetail]" />
+  </Application.Commands>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="ShowCustomersListDetail">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="CustomersListDetail" />
+      </ApplicationMethod.Attributes>
+    </ApplicationMethod>
+  </Application.Methods>
+  <Application.NavigationItems>
+    <ApplicationNavigationGroup
+      Name="Tasks"
+      DefaultItem="!module/NavigationItems[Tasks]/Children[CustomersListDetail]">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Tasks" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="CustomersListDetail"
+        Command="!module/Commands[ScreenCommandShowCustomersListDetail]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="Administration">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Administration" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="RolesScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]" />
+      <ApplicationNavigationLink
+        Name="UsersScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+    </ApplicationNavigationGroup>
+  </Application.NavigationItems>
+</Application>
