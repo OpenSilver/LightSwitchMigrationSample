@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="vProductModelCatalogDescription">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductModelID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Name"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Summary"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Manufacturer"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Copyright"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductURL"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WarrantyPeriod"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WarrantyDescription"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NoOfYears"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MaintenanceDescription"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Wheel"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Saddle"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Pedal"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BikeFrame"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Crankset"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PictureAngle"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PictureSize"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductPhotoID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Color"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductLine"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Style"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RiderExperience"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="1024" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <KeyProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="AdventureWorksLT2017Data">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="vProductModelCatalogDescriptions"
+      EntityType="vProductModelCatalogDescription" />
+    <QueryOperation
+      Name="vProductModelCatalogDescriptions_Single"
+      ReturnType="vProductModelCatalogDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="ModifiedDate" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="ModifiedDate" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="rowguid" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="rowguid" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Name" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Name" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ProductModelID" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="ProductModelID" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vProductModelCatalogDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Name"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Name' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="rowguid"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'rowguid' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ModifiedDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ModifiedDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="vProductModelCatalogDescriptions_SingleOrDefault"
+      ReturnType="vProductModelCatalogDescription">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="ModifiedDate" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="ModifiedDate" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="rowguid" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="rowguid" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Name" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Name" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ProductModelID" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="ProductModelID" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="vProductModelCatalogDescriptions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Name"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Name' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="rowguid"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'rowguid' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="ModifiedDate"
+        ParameterType="Microsoft.LightSwitch:DateTime?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ModifiedDate' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="AdventureWorksLT2017DataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="vProductModelCatalogDescriptions">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="SalesLT"
+          Table="vProductModelCatalogDescription" />
+        <IsView />
+        <SsdlProperty
+          Name="ProductModelID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="vProductModelCatalogDescription/Properties[ProductModelID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Name"
+          Nullable="False"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Name]" />
+        <SsdlProperty
+          Name="Summary"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="vProductModelCatalogDescription/Properties[Summary]" />
+        <SsdlProperty
+          Name="Manufacturer"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="vProductModelCatalogDescription/Properties[Manufacturer]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Copyright"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Copyright]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="ProductURL"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[ProductURL]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="WarrantyPeriod"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[WarrantyPeriod]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="WarrantyDescription"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[WarrantyDescription]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="NoOfYears"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[NoOfYears]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="MaintenanceDescription"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[MaintenanceDescription]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="Wheel"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Wheel]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="Saddle"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Saddle]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="Pedal"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Pedal]" />
+        <SsdlProperty
+          Name="BikeFrame"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="vProductModelCatalogDescription/Properties[BikeFrame]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="Crankset"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Crankset]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="PictureAngle"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[PictureAngle]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="PictureSize"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[PictureSize]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="ProductPhotoID"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[ProductPhotoID]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="Material"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Material]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="Color"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Color]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="ProductLine"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[ProductLine]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="Style"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[Style]" />
+        <SsdlProperty
+          MaxLength="1024"
+          Name="RiderExperience"
+          Nullable="True"
+          Type="nvarchar"
+          Property="vProductModelCatalogDescription/Properties[RiderExperience]" />
+        <SsdlProperty
+          Name="rowguid"
+          Nullable="False"
+          Type="uniqueidentifier"
+          Property="vProductModelCatalogDescription/Properties[rowguid]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="False"
+          Type="datetime"
+          Property="vProductModelCatalogDescription/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

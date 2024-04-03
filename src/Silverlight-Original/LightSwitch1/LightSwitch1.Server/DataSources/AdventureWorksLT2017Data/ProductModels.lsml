@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="ProductModel">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductModelID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CatalogDescription"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <NotSortable />
+          <NotSearchable />
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Products"
+        Association="FK_Product_ProductModel_ProductModelID"
+        FromEnd="ProductModel"
+        ToEnd="Product" />
+      <NavigationProperty
+        Name="ProductModelProductDescriptions"
+        Association="FK_ProductModelProductDescription_ProductModel_ProductModelID"
+        FromEnd="ProductModel"
+        ToEnd="ProductModelProductDescription" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Product_ProductModel_ProductModelID">
+    <AssociationEnd
+      Name="ProductModel"
+      EntityType="ProductModel">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Product"
+      Multiplicity="Many"
+      EntityType="Product" />
+  </Association>
+  <Association
+    Name="FK_ProductModelProductDescription_ProductModel_ProductModelID">
+    <AssociationEnd
+      Name="ProductModel"
+      Multiplicity="One"
+      EntityType="ProductModel">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ProductModelProductDescription"
+      Multiplicity="Many"
+      EntityType="ProductModelProductDescription" />
+  </Association>
+  <EntityContainer
+    Name="AdventureWorksLT2017Data">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="ProductModels"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ProductModel" />
+    <AssociationSet
+      Name="FK_Product_ProductModel_ProductModelID"
+      Association="FK_Product_ProductModel_ProductModelID">
+      <AssociationSetEnd
+        Name="ProductModel"
+        EntitySet="ProductModels" />
+      <AssociationSetEnd
+        Name="Product"
+        EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_ProductModelProductDescription_ProductModel_ProductModelID"
+      Association="FK_ProductModelProductDescription_ProductModel_ProductModelID">
+      <AssociationSetEnd
+        Name="ProductModel"
+        EntitySet="ProductModels" />
+      <AssociationSetEnd
+        Name="ProductModelProductDescription"
+        EntitySet="ProductModelProductDescriptions" />
+    </AssociationSet>
+    <QueryOperation
+      Name="ProductModels_Single"
+      ReturnType="ProductModel">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ProductModelID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ProductModelID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductModels" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ProductModels_SingleOrDefault"
+      ReturnType="ProductModel">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ProductModelID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ProductModelID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ProductModels" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductModelID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductModelID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="AdventureWorksLT2017DataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="ProductModels">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="SalesLT"
+          Table="ProductModel" />
+        <SsdlProperty
+          Name="ProductModelID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="ProductModel/Properties[ProductModelID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Name"
+          Nullable="False"
+          Type="nvarchar"
+          Property="ProductModel/Properties[Name]" />
+        <SsdlProperty
+          Name="CatalogDescription"
+          Nullable="True"
+          Type="xml"
+          Property="ProductModel/Properties[CatalogDescription]" />
+        <SsdlProperty
+          Name="rowguid"
+          Nullable="False"
+          Type="uniqueidentifier"
+          Property="ProductModel/Properties[rowguid]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="False"
+          Type="datetime"
+          Property="ProductModel/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Product_ProductModel_ProductModelID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Product_ProductModel_ProductModelID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_Product_ProductModel_ProductModelID]/Members[ProductModel]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ProductModelID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_Product_ProductModel_ProductModelID]/Members[Product]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ProductModelID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_ProductModelProductDescription_ProductModel_ProductModelID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_ProductModelProductDescription_ProductModel_ProductModelID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_ProductModelProductDescription_ProductModel_ProductModelID]/Members[ProductModel]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ProductModelID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_ProductModelProductDescription_ProductModel_ProductModelID]/Members[ProductModelProductDescription]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ProductModelID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

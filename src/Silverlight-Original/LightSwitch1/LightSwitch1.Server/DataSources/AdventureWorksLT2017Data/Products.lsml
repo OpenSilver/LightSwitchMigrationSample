@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Product">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ProductID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductNumber"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Color"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="15" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StandardCost"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ListPrice"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Size"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Weight"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="8"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SellStartDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SellEndDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiscontinuedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ThumbNailPhoto"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ThumbnailPhotoFileName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ProductCategory"
+        Association="FK_Product_ProductCategory_ProductCategoryID"
+        FromEnd="Product"
+        ToEnd="ProductCategory" />
+      <NavigationProperty
+        Name="ProductModel"
+        Association="FK_Product_ProductModel_ProductModelID"
+        FromEnd="Product"
+        ToEnd="ProductModel" />
+      <NavigationProperty
+        Name="SalesOrderDetails"
+        Association="FK_SalesOrderDetail_Product_ProductID"
+        FromEnd="Product"
+        ToEnd="SalesOrderDetail" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_SalesOrderDetail_Product_ProductID">
+    <AssociationEnd
+      Name="Product"
+      Multiplicity="One"
+      EntityType="Product">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderDetail"
+      Multiplicity="Many"
+      EntityType="SalesOrderDetail" />
+  </Association>
+  <EntityContainer
+    Name="AdventureWorksLT2017Data">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Products"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Product" />
+    <AssociationSet
+      Name="FK_SalesOrderDetail_Product_ProductID"
+      Association="FK_SalesOrderDetail_Product_ProductID">
+      <AssociationSetEnd
+        Name="Product"
+        EntitySet="Products" />
+      <AssociationSetEnd
+        Name="SalesOrderDetail"
+        EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Products_Single"
+      ReturnType="Product">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ProductID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ProductID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Products" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Products_SingleOrDefault"
+      ReturnType="Product">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ProductID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ProductID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Products" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ProductID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ProductID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="AdventureWorksLT2017DataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Products">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="SalesLT"
+          Table="Product" />
+        <SsdlProperty
+          Name="ProductID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Product/Properties[ProductID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Name"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Product/Properties[Name]" />
+        <SsdlProperty
+          MaxLength="25"
+          Name="ProductNumber"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Product/Properties[ProductNumber]" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Color"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Product/Properties[Color]" />
+        <SsdlProperty
+          Name="StandardCost"
+          Nullable="False"
+          Type="money"
+          Property="Product/Properties[StandardCost]" />
+        <SsdlProperty
+          Name="ListPrice"
+          Nullable="False"
+          Type="money"
+          Property="Product/Properties[ListPrice]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="Size"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Product/Properties[Size]" />
+        <SsdlProperty
+          Name="Weight"
+          Nullable="True"
+          Precision="8"
+          Scale="2"
+          Type="decimal"
+          Property="Product/Properties[Weight]" />
+        <SsdlProperty
+          Name="SellStartDate"
+          Nullable="False"
+          Type="datetime"
+          Property="Product/Properties[SellStartDate]" />
+        <SsdlProperty
+          Name="SellEndDate"
+          Nullable="True"
+          Type="datetime"
+          Property="Product/Properties[SellEndDate]" />
+        <SsdlProperty
+          Name="DiscontinuedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="Product/Properties[DiscontinuedDate]" />
+        <SsdlProperty
+          Name="ThumbNailPhoto"
+          Nullable="True"
+          Type="varbinary(max)"
+          Property="Product/Properties[ThumbNailPhoto]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ThumbnailPhotoFileName"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Product/Properties[ThumbnailPhotoFileName]" />
+        <SsdlProperty
+          Name="rowguid"
+          Nullable="False"
+          Type="uniqueidentifier"
+          Property="Product/Properties[rowguid]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="False"
+          Type="datetime"
+          Property="Product/Properties[ModifiedDate]" />
+        <SsdlForeignKeyProperty
+          Name="ProductCategoryID"
+          Nullable="True"
+          Type="int"
+          PropertyName="ProductCategoryID" />
+        <SsdlForeignKeyProperty
+          Name="ProductModelID"
+          Nullable="True"
+          Type="int"
+          PropertyName="ProductModelID" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SalesOrderDetail_Product_ProductID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SalesOrderDetail_Product_ProductID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderDetail_Product_ProductID]/Members[Product]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ProductID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderDetail_Product_ProductID]/Members[SalesOrderDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ProductID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

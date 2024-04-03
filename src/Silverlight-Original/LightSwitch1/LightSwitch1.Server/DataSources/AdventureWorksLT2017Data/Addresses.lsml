@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Address">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="AddressID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="AddressLine1"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="60" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AddressLine2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="City"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateProvince"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CountryRegion"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PostalCode"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="15" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="CustomerAddresses"
+        Association="FK_CustomerAddress_Address_AddressID"
+        FromEnd="Address"
+        ToEnd="CustomerAddress" />
+      <NavigationProperty
+        Name="SalesOrderHeaders"
+        Association="FK_SalesOrderHeader_Address_BillTo_AddressID"
+        FromEnd="Address"
+        ToEnd="SalesOrderHeader" />
+      <NavigationProperty
+        Name="SalesOrderHeaders1"
+        Association="FK_SalesOrderHeader_Address_ShipTo_AddressID"
+        FromEnd="Address"
+        ToEnd="SalesOrderHeader" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_CustomerAddress_Address_AddressID">
+    <AssociationEnd
+      Name="Address"
+      Multiplicity="One"
+      EntityType="Address">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CustomerAddress"
+      Multiplicity="Many"
+      EntityType="CustomerAddress" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderHeader_Address_BillTo_AddressID">
+    <AssociationEnd
+      Name="Address"
+      EntityType="Address">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderHeader"
+      Multiplicity="Many"
+      EntityType="SalesOrderHeader" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderHeader_Address_ShipTo_AddressID">
+    <AssociationEnd
+      Name="Address"
+      EntityType="Address">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderHeader"
+      Multiplicity="Many"
+      EntityType="SalesOrderHeader" />
+  </Association>
+  <EntityContainer
+    Name="AdventureWorksLT2017Data">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Addresses"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Address" />
+    <AssociationSet
+      Name="FK_CustomerAddress_Address_AddressID"
+      Association="FK_CustomerAddress_Address_AddressID">
+      <AssociationSetEnd
+        Name="Address"
+        EntitySet="Addresses" />
+      <AssociationSetEnd
+        Name="CustomerAddress"
+        EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_SalesOrderHeader_Address_BillTo_AddressID"
+      Association="FK_SalesOrderHeader_Address_BillTo_AddressID">
+      <AssociationSetEnd
+        Name="Address"
+        EntitySet="Addresses" />
+      <AssociationSetEnd
+        Name="SalesOrderHeader"
+        EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_SalesOrderHeader_Address_ShipTo_AddressID"
+      Association="FK_SalesOrderHeader_Address_ShipTo_AddressID">
+      <AssociationSetEnd
+        Name="Address"
+        EntitySet="Addresses" />
+      <AssociationSetEnd
+        Name="SalesOrderHeader"
+        EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Addresses_Single"
+      ReturnType="Address">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="AddressID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="AddressID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Addresses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="AddressID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'AddressID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Addresses_SingleOrDefault"
+      ReturnType="Address">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="AddressID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="AddressID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Addresses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="AddressID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'AddressID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="AdventureWorksLT2017DataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Addresses">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="SalesLT"
+          Table="Address" />
+        <SsdlProperty
+          Name="AddressID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Address/Properties[AddressID]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="AddressLine1"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Address/Properties[AddressLine1]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="AddressLine2"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Address/Properties[AddressLine2]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="City"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Address/Properties[City]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="StateProvince"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Address/Properties[StateProvince]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CountryRegion"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Address/Properties[CountryRegion]" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="PostalCode"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Address/Properties[PostalCode]" />
+        <SsdlProperty
+          Name="rowguid"
+          Nullable="False"
+          Type="uniqueidentifier"
+          Property="Address/Properties[rowguid]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="False"
+          Type="datetime"
+          Property="Address/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_CustomerAddress_Address_AddressID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_CustomerAddress_Address_AddressID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_CustomerAddress_Address_AddressID]/Members[Address]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="AddressID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_CustomerAddress_Address_AddressID]/Members[CustomerAddress]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="AddressID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SalesOrderHeader_Address_BillTo_AddressID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SalesOrderHeader_Address_BillTo_AddressID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderHeader_Address_BillTo_AddressID]/Members[Address]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="AddressID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderHeader_Address_BillTo_AddressID]/Members[SalesOrderHeader]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="BillToAddressID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SalesOrderHeader_Address_ShipTo_AddressID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SalesOrderHeader_Address_ShipTo_AddressID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderHeader_Address_ShipTo_AddressID]/Members[Address]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="AddressID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderHeader_Address_ShipTo_AddressID]/Members[SalesOrderHeader]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ShipToAddressID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

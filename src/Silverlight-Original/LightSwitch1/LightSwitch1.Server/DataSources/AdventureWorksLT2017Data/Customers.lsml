@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Customer">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="CustomerID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="NameStyle"
+        PropertyType=":Boolean">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Title"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="8" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FirstName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MiddleName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LastName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Suffix"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CompanyName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="128" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SalesPerson"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="256" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailAddress"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Phone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="25" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PasswordHash"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="128" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PasswordSalt"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="rowguid"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="CustomerAddresses"
+        Association="FK_CustomerAddress_Customer_CustomerID"
+        FromEnd="Customer"
+        ToEnd="CustomerAddress" />
+      <NavigationProperty
+        Name="SalesOrderHeaders"
+        Association="FK_SalesOrderHeader_Customer_CustomerID"
+        FromEnd="Customer"
+        ToEnd="SalesOrderHeader" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_CustomerAddress_Customer_CustomerID">
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CustomerAddress"
+      Multiplicity="Many"
+      EntityType="CustomerAddress" />
+  </Association>
+  <Association
+    Name="FK_SalesOrderHeader_Customer_CustomerID">
+    <AssociationEnd
+      Name="Customer"
+      Multiplicity="One"
+      EntityType="Customer">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderHeader"
+      Multiplicity="Many"
+      EntityType="SalesOrderHeader" />
+  </Association>
+  <EntityContainer
+    Name="AdventureWorksLT2017Data">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Customers"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Customer" />
+    <AssociationSet
+      Name="FK_CustomerAddress_Customer_CustomerID"
+      Association="FK_CustomerAddress_Customer_CustomerID">
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+      <AssociationSetEnd
+        Name="CustomerAddress"
+        EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_SalesOrderHeader_Customer_CustomerID"
+      Association="FK_SalesOrderHeader_Customer_CustomerID">
+      <AssociationSetEnd
+        Name="Customer"
+        EntitySet="Customers" />
+      <AssociationSetEnd
+        Name="SalesOrderHeader"
+        EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Customers_Single"
+      ReturnType="Customer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CustomerID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CustomerID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Customers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CustomerID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CustomerID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Customers_SingleOrDefault"
+      ReturnType="Customer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CustomerID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CustomerID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Customers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CustomerID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CustomerID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="AdventureWorksLT2017DataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Customers">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="SalesLT"
+          Table="Customer" />
+        <SsdlProperty
+          Name="CustomerID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Customer/Properties[CustomerID]" />
+        <SsdlProperty
+          Name="NameStyle"
+          Nullable="False"
+          Type="bit"
+          Property="Customer/Properties[NameStyle]" />
+        <SsdlProperty
+          MaxLength="8"
+          Name="Title"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Customer/Properties[Title]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="FirstName"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Customer/Properties[FirstName]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MiddleName"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Customer/Properties[MiddleName]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="LastName"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Customer/Properties[LastName]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Suffix"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Customer/Properties[Suffix]" />
+        <SsdlProperty
+          MaxLength="128"
+          Name="CompanyName"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Customer/Properties[CompanyName]" />
+        <SsdlProperty
+          MaxLength="256"
+          Name="SalesPerson"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Customer/Properties[SalesPerson]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EmailAddress"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Customer/Properties[EmailAddress]" />
+        <SsdlProperty
+          MaxLength="25"
+          Name="Phone"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Customer/Properties[Phone]" />
+        <SsdlProperty
+          MaxLength="128"
+          Name="PasswordHash"
+          Nullable="False"
+          Type="varchar"
+          Property="Customer/Properties[PasswordHash]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="PasswordSalt"
+          Nullable="False"
+          Type="varchar"
+          Property="Customer/Properties[PasswordSalt]" />
+        <SsdlProperty
+          Name="rowguid"
+          Nullable="False"
+          Type="uniqueidentifier"
+          Property="Customer/Properties[rowguid]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="False"
+          Type="datetime"
+          Property="Customer/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_CustomerAddress_Customer_CustomerID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_CustomerAddress_Customer_CustomerID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_CustomerAddress_Customer_CustomerID]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CustomerID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_CustomerAddress_Customer_CustomerID]/Members[CustomerAddress]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CustomerID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SalesOrderHeader_Customer_CustomerID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SalesOrderHeader_Customer_CustomerID" />
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderHeader_Customer_CustomerID]/Members[Customer]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CustomerID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="AdventureWorksLT2017Data/Members[FK_SalesOrderHeader_Customer_CustomerID]/Members[SalesOrderHeader]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CustomerID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>
