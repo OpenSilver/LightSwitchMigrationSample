@@ -34,20 +34,20 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Title"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="8" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="FirstName"
         PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
           <MaxLength
             Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Title"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="8" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
