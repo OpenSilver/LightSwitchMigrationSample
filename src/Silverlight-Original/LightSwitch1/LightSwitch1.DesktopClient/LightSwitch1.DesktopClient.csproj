@@ -42,6 +42,9 @@
     <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' != '' and !HasTrailingSlash('$(LightSwitchSDKPath)')">$(LightSwitchSDKPath)\</LightSwitchSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v5.2@InstallPath)</WCFRIASERVICESSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v5.2@InstallPath)</WCFRIASERVICESSDKPath>
+    <SignManifests>False</SignManifests>
+    <ManifestCertificateThumbprint />
+    <ManifestKeyFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -237,6 +240,7 @@
     <ClientResource Include="Properties\Config.xml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\CustomersListDetail.lsml" />
+    <LightSwitchModel Include="Screens\EditableCustomersGrid.lsml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

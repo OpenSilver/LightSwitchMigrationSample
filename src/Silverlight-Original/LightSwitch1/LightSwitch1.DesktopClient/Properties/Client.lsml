@@ -39,6 +39,9 @@
     <ApplicationCommand
       Name="ScreenCommandShowCustomersListDetail"
       Target="!module/Methods[ShowCustomersListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowEditableCustomersGrid"
+      Target="!module/Methods[ShowEditableCustomersGrid]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
@@ -51,6 +54,9 @@
       <ApplicationNavigationLink
         Name="CustomersListDetail"
         Command="!module/Commands[ScreenCommandShowCustomersListDetail]" />
+      <ApplicationNavigationLink
+        Name="EditableCustomersGrid"
+        Command="!module/Commands[ScreenCommandShowEditableCustomersGrid]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="Administration">
