@@ -42,6 +42,21 @@
     <ApplicationCommand
       Name="ScreenCommandShowEditableCustomersGrid"
       Target="!module/Methods[ShowEditableCustomersGrid]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchProducts"
+      Target="!module/Methods[ShowSearchProducts]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowEditableProductsGrid"
+      Target="!module/Methods[ShowEditableProductsGrid]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowProductsListDetail"
+      Target="!module/Methods[ShowProductsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSalesOrderDetailsListDetail"
+      Target="!module/Methods[ShowSalesOrderDetailsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddressesListDetail"
+      Target="!module/Methods[ShowAddressesListDetail]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
@@ -57,6 +72,21 @@
       <ApplicationNavigationLink
         Name="EditableCustomersGrid"
         Command="!module/Commands[ScreenCommandShowEditableCustomersGrid]" />
+      <ApplicationNavigationLink
+        Name="ProductsListDetail"
+        Command="!module/Commands[ScreenCommandShowProductsListDetail]" />
+      <ApplicationNavigationLink
+        Name="EditableProductsGrid"
+        Command="!module/Commands[ScreenCommandShowEditableProductsGrid]" />
+      <ApplicationNavigationLink
+        Name="SalesOrderDetailsListDetail"
+        Command="!module/Commands[ScreenCommandShowSalesOrderDetailsListDetail]" />
+      <ApplicationNavigationLink
+        Name="AddressesListDetail"
+        Command="!module/Commands[ScreenCommandShowAddressesListDetail]" />
+      <ApplicationNavigationLink
+        Name="SearchProducts"
+        Command="!module/Commands[ScreenCommandShowSearchProducts]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="Administration">
