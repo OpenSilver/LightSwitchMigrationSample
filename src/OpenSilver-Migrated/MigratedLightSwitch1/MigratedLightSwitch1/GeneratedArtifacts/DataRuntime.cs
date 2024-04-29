@@ -143,32 +143,6 @@ namespace LightSwitchApplication
         #region Public Properties
     
         /// <summary>
-        /// Gets the BuildVersions entity set.  The entity set provides members to access entities of a specific type.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.BuildVersion> BuildVersions
-        {
-            get
-            {
-                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.BuildVersions);
-            }
-        }
-        
-        /// <summary>
-        /// Gets the ErrorLogs entity set.  The entity set provides members to access entities of a specific type.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ErrorLog> ErrorLogs
-        {
-            get
-            {
-                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ErrorLogs);
-            }
-        }
-        
-        /// <summary>
         /// Gets the Addresses entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
@@ -182,15 +156,15 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Gets the Customers entity set.  The entity set provides members to access entities of a specific type.
+        /// Gets the BuildVersions entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Customer> Customers
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.BuildVersion> BuildVersions
         {
             get
             {
-                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Customers);
+                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.BuildVersions);
             }
         }
         
@@ -208,15 +182,28 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Gets the Products entity set.  The entity set provides members to access entities of a specific type.
+        /// Gets the Customers entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Product> Products
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Customer> Customers
         {
             get
             {
-                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Products);
+                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Customers);
+            }
+        }
+        
+        /// <summary>
+        /// Gets the ErrorLogs entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ErrorLog> ErrorLogs
+        {
+            get
+            {
+                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ErrorLogs);
             }
         }
         
@@ -247,6 +234,19 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
+        /// Gets the ProductModelProductDescriptions entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions
+        {
+            get
+            {
+                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ProductModelProductDescriptions);
+            }
+        }
+        
+        /// <summary>
         /// Gets the ProductModels entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
@@ -260,15 +260,15 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Gets the ProductModelProductDescriptions entity set.  The entity set provides members to access entities of a specific type.
+        /// Gets the Products entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Product> Products
         {
             get
             {
-                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ProductModelProductDescriptions);
+                return global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.GetValue(this, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Products);
             }
         }
         
@@ -344,6 +344,28 @@ namespace LightSwitchApplication
         /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s).
         /// </summary>
+        /// <param name="AddressID">
+        /// The value of the 'AddressID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Address Addresses_Single(global::System.Nullable<int> AddressID)
+        {
+            return this.Details.Methods.Addresses_Single.CreateInvocation(AddressID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="AddressID">
+        /// The value of the 'AddressID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Address Addresses_SingleOrDefault(global::System.Nullable<int> AddressID)
+        {
+            return this.Details.Methods.Addresses_SingleOrDefault.CreateInvocation(AddressID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
         /// <param name="SystemInformationID">
         /// The value of the 'SystemInformationID' key property of the entity to retrieve.
         /// </param>
@@ -384,72 +406,6 @@ namespace LightSwitchApplication
         /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s).
         /// </summary>
-        /// <param name="ErrorLogID">
-        /// The value of the 'ErrorLogID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.ErrorLog ErrorLogs_Single(global::System.Nullable<int> ErrorLogID)
-        {
-            return this.Details.Methods.ErrorLogs_Single.CreateInvocation(ErrorLogID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="ErrorLogID">
-        /// The value of the 'ErrorLogID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.ErrorLog ErrorLogs_SingleOrDefault(global::System.Nullable<int> ErrorLogID)
-        {
-            return this.Details.Methods.ErrorLogs_SingleOrDefault.CreateInvocation(ErrorLogID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
-        /// </summary>
-        /// <param name="AddressID">
-        /// The value of the 'AddressID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.Address Addresses_Single(global::System.Nullable<int> AddressID)
-        {
-            return this.Details.Methods.Addresses_Single.CreateInvocation(AddressID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="AddressID">
-        /// The value of the 'AddressID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.Address Addresses_SingleOrDefault(global::System.Nullable<int> AddressID)
-        {
-            return this.Details.Methods.Addresses_SingleOrDefault.CreateInvocation(AddressID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
-        /// </summary>
-        /// <param name="CustomerID">
-        /// The value of the 'CustomerID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.Customer Customers_Single(global::System.Nullable<int> CustomerID)
-        {
-            return this.Details.Methods.Customers_Single.CreateInvocation(CustomerID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="CustomerID">
-        /// The value of the 'CustomerID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.Customer Customers_SingleOrDefault(global::System.Nullable<int> CustomerID)
-        {
-            return this.Details.Methods.Customers_SingleOrDefault.CreateInvocation(CustomerID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
-        /// </summary>
         /// <param name="CustomerID">
         /// The value of the 'CustomerID' key property of the entity to retrieve.
         /// </param>
@@ -478,23 +434,45 @@ namespace LightSwitchApplication
         /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s).
         /// </summary>
-        /// <param name="ProductID">
-        /// The value of the 'ProductID' key property of the entity to retrieve.
+        /// <param name="CustomerID">
+        /// The value of the 'CustomerID' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.Product Products_Single(global::System.Nullable<int> ProductID)
+        public global::LightSwitchApplication.Customer Customers_Single(global::System.Nullable<int> CustomerID)
         {
-            return this.Details.Methods.Products_Single.CreateInvocation(ProductID).Execute();
+            return this.Details.Methods.Customers_Single.CreateInvocation(CustomerID).Execute();
         }
         
         /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
         /// </summary>
-        /// <param name="ProductID">
-        /// The value of the 'ProductID' key property of the entity to retrieve.
+        /// <param name="CustomerID">
+        /// The value of the 'CustomerID' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.Product Products_SingleOrDefault(global::System.Nullable<int> ProductID)
+        public global::LightSwitchApplication.Customer Customers_SingleOrDefault(global::System.Nullable<int> CustomerID)
         {
-            return this.Details.Methods.Products_SingleOrDefault.CreateInvocation(ProductID).Execute();
+            return this.Details.Methods.Customers_SingleOrDefault.CreateInvocation(CustomerID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ErrorLogID">
+        /// The value of the 'ErrorLogID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ErrorLog ErrorLogs_Single(global::System.Nullable<int> ErrorLogID)
+        {
+            return this.Details.Methods.ErrorLogs_Single.CreateInvocation(ErrorLogID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ErrorLogID">
+        /// The value of the 'ErrorLogID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ErrorLog ErrorLogs_SingleOrDefault(global::System.Nullable<int> ErrorLogID)
+        {
+            return this.Details.Methods.ErrorLogs_SingleOrDefault.CreateInvocation(ErrorLogID).Execute();
         }
         
         /// <summary>
@@ -547,28 +525,6 @@ namespace LightSwitchApplication
         /// <param name="ProductModelID">
         /// The value of the 'ProductModelID' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.ProductModel ProductModels_Single(global::System.Nullable<int> ProductModelID)
-        {
-            return this.Details.Methods.ProductModels_Single.CreateInvocation(ProductModelID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="ProductModelID">
-        /// The value of the 'ProductModelID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.ProductModel ProductModels_SingleOrDefault(global::System.Nullable<int> ProductModelID)
-        {
-            return this.Details.Methods.ProductModels_SingleOrDefault.CreateInvocation(ProductModelID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
-        /// </summary>
-        /// <param name="ProductModelID">
-        /// The value of the 'ProductModelID' key property of the entity to retrieve.
-        /// </param>
         /// <param name="ProductDescriptionID">
         /// The value of the 'ProductDescriptionID' key property of the entity to retrieve.
         /// </param>
@@ -595,6 +551,50 @@ namespace LightSwitchApplication
         public global::LightSwitchApplication.ProductModelProductDescription ProductModelProductDescriptions_SingleOrDefault(global::System.Nullable<int> ProductModelID, global::System.Nullable<int> ProductDescriptionID, string Culture)
         {
             return this.Details.Methods.ProductModelProductDescriptions_SingleOrDefault.CreateInvocation(ProductModelID, ProductDescriptionID, Culture).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ProductModelID">
+        /// The value of the 'ProductModelID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ProductModel ProductModels_Single(global::System.Nullable<int> ProductModelID)
+        {
+            return this.Details.Methods.ProductModels_Single.CreateInvocation(ProductModelID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ProductModelID">
+        /// The value of the 'ProductModelID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ProductModel ProductModels_SingleOrDefault(global::System.Nullable<int> ProductModelID)
+        {
+            return this.Details.Methods.ProductModels_SingleOrDefault.CreateInvocation(ProductModelID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ProductID">
+        /// The value of the 'ProductID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Product Products_Single(global::System.Nullable<int> ProductID)
+        {
+            return this.Details.Methods.Products_Single.CreateInvocation(ProductID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ProductID">
+        /// The value of the 'ProductID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Product Products_SingleOrDefault(global::System.Nullable<int> ProductID)
+        {
+            return this.Details.Methods.Products_SingleOrDefault.CreateInvocation(ProductID).Execute();
         }
         
         /// <summary>
@@ -768,8 +768,8 @@ namespace LightSwitchApplication
     
             static DetailsClass()
             {
-                var initializeMethodEntry = global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.BuildVersions_Single;
-                var initializePropertyEntry = global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.BuildVersions;
+                var initializeMethodEntry = global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Addresses_Single;
+                var initializePropertyEntry = global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Addresses;
             }
     
             public DetailsClass() : base()
@@ -803,38 +803,6 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion> BuildVersions_Single
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.BuildVersions_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion> BuildVersions_SingleOrDefault
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.BuildVersions_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog> ErrorLogs_Single
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ErrorLogs_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog> ErrorLogs_SingleOrDefault
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ErrorLogs_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address> Addresses_Single
                 {
                     get
@@ -851,19 +819,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer> Customers_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion> BuildVersions_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Customers_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.BuildVersions_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer> Customers_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion> BuildVersions_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Customers_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.BuildVersions_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>;
                     }
                 }
                 
@@ -883,19 +851,35 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product> Products_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer> Customers_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Products_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Customers_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product> Products_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer> Customers_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Products_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Customers_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog> ErrorLogs_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ErrorLogs_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog> ErrorLogs_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ErrorLogs_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>;
                     }
                 }
                 
@@ -931,6 +915,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ProductModelProductDescriptions_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ProductModelProductDescriptions_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel> ProductModels_Single
                 {
                     get
@@ -947,19 +947,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product> Products_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ProductModelProductDescriptions_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Products_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product> Products_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.ProductModelProductDescriptions_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties.Products_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>;
                     }
                 }
                 
@@ -1056,22 +1056,6 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion> BuildVersions
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.BuildVersions) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog> ErrorLogs
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ErrorLogs) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address> Addresses
                 {
                     get
@@ -1080,11 +1064,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer> Customers
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion> BuildVersions
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Customers) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.BuildVersions) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>;
                     }
                 }
                 
@@ -1096,11 +1080,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product> Products
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer> Customers
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Products) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Customers) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog> ErrorLogs
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ErrorLogs) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>;
                     }
                 }
                 
@@ -1120,6 +1112,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ProductModelProductDescriptions) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel> ProductModels
                 {
                     get
@@ -1128,11 +1128,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription> ProductModelProductDescriptions
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product> Products
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.ProductModelProductDescriptions) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>;
+                        return base.GetItem(global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties.Products) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>;
                     }
                 }
                 
@@ -1185,46 +1185,6 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry
-                    BuildVersions_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry(
-                        "BuildVersions_Single",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._BuildVersions_Single_Stub);
-                private static void _BuildVersions_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
-                {
-                    c(d, ref d._BuildVersions_Single, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry
-                    BuildVersions_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry(
-                        "BuildVersions_SingleOrDefault",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._BuildVersions_SingleOrDefault_Stub);
-                private static void _BuildVersions_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
-                {
-                    c(d, ref d._BuildVersions_SingleOrDefault, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry
-                    ErrorLogs_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry(
-                        "ErrorLogs_Single",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ErrorLogs_Single_Stub);
-                private static void _ErrorLogs_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ErrorLogs_Single, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry
-                    ErrorLogs_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry(
-                        "ErrorLogs_SingleOrDefault",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ErrorLogs_SingleOrDefault_Stub);
-                private static void _ErrorLogs_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ErrorLogs_SingleOrDefault, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address>.Entry
                     Addresses_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address>.Entry(
                         "Addresses_Single",
@@ -1245,23 +1205,23 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry
-                    Customers_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
-                        "Customers_Single",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Customers_Single_Stub);
-                private static void _Customers_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry
+                    BuildVersions_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry(
+                        "BuildVersions_Single",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._BuildVersions_Single_Stub);
+                private static void _BuildVersions_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Customers_Single, sf);
+                    c(d, ref d._BuildVersions_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry
-                    Customers_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
-                        "Customers_SingleOrDefault",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Customers_SingleOrDefault_Stub);
-                private static void _Customers_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry
+                    BuildVersions_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry(
+                        "BuildVersions_SingleOrDefault",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._BuildVersions_SingleOrDefault_Stub);
+                private static void _BuildVersions_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Customers_SingleOrDefault, sf);
+                    c(d, ref d._BuildVersions_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1285,23 +1245,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry
-                    Products_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry(
-                        "Products_Single",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Products_Single_Stub);
-                private static void _Products_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry
+                    Customers_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
+                        "Customers_Single",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Customers_Single_Stub);
+                private static void _Customers_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Products_Single, sf);
+                    c(d, ref d._Customers_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry
-                    Products_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry(
-                        "Products_SingleOrDefault",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Products_SingleOrDefault_Stub);
-                private static void _Products_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry
+                    Customers_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
+                        "Customers_SingleOrDefault",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Customers_SingleOrDefault_Stub);
+                private static void _Customers_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Products_SingleOrDefault, sf);
+                    c(d, ref d._Customers_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry
+                    ErrorLogs_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry(
+                        "ErrorLogs_Single",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ErrorLogs_Single_Stub);
+                private static void _ErrorLogs_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ErrorLogs_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry
+                    ErrorLogs_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry(
+                        "ErrorLogs_SingleOrDefault",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ErrorLogs_SingleOrDefault_Stub);
+                private static void _ErrorLogs_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ErrorLogs_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1345,6 +1325,26 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry
+                    ProductModelProductDescriptions_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry(
+                        "ProductModelProductDescriptions_Single",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ProductModelProductDescriptions_Single_Stub);
+                private static void _ProductModelProductDescriptions_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ProductModelProductDescriptions_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry
+                    ProductModelProductDescriptions_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry(
+                        "ProductModelProductDescriptions_SingleOrDefault",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ProductModelProductDescriptions_SingleOrDefault_Stub);
+                private static void _ProductModelProductDescriptions_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ProductModelProductDescriptions_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel>.Entry
                     ProductModels_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel>.Entry(
                         "ProductModels_Single",
@@ -1365,23 +1365,23 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry
-                    ProductModelProductDescriptions_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry(
-                        "ProductModelProductDescriptions_Single",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ProductModelProductDescriptions_Single_Stub);
-                private static void _ProductModelProductDescriptions_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry
+                    Products_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry(
+                        "Products_Single",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Products_Single_Stub);
+                private static void _Products_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ProductModelProductDescriptions_Single, sf);
+                    c(d, ref d._Products_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry
-                    ProductModelProductDescriptions_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry(
-                        "ProductModelProductDescriptions_SingleOrDefault",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._ProductModelProductDescriptions_SingleOrDefault_Stub);
-                private static void _ProductModelProductDescriptions_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry
+                    Products_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry(
+                        "Products_SingleOrDefault",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.MethodSetProperties._Products_SingleOrDefault_Stub);
+                private static void _Products_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ProductModelProductDescriptions_SingleOrDefault, sf);
+                    c(d, ref d._Products_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1493,26 +1493,6 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry
-                    BuildVersions = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry(
-                        "BuildVersions",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._BuildVersions_Stub);
-                private static void _BuildVersions_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
-                {
-                    c(d, ref d._BuildVersions, sf);
-                }
-     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry
-                    ErrorLogs = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry(
-                        "ErrorLogs",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._ErrorLogs_Stub);
-                private static void _ErrorLogs_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ErrorLogs, sf);
-                }
-     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address>.Entry
                     Addresses = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address>.Entry(
                         "Addresses",
@@ -1523,13 +1503,13 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry
-                    Customers = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
-                        "Customers",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._Customers_Stub);
-                private static void _Customers_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry
+                    BuildVersions = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Entry(
+                        "BuildVersions",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._BuildVersions_Stub);
+                private static void _BuildVersions_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Customers, sf);
+                    c(d, ref d._BuildVersions, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1543,13 +1523,23 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry
-                    Products = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry(
-                        "Products",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._Products_Stub);
-                private static void _Products_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry
+                    Customers = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
+                        "Customers",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._Customers_Stub);
+                private static void _Customers_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Products, sf);
+                    c(d, ref d._Customers, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry
+                    ErrorLogs = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Entry(
+                        "ErrorLogs",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._ErrorLogs_Stub);
+                private static void _ErrorLogs_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ErrorLogs, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1573,6 +1563,16 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry
+                    ProductModelProductDescriptions = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry(
+                        "ProductModelProductDescriptions",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._ProductModelProductDescriptions_Stub);
+                private static void _ProductModelProductDescriptions_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ProductModelProductDescriptions, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel>.Entry
                     ProductModels = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel>.Entry(
                         "ProductModels",
@@ -1583,13 +1583,13 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry
-                    ProductModelProductDescriptions = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Entry(
-                        "ProductModelProductDescriptions",
-                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._ProductModelProductDescriptions_Stub);
-                private static void _ProductModelProductDescriptions_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry
+                    Products = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Entry(
+                        "Products",
+                        global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass.PropertySetProperties._Products_Stub);
+                private static void _Products_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data> c, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ProductModelProductDescriptions, sf);
+                    c(d, ref d._Products, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1645,22 +1645,19 @@ namespace LightSwitchApplication
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data _BuildVersions;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data _ErrorLogs;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address>.Data _Addresses;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data _Customers;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data _BuildVersions;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.CustomerAddress>.Data _CustomerAddresses;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data _Products;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data _Customers;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data _ErrorLogs;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductCategory>.Data _ProductCategories;
@@ -1669,10 +1666,13 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductDescription>.Data _ProductDescriptions;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data _ProductModelProductDescriptions;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel>.Data _ProductModels;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data _ProductModelProductDescriptions;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data _Products;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.SalesOrderDetail>.Data _SalesOrderDetails;
@@ -1690,28 +1690,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.vProductModelCatalogDescription>.Data _vProductModelCatalogDescriptions;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data _BuildVersions_Single;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data _BuildVersions_SingleOrDefault;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data _ErrorLogs_Single;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data _ErrorLogs_SingleOrDefault;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address>.Data _Addresses_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Address>.Data _Addresses_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data _Customers_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data _BuildVersions_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data _Customers_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.BuildVersion>.Data _BuildVersions_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.CustomerAddress>.Data _CustomerAddresses_Single;
@@ -1720,10 +1708,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.CustomerAddress>.Data _CustomerAddresses_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data _Products_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data _Customers_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data _Products_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Customer>.Data _Customers_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data _ErrorLogs_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ErrorLog>.Data _ErrorLogs_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductCategory>.Data _ProductCategories_Single;
@@ -1738,16 +1732,22 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductDescription>.Data _ProductDescriptions_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data _ProductModelProductDescriptions_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data _ProductModelProductDescriptions_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel>.Data _ProductModels_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModel>.Data _ProductModels_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data _ProductModelProductDescriptions_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data _Products_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.ProductModelProductDescription>.Data _ProductModelProductDescriptions_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.Product>.Data _Products_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.AdventureWorksLT2017Data, global::LightSwitchApplication.AdventureWorksLT2017Data.DetailsClass, global::LightSwitchApplication.SalesOrderDetail>.Data _SalesOrderDetails_Single;

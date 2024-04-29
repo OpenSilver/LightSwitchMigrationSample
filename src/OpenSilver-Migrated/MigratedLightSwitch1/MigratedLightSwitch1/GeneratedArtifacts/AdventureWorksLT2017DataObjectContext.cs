@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 3/19/2024 11:54:59 AM
+// Generation date: 4/22/2024 7:54:55 PM
 namespace LightSwitchApplication.Implementation
 {
     
@@ -61,40 +61,6 @@ namespace LightSwitchApplication.Implementation
             return null;
         }
         /// <summary>
-        /// There are no comments for BuildVersions in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<BuildVersion> BuildVersions
-        {
-            get
-            {
-                if ((this._BuildVersions == null))
-                {
-                    this._BuildVersions = base.CreateQuery<BuildVersion>("BuildVersions");
-                }
-                return this._BuildVersions;
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<BuildVersion> _BuildVersions;
-        /// <summary>
-        /// There are no comments for ErrorLogs in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<ErrorLog> ErrorLogs
-        {
-            get
-            {
-                if ((this._ErrorLogs == null))
-                {
-                    this._ErrorLogs = base.CreateQuery<ErrorLog>("ErrorLogs");
-                }
-                return this._ErrorLogs;
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<ErrorLog> _ErrorLogs;
-        /// <summary>
         /// There are no comments for Addresses in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -112,22 +78,22 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<Address> _Addresses;
         /// <summary>
-        /// There are no comments for Customers in the schema.
+        /// There are no comments for BuildVersions in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<Customer> Customers
+        public global::System.Data.Services.Client.DataServiceQuery<BuildVersion> BuildVersions
         {
             get
             {
-                if ((this._Customers == null))
+                if ((this._BuildVersions == null))
                 {
-                    this._Customers = base.CreateQuery<Customer>("Customers");
+                    this._BuildVersions = base.CreateQuery<BuildVersion>("BuildVersions");
                 }
-                return this._Customers;
+                return this._BuildVersions;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<Customer> _Customers;
+        private global::System.Data.Services.Client.DataServiceQuery<BuildVersion> _BuildVersions;
         /// <summary>
         /// There are no comments for CustomerAddresses in the schema.
         /// </summary>
@@ -146,22 +112,39 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<CustomerAddress> _CustomerAddresses;
         /// <summary>
-        /// There are no comments for Products in the schema.
+        /// There are no comments for Customers in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<Product> Products
+        public global::System.Data.Services.Client.DataServiceQuery<Customer> Customers
         {
             get
             {
-                if ((this._Products == null))
+                if ((this._Customers == null))
                 {
-                    this._Products = base.CreateQuery<Product>("Products");
+                    this._Customers = base.CreateQuery<Customer>("Customers");
                 }
-                return this._Products;
+                return this._Customers;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<Product> _Products;
+        private global::System.Data.Services.Client.DataServiceQuery<Customer> _Customers;
+        /// <summary>
+        /// There are no comments for ErrorLogs in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<ErrorLog> ErrorLogs
+        {
+            get
+            {
+                if ((this._ErrorLogs == null))
+                {
+                    this._ErrorLogs = base.CreateQuery<ErrorLog>("ErrorLogs");
+                }
+                return this._ErrorLogs;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<ErrorLog> _ErrorLogs;
         /// <summary>
         /// There are no comments for ProductCategories in the schema.
         /// </summary>
@@ -197,6 +180,23 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<ProductDescription> _ProductDescriptions;
         /// <summary>
+        /// There are no comments for ProductModelProductDescriptions in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<ProductModelProductDescription> ProductModelProductDescriptions
+        {
+            get
+            {
+                if ((this._ProductModelProductDescriptions == null))
+                {
+                    this._ProductModelProductDescriptions = base.CreateQuery<ProductModelProductDescription>("ProductModelProductDescriptions");
+                }
+                return this._ProductModelProductDescriptions;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<ProductModelProductDescription> _ProductModelProductDescriptions;
+        /// <summary>
         /// There are no comments for ProductModels in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -214,22 +214,22 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<ProductModel> _ProductModels;
         /// <summary>
-        /// There are no comments for ProductModelProductDescriptions in the schema.
+        /// There are no comments for Products in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<ProductModelProductDescription> ProductModelProductDescriptions
+        public global::System.Data.Services.Client.DataServiceQuery<Product> Products
         {
             get
             {
-                if ((this._ProductModelProductDescriptions == null))
+                if ((this._Products == null))
                 {
-                    this._ProductModelProductDescriptions = base.CreateQuery<ProductModelProductDescription>("ProductModelProductDescriptions");
+                    this._Products = base.CreateQuery<Product>("Products");
                 }
-                return this._ProductModelProductDescriptions;
+                return this._Products;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<ProductModelProductDescription> _ProductModelProductDescriptions;
+        private global::System.Data.Services.Client.DataServiceQuery<Product> _Products;
         /// <summary>
         /// There are no comments for SalesOrderDetails in the schema.
         /// </summary>
@@ -316,22 +316,6 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<vProductModelCatalogDescription> _vProductModelCatalogDescriptions;
         /// <summary>
-        /// There are no comments for BuildVersions in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToBuildVersions(BuildVersion buildVersion)
-        {
-            base.AddObject("BuildVersions", buildVersion);
-        }
-        /// <summary>
-        /// There are no comments for ErrorLogs in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToErrorLogs(ErrorLog errorLog)
-        {
-            base.AddObject("ErrorLogs", errorLog);
-        }
-        /// <summary>
         /// There are no comments for Addresses in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -340,12 +324,12 @@ namespace LightSwitchApplication.Implementation
             base.AddObject("Addresses", address);
         }
         /// <summary>
-        /// There are no comments for Customers in the schema.
+        /// There are no comments for BuildVersions in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToCustomers(Customer customer)
+        public void AddToBuildVersions(BuildVersion buildVersion)
         {
-            base.AddObject("Customers", customer);
+            base.AddObject("BuildVersions", buildVersion);
         }
         /// <summary>
         /// There are no comments for CustomerAddresses in the schema.
@@ -356,12 +340,20 @@ namespace LightSwitchApplication.Implementation
             base.AddObject("CustomerAddresses", customerAddress);
         }
         /// <summary>
-        /// There are no comments for Products in the schema.
+        /// There are no comments for Customers in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToProducts(Product product)
+        public void AddToCustomers(Customer customer)
         {
-            base.AddObject("Products", product);
+            base.AddObject("Customers", customer);
+        }
+        /// <summary>
+        /// There are no comments for ErrorLogs in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToErrorLogs(ErrorLog errorLog)
+        {
+            base.AddObject("ErrorLogs", errorLog);
         }
         /// <summary>
         /// There are no comments for ProductCategories in the schema.
@@ -380,6 +372,14 @@ namespace LightSwitchApplication.Implementation
             base.AddObject("ProductDescriptions", productDescription);
         }
         /// <summary>
+        /// There are no comments for ProductModelProductDescriptions in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToProductModelProductDescriptions(ProductModelProductDescription productModelProductDescription)
+        {
+            base.AddObject("ProductModelProductDescriptions", productModelProductDescription);
+        }
+        /// <summary>
         /// There are no comments for ProductModels in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -388,12 +388,12 @@ namespace LightSwitchApplication.Implementation
             base.AddObject("ProductModels", productModel);
         }
         /// <summary>
-        /// There are no comments for ProductModelProductDescriptions in the schema.
+        /// There are no comments for Products in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToProductModelProductDescriptions(ProductModelProductDescription productModelProductDescription)
+        public void AddToProducts(Product product)
         {
-            base.AddObject("ProductModelProductDescriptions", productModelProductDescription);
+            base.AddObject("Products", product);
         }
         /// <summary>
         /// There are no comments for SalesOrderDetails in the schema.
@@ -446,155 +446,155 @@ namespace LightSwitchApplication.Implementation
                 "ices/metadata\" m:DataServiceVersion=\"1.0\" m:MaxDataServiceVersion=\"3.0\"><Schema " +
                 "xmlns:annotation=\"http://schemas.microsoft.com/ado/2009/02/edm/annotation\" Names" +
                 "pace=\"LightSwitchApplication\" Alias=\"Self\" xmlns=\"http://schemas.microsoft.com/a" +
-                "do/2008/09/edm\"><EntityType Name=\"BuildVersion\"><Key><PropertyRef Name=\"SystemIn" +
-                "formationID\" /><PropertyRef Name=\"Database_Version\" /><PropertyRef Name=\"Version" +
-                "Date\" /><PropertyRef Name=\"ModifiedDate\" /></Key><Property Name=\"SystemInformati" +
-                "onID\" Type=\"Edm.Byte\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identit" +
-                "y\" /><Property Name=\"Database_Version\" Type=\"Edm.String\" Nullable=\"false\" MaxLen" +
-                "gth=\"25\" /><Property Name=\"VersionDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Pre" +
-                "cision=\"3\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" " +
-                "Precision=\"3\" /></EntityType><EntityType Name=\"ErrorLog\"><Key><PropertyRef Name=" +
-                "\"ErrorLogID\" /></Key><Property Name=\"ErrorLogID\" Type=\"Edm.Int32\" Nullable=\"fals" +
-                "e\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"ErrorTime\" Type" +
-                "=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Proper" +
-                "ty Name=\"UserName\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"128\" Concurrenc" +
-                "yMode=\"Fixed\" /><Property Name=\"ErrorNumber\" Type=\"Edm.Int32\" Nullable=\"false\" C" +
-                "oncurrencyMode=\"Fixed\" /><Property Name=\"ErrorSeverity\" Type=\"Edm.Int32\" Concurr" +
-                "encyMode=\"Fixed\" /><Property Name=\"ErrorState\" Type=\"Edm.Int32\" ConcurrencyMode=" +
-                "\"Fixed\" /><Property Name=\"ErrorProcedure\" Type=\"Edm.String\" MaxLength=\"126\" Conc" +
-                "urrencyMode=\"Fixed\" /><Property Name=\"ErrorLine\" Type=\"Edm.Int32\" ConcurrencyMod" +
-                "e=\"Fixed\" /><Property Name=\"ErrorMessage\" Type=\"Edm.String\" Nullable=\"false\" Max" +
-                "Length=\"4000\" ConcurrencyMode=\"Fixed\" /></EntityType><EntityType Name=\"Address\">" +
-                "<Key><PropertyRef Name=\"AddressID\" /></Key><Property Name=\"AddressID\" Type=\"Edm." +
-                "Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property " +
-                "Name=\"AddressLine1\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"60\" Concurrenc" +
-                "yMode=\"Fixed\" /><Property Name=\"AddressLine2\" Type=\"Edm.String\" MaxLength=\"60\" C" +
-                "oncurrencyMode=\"Fixed\" /><Property Name=\"City\" Type=\"Edm.String\" Nullable=\"false" +
-                "\" MaxLength=\"30\" ConcurrencyMode=\"Fixed\" /><Property Name=\"StateProvince\" Type=\"" +
-                "Edm.String\" Nullable=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property " +
-                "Name=\"CountryRegion\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" Concurren" +
-                "cyMode=\"Fixed\" /><Property Name=\"PostalCode\" Type=\"Edm.String\" Nullable=\"false\" " +
-                "MaxLength=\"15\" ConcurrencyMode=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid" +
+                "do/2008/09/edm\"><EntityType Name=\"Address\"><Key><PropertyRef Name=\"AddressID\" />" +
+                "</Key><Property Name=\"AddressID\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:St" +
+                "oreGeneratedPattern=\"Identity\" /><Property Name=\"AddressLine1\" Type=\"Edm.String\"" +
+                " Nullable=\"false\" MaxLength=\"60\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Addre" +
+                "ssLine2\" Type=\"Edm.String\" MaxLength=\"60\" ConcurrencyMode=\"Fixed\" /><Property Na" +
+                "me=\"City\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" ConcurrencyMode=\"Fix" +
+                "ed\" /><Property Name=\"StateProvince\" Type=\"Edm.String\" Nullable=\"false\" MaxLengt" +
+                "h=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"CountryRegion\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Post" +
+                "alCode\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"15\" ConcurrencyMode=\"Fixed" +
+                "\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" ConcurrencyMode=\"F" +
+                "ixed\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Preci" +
+                "sion=\"3\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"CustomerAddresses\" " +
+                "Relationship=\"LightSwitchApplication.FK_CustomerAddress_Address_AddressID\" ToRol" +
+                "e=\"CustomerAddress\" FromRole=\"Address\" /><NavigationProperty Name=\"SalesOrderHea" +
+                "ders\" Relationship=\"LightSwitchApplication.FK_SalesOrderHeader_Address_BillTo_Ad" +
+                "dressID\" ToRole=\"SalesOrderHeader\" FromRole=\"Address\" /><NavigationProperty Name" +
+                "=\"SalesOrderHeaders1\" Relationship=\"LightSwitchApplication.FK_SalesOrderHeader_A" +
+                "ddress_ShipTo_AddressID\" ToRole=\"SalesOrderHeader\" FromRole=\"Address\" /></Entity" +
+                "Type><EntityType Name=\"BuildVersion\"><Key><PropertyRef Name=\"SystemInformationID" +
+                "\" /><PropertyRef Name=\"Database_Version\" /><PropertyRef Name=\"VersionDate\" /><Pr" +
+                "opertyRef Name=\"ModifiedDate\" /></Key><Property Name=\"SystemInformationID\" Type=" +
+                "\"Edm.Byte\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Prope" +
+                "rty Name=\"Database_Version\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"25\" />" +
+                "<Property Name=\"VersionDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" " +
+                "/><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"" +
+                "3\" /></EntityType><EntityType Name=\"CustomerAddress\"><Key><PropertyRef Name=\"Cus" +
+                "tomerID\" /><PropertyRef Name=\"AddressID\" /></Key><Property Name=\"CustomerID\" Typ" +
+                "e=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"AddressID\" Type=\"Edm.Int32\" Nul" +
+                "lable=\"false\" /><Property Name=\"AddressType\" Type=\"Edm.String\" Nullable=\"false\" " +
+                "MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid" +
                 "\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=" +
                 "\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Navigat" +
-                "ionProperty Name=\"CustomerAddresses\" Relationship=\"LightSwitchApplication.FK_Cus" +
-                "tomerAddress_Address_AddressID\" ToRole=\"CustomerAddress\" FromRole=\"Address\" /><N" +
-                "avigationProperty Name=\"SalesOrderHeaders\" Relationship=\"LightSwitchApplication." +
-                "FK_SalesOrderHeader_Address_BillTo_AddressID\" ToRole=\"SalesOrderHeader\" FromRole" +
-                "=\"Address\" /><NavigationProperty Name=\"SalesOrderHeaders1\" Relationship=\"LightSw" +
-                "itchApplication.FK_SalesOrderHeader_Address_ShipTo_AddressID\" ToRole=\"SalesOrder" +
-                "Header\" FromRole=\"Address\" /></EntityType><EntityType Name=\"Customer\"><Key><Prop" +
-                "ertyRef Name=\"CustomerID\" /></Key><Property Name=\"CustomerID\" Type=\"Edm.Int32\" N" +
-                "ullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Na" +
-                "meStyle\" Type=\"Edm.Boolean\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" /><Property" +
-                " Name=\"Title\" Type=\"Edm.String\" MaxLength=\"8\" ConcurrencyMode=\"Fixed\" /><Propert" +
-                "y Name=\"FirstName\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" Concurrency" +
-                "Mode=\"Fixed\" /><Property Name=\"MiddleName\" Type=\"Edm.String\" MaxLength=\"50\" Conc" +
-                "urrencyMode=\"Fixed\" /><Property Name=\"LastName\" Type=\"Edm.String\" Nullable=\"fals" +
-                "e\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Suffix\" Type=\"Edm.St" +
-                "ring\" MaxLength=\"10\" ConcurrencyMode=\"Fixed\" /><Property Name=\"CompanyName\" Type" +
-                "=\"Edm.String\" MaxLength=\"128\" ConcurrencyMode=\"Fixed\" /><Property Name=\"SalesPer" +
-                "son\" Type=\"Edm.String\" MaxLength=\"256\" ConcurrencyMode=\"Fixed\" /><Property Name=" +
-                "\"EmailAddress\" Type=\"Edm.String\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Prope" +
-                "rty Name=\"Phone\" Type=\"Edm.String\" MaxLength=\"25\" ConcurrencyMode=\"Fixed\" /><Pro" +
-                "perty Name=\"PasswordHash\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"128\" Uni" +
-                "code=\"false\" ConcurrencyMode=\"Fixed\" /><Property Name=\"PasswordSalt\" Type=\"Edm.S" +
-                "tring\" Nullable=\"false\" MaxLength=\"10\" Unicode=\"false\" ConcurrencyMode=\"Fixed\" /" +
-                "><Property Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" ConcurrencyMode=\"Fixe" +
-                "d\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Precisio" +
-                "n=\"3\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"CustomerAddresses\" Rel" +
-                "ationship=\"LightSwitchApplication.FK_CustomerAddress_Customer_CustomerID\" ToRole" +
-                "=\"CustomerAddress\" FromRole=\"Customer\" /><NavigationProperty Name=\"SalesOrderHea" +
-                "ders\" Relationship=\"LightSwitchApplication.FK_SalesOrderHeader_Customer_Customer" +
-                "ID\" ToRole=\"SalesOrderHeader\" FromRole=\"Customer\" /></EntityType><EntityType Nam" +
-                "e=\"CustomerAddress\"><Key><PropertyRef Name=\"CustomerID\" /><PropertyRef Name=\"Add" +
-                "ressID\" /></Key><Property Name=\"CustomerID\" Type=\"Edm.Int32\" Nullable=\"false\" />" +
-                "<Property Name=\"AddressID\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"A" +
-                "ddressType\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" ConcurrencyMode=\"F" +
-                "ixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" ConcurrencyMod" +
-                "e=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" P" +
-                "recision=\"3\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"Address\" Relati" +
-                "onship=\"LightSwitchApplication.FK_CustomerAddress_Address_AddressID\" ToRole=\"Add" +
-                "ress\" FromRole=\"CustomerAddress\" /><NavigationProperty Name=\"Customer\" Relations" +
-                "hip=\"LightSwitchApplication.FK_CustomerAddress_Customer_CustomerID\" ToRole=\"Cust" +
-                "omer\" FromRole=\"CustomerAddress\" /></EntityType><EntityType Name=\"Product\"><Key>" +
-                "<PropertyRef Name=\"ProductID\" /></Key><Property Name=\"ProductID\" Type=\"Edm.Int32" +
-                "\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=" +
-                "\"Name\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\"" +
-                " /><Property Name=\"ProductNumber\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"" +
-                "25\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Color\" Type=\"Edm.String\" MaxLength" +
-                "=\"15\" ConcurrencyMode=\"Fixed\" /><Property Name=\"StandardCost\" Type=\"Edm.Decimal\"" +
-                " Nullable=\"false\" Precision=\"19\" Scale=\"4\" ConcurrencyMode=\"Fixed\" /><Property N" +
-                "ame=\"ListPrice\" Type=\"Edm.Decimal\" Nullable=\"false\" Precision=\"19\" Scale=\"4\" Con" +
-                "currencyMode=\"Fixed\" /><Property Name=\"Size\" Type=\"Edm.String\" MaxLength=\"5\" Con" +
-                "currencyMode=\"Fixed\" /><Property Name=\"Weight\" Type=\"Edm.Decimal\" Precision=\"8\" " +
-                "Scale=\"2\" ConcurrencyMode=\"Fixed\" /><Property Name=\"SellStartDate\" Type=\"Edm.Dat" +
-                "eTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Property Name=\"" +
-                "SellEndDate\" Type=\"Edm.DateTime\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Proper" +
-                "ty Name=\"DiscontinuedDate\" Type=\"Edm.DateTime\" Precision=\"3\" ConcurrencyMode=\"Fi" +
-                "xed\" /><Property Name=\"ThumbNailPhoto\" Type=\"Edm.Binary\" MaxLength=\"Max\" /><Prop" +
-                "erty Name=\"ThumbnailPhotoFileName\" Type=\"Edm.String\" MaxLength=\"50\" ConcurrencyM" +
-                "ode=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\" Null";
+                "ionProperty Name=\"Address\" Relationship=\"LightSwitchApplication.FK_CustomerAddre" +
+                "ss_Address_AddressID\" ToRole=\"Address\" FromRole=\"CustomerAddress\" /><NavigationP" +
+                "roperty Name=\"Customer\" Relationship=\"LightSwitchApplication.FK_CustomerAddress_" +
+                "Customer_CustomerID\" ToRole=\"Customer\" FromRole=\"CustomerAddress\" /></EntityType" +
+                "><EntityType Name=\"Customer\"><Key><PropertyRef Name=\"CustomerID\" /></Key><Proper" +
+                "ty Name=\"CustomerID\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGenerated" +
+                "Pattern=\"Identity\" /><Property Name=\"NameStyle\" Type=\"Edm.Boolean\" Nullable=\"fal" +
+                "se\" ConcurrencyMode=\"Fixed\" /><Property Name=\"FirstName\" Type=\"Edm.String\" Nulla" +
+                "ble=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Title\" Type" +
+                "=\"Edm.String\" MaxLength=\"8\" ConcurrencyMode=\"Fixed\" /><Property Name=\"MiddleName" +
+                "\" Type=\"Edm.String\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Las" +
+                "tName\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\"" +
+                " /><Property Name=\"Suffix\" Type=\"Edm.String\" MaxLength=\"10\" ConcurrencyMode=\"Fix" +
+                "ed\" /><Property Name=\"CompanyName\" Type=\"Edm.String\" MaxLength=\"128\" Concurrency" +
+                "Mode=\"Fixed\" /><Property Name=\"SalesPerson\" Type=\"Edm.String\" MaxLength=\"256\" Co" +
+                "ncurrencyMode=\"Fixed\" /><Property Name=\"EmailAddress\" Type=\"Edm.String\" MaxLengt" +
+                "h=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Phone\" Type=\"Edm.String\" MaxLen" +
+                "gth=\"25\" ConcurrencyMode=\"Fixed\" /><Property Name=\"PasswordHash\" Type=\"Edm.Strin" +
+                "g\" Nullable=\"false\" MaxLength=\"128\" Unicode=\"false\" ConcurrencyMode=\"Fixed\" /><P" +
+                "roperty Name=\"PasswordSalt\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"10\" Un" +
+                "icode=\"false\" ConcurrencyMode=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\"" +
+                " Nullable=\"false\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=\"" +
+                "Edm.DateTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Navigati" +
+                "onProperty Name=\"CustomerAddresses\" Relationship=\"LightSwitchApplication.FK_Cust" +
+                "omerAddress_Customer_CustomerID\" ToRole=\"CustomerAddress\" FromRole=\"Customer\" />" +
+                "<NavigationProperty Name=\"SalesOrderHeaders\" Relationship=\"LightSwitchApplicatio" +
+                "n.FK_SalesOrderHeader_Customer_CustomerID\" ToRole=\"SalesOrderHeader\" FromRole=\"C" +
+                "ustomer\" /></EntityType><EntityType Name=\"ErrorLog\"><Key><PropertyRef Name=\"Erro" +
+                "rLogID\" /></Key><Property Name=\"ErrorLogID\" Type=\"Edm.Int32\" Nullable=\"false\" an" +
+                "notation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"ErrorTime\" Type=\"Edm" +
+                ".DateTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Property Na" +
+                "me=\"UserName\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"128\" ConcurrencyMode" +
+                "=\"Fixed\" /><Property Name=\"ErrorNumber\" Type=\"Edm.Int32\" Nullable=\"false\" Concur" +
+                "rencyMode=\"Fixed\" /><Property Name=\"ErrorSeverity\" Type=\"Edm.Int32\" ConcurrencyM" +
+                "ode=\"Fixed\" /><Property Name=\"ErrorState\" Type=\"Edm.Int32\" ConcurrencyMode=\"Fixe" +
+                "d\" /><Property Name=\"ErrorProcedure\" Type=\"Edm.String\" MaxLength=\"126\" Concurren" +
+                "cyMode=\"Fixed\" /><Property Name=\"ErrorLine\" Type=\"Edm.Int32\" ConcurrencyMode=\"Fi" +
+                "xed\" /><Property Name=\"ErrorMessage\" Type=\"Edm.String\" Nullable=\"false\" MaxLengt" +
+                "h=\"4000\" ConcurrencyMode=\"Fixed\" /></EntityType><EntityType Name=\"ProductCategor" +
+                "y\"><Key><PropertyRef Name=\"ProductCategoryID\" /></Key><Property Name=\"ProductCat" +
+                "egoryID\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Ide" +
+                "ntity\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\"" +
+                " ConcurrencyMode=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"fa" +
+                "lse\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\"" +
+                " Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Parent" +
+                "ProductCategoryID\" Type=\"Edm.Int32\" ConcurrencyMode=\"Fixed\" /><NavigationPropert" +
+                "y Name=\"Products\" Relationship=\"LightSwitchApplication.FK_Product_ProductCategor" +
+                "y_ProductCategoryID\" ToRole=\"Product\" FromRole=\"ProductCategory\" /><NavigationPr" +
+                "operty Name=\"ProductCategories\" Relationship=\"LightSwitchApplication.FK_ProductC" +
+                "ategory_ProductCategory_ParentProductCategoryID_Produ\" ToRole=\"ProductCategory1\"" +
+                " FromRole=\"ProductCategory\" /><NavigationProperty Name=\"ProductCategory1\" Relati" +
+                "onship=\"LightSwitchApplication.FK_ProductCategory_ProductCategory_ParentProductC" +
+                "ategoryID_Produ\" ToRole=\"ProductCategory\" FromRole=\"ProductCategory1\" /></Entity" +
+                "Type><EntityType Name=\"ProductDescription\"><Key><PropertyRef Name=\"ProductDescri" +
+                "ptionID\" /></Key><Property Name=\"ProductDescriptionID\" Type=\"Edm.Int32\" Nullable" +
+                "=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Pro";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart1 = "able=\"false\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=\"Edm.Da" +
-                "teTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Property Name=" +
-                "\"ProductCategoryID\" Type=\"Edm.Int32\" ConcurrencyMode=\"Fixed\" /><Property Name=\"P" +
-                "roductModelID\" Type=\"Edm.Int32\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Na" +
-                "me=\"ProductCategory\" Relationship=\"LightSwitchApplication.FK_Product_ProductCate" +
-                "gory_ProductCategoryID\" ToRole=\"ProductCategory\" FromRole=\"Product\" /><Navigatio" +
-                "nProperty Name=\"ProductModel\" Relationship=\"LightSwitchApplication.FK_Product_Pr" +
-                "oductModel_ProductModelID\" ToRole=\"ProductModel\" FromRole=\"Product\" /><Navigatio" +
-                "nProperty Name=\"SalesOrderDetails\" Relationship=\"LightSwitchApplication.FK_Sales" +
-                "OrderDetail_Product_ProductID\" ToRole=\"SalesOrderDetail\" FromRole=\"Product\" /></" +
-                "EntityType><EntityType Name=\"ProductCategory\"><Key><PropertyRef Name=\"ProductCat" +
-                "egoryID\" /></Key><Property Name=\"ProductCategoryID\" Type=\"Edm.Int32\" Nullable=\"f" +
-                "alse\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Name\" Type=\"" +
-                "Edm.String\" Nullable=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property " +
-                "Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" /><Prope" +
-                "rty Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" Concu" +
-                "rrencyMode=\"Fixed\" /><Property Name=\"ParentProductCategoryID\" Type=\"Edm.Int32\" C" +
-                "oncurrencyMode=\"Fixed\" /><NavigationProperty Name=\"Products\" Relationship=\"Light" +
-                "SwitchApplication.FK_Product_ProductCategory_ProductCategoryID\" ToRole=\"Product\"" +
-                " FromRole=\"ProductCategory\" /><NavigationProperty Name=\"ProductCategories\" Relat" +
-                "ionship=\"LightSwitchApplication.FK_ProductCategory_ProductCategory_ParentProduct" +
-                "CategoryID_Produ\" ToRole=\"ProductCategory1\" FromRole=\"ProductCategory\" /><Naviga" +
-                "tionProperty Name=\"ProductCategory1\" Relationship=\"LightSwitchApplication.FK_Pro" +
-                "ductCategory_ProductCategory_ParentProductCategoryID_Produ\" ToRole=\"ProductCateg" +
-                "ory\" FromRole=\"ProductCategory1\" /></EntityType><EntityType Name=\"ProductDescrip" +
-                "tion\"><Key><PropertyRef Name=\"ProductDescriptionID\" /></Key><Property Name=\"Prod" +
-                "uctDescriptionID\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPat" +
-                "tern=\"Identity\" /><Property Name=\"Description\" Type=\"Edm.String\" Nullable=\"false" +
-                "\" MaxLength=\"400\" ConcurrencyMode=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.G" +
-                "uid\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Ty" +
-                "pe=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Navi" +
-                "gationProperty Name=\"ProductModelProductDescriptions\" Relationship=\"LightSwitchA" +
-                "pplication.FK_ProductModelProductDescription_ProductDescription_ProductDesc\" ToR" +
-                "ole=\"ProductModelProductDescription\" FromRole=\"ProductDescription\" /></EntityTyp" +
-                "e><EntityType Name=\"ProductModel\"><Key><PropertyRef Name=\"ProductModelID\" /></Ke" +
-                "y><Property Name=\"ProductModelID\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:S" +
-                "toreGeneratedPattern=\"Identity\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullab" +
-                "le=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" /><Property Name=\"CatalogDescr" +
-                "iption\" Type=\"Edm.String\" MaxLength=\"Max\" /><Property Name=\"rowguid\" Type=\"Edm.G" +
-                "uid\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Ty" +
-                "pe=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Navi" +
-                "gationProperty Name=\"Products\" Relationship=\"LightSwitchApplication.FK_Product_P" +
-                "roductModel_ProductModelID\" ToRole=\"Product\" FromRole=\"ProductModel\" /><Navigati" +
-                "onProperty Name=\"ProductModelProductDescriptions\" Relationship=\"LightSwitchAppli" +
-                "cation.FK_ProductModelProductDescription_ProductModel_ProductModelID\" ToRole=\"Pr" +
-                "oductModelProductDescription\" FromRole=\"ProductModel\" /></EntityType><EntityType" +
-                " Name=\"ProductModelProductDescription\"><Key><PropertyRef Name=\"ProductModelID\" /" +
-                "><PropertyRef Name=\"ProductDescriptionID\" /><PropertyRef Name=\"Culture\" /></Key>" +
-                "<Property Name=\"ProductModelID\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Na" +
-                "me=\"ProductDescriptionID\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Cu" +
-                "lture\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"6\" FixedLength=\"true\" /><Pr" +
-                "operty Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" /" +
-                "><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3" +
-                "\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"ProductDescription\" Relati" +
-                "onship=\"LightSwitchApplication.FK_ProductModelProductDescription_ProductDescript" +
-                "ion_ProductDesc\" ToRole=\"ProductDescription\" FromRole=\"ProductModelProductDescri" +
-                "ption\" /><NavigationProperty Name=\"ProductModel\" Relationship=\"LightSwitchApplic" +
-                "ation.FK_ProductModelProductDescription_ProductModel_ProductModelID\" ToRole=\"Pro" +
-                "ductModel\" FromRole=\"ProductModelProductDescription\" /></EntityType><EntityType " +
+            private const string ModelPart1 = "perty Name=\"Description\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"400\" Concu" +
+                "rrencyMode=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" C" +
+                "oncurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nulla" +
+                "ble=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"Pr" +
+                "oductModelProductDescriptions\" Relationship=\"LightSwitchApplication.FK_ProductMo" +
+                "delProductDescription_ProductDescription_ProductDesc\" ToRole=\"ProductModelProduc" +
+                "tDescription\" FromRole=\"ProductDescription\" /></EntityType><EntityType Name=\"Pro" +
+                "ductModelProductDescription\"><Key><PropertyRef Name=\"ProductModelID\" /><Property" +
+                "Ref Name=\"ProductDescriptionID\" /><PropertyRef Name=\"Culture\" /></Key><Property " +
+                "Name=\"ProductModelID\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Produc" +
+                "tDescriptionID\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Culture\" Typ" +
+                "e=\"Edm.String\" Nullable=\"false\" MaxLength=\"6\" FixedLength=\"true\" /><Property Nam" +
+                "e=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" /><Property" +
+                " Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" Concurre" +
+                "ncyMode=\"Fixed\" /><NavigationProperty Name=\"ProductDescription\" Relationship=\"Li" +
+                "ghtSwitchApplication.FK_ProductModelProductDescription_ProductDescription_Produc" +
+                "tDesc\" ToRole=\"ProductDescription\" FromRole=\"ProductModelProductDescription\" /><" +
+                "NavigationProperty Name=\"ProductModel\" Relationship=\"LightSwitchApplication.FK_P" +
+                "roductModelProductDescription_ProductModel_ProductModelID\" ToRole=\"ProductModel\"" +
+                " FromRole=\"ProductModelProductDescription\" /></EntityType><EntityType Name=\"Prod" +
+                "uctModel\"><Key><PropertyRef Name=\"ProductModelID\" /></Key><Property Name=\"Produc" +
+                "tModelID\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Id" +
+                "entity\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50" +
+                "\" ConcurrencyMode=\"Fixed\" /><Property Name=\"CatalogDescription\" Type=\"Edm.String" +
+                "\" MaxLength=\"Max\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" Co" +
+                "ncurrencyMode=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullab" +
+                "le=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"Pro" +
+                "ducts\" Relationship=\"LightSwitchApplication.FK_Product_ProductModel_ProductModel" +
+                "ID\" ToRole=\"Product\" FromRole=\"ProductModel\" /><NavigationProperty Name=\"Product" +
+                "ModelProductDescriptions\" Relationship=\"LightSwitchApplication.FK_ProductModelPr" +
+                "oductDescription_ProductModel_ProductModelID\" ToRole=\"ProductModelProductDescrip" +
+                "tion\" FromRole=\"ProductModel\" /></EntityType><EntityType Name=\"Product\"><Key><Pr" +
+                "opertyRef Name=\"ProductID\" /></Key><Property Name=\"ProductID\" Type=\"Edm.Int32\" N" +
+                "ullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Na" +
+                "me\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" ConcurrencyMode=\"Fixed\" />" +
+                "<Property Name=\"ProductNumber\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"25\"" +
+                " ConcurrencyMode=\"Fixed\" /><Property Name=\"Color\" Type=\"Edm.String\" MaxLength=\"1" +
+                "5\" ConcurrencyMode=\"Fixed\" /><Property Name=\"StandardCost\" Type=\"Edm.Decimal\" Nu" +
+                "llable=\"false\" Precision=\"19\" Scale=\"4\" ConcurrencyMode=\"Fixed\" /><Property Name" +
+                "=\"ListPrice\" Type=\"Edm.Decimal\" Nullable=\"false\" Precision=\"19\" Scale=\"4\" Concur" +
+                "rencyMode=\"Fixed\" /><Property Name=\"Size\" Type=\"Edm.String\" MaxLength=\"5\" Concur" +
+                "rencyMode=\"Fixed\" /><Property Name=\"Weight\" Type=\"Edm.Decimal\" Precision=\"8\" Sca" +
+                "le=\"2\" ConcurrencyMode=\"Fixed\" /><Property Name=\"SellStartDate\" Type=\"Edm.DateTi" +
+                "me\" Nullable=\"false\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Property Name=\"Sel" +
+                "lEndDate\" Type=\"Edm.DateTime\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Property " +
+                "Name=\"DiscontinuedDate\" Type=\"Edm.DateTime\" Precision=\"3\" ConcurrencyMode=\"Fixed" +
+                "\" /><Property Name=\"ThumbNailPhoto\" Type=\"Edm.Binary\" MaxLength=\"Max\" /><Propert" +
+                "y Name=\"ThumbnailPhotoFileName\" Type=\"Edm.String\" MaxLength=\"50\" ConcurrencyMode" +
+                "=\"Fixed\" /><Property Name=\"rowguid\" Type=\"Edm.Guid\" Nullable=\"false\" Concurrency" +
+                "Mode=\"Fixed\" /><Property Name=\"ModifiedDate\" Type=\"Edm.DateTime\" Nullable=\"false" +
+                "\" Precision=\"3\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ProductCategoryID\" Typ" +
+                "e=\"Edm.Int32\" ConcurrencyMode=\"Fixed\" /><Property Name=\"ProductModelID\" Type=\"Ed" +
+                "m.Int32\" ConcurrencyMode=\"Fixed\" /><NavigationProperty Name=\"ProductCategory\" Re" +
+                "lationship=\"LightSwitchApplication.FK_Product_ProductCategory_ProductCategoryID\"" +
+                " ToRole=\"ProductCategory\" FromRole=\"Product\" /><NavigationProperty Name=\"Product" +
+                "Model\" Relationship=\"LightSwitchApplication.FK_Product_ProductModel_ProductModel" +
+                "ID\" ToRole=\"ProductModel\" FromRole=\"Product\" /><NavigationProperty Name=\"SalesOr" +
+                "derDetails\" Relationship=\"LightSwitchApplication.FK_SalesOrderDetail_Product_Pro" +
+                "ductID\" ToRole=\"SalesOrderDetail\" FromRole=\"Product\" /></EntityType><EntityType " +
                 "Name=\"SalesOrderDetail\"><Key><PropertyRef Name=\"SalesOrderID\" /><PropertyRef Nam" +
                 "e=\"SalesOrderDetailID\" /></Key><Property Name=\"SalesOrderID\" Type=\"Edm.Int32\" Nu" +
                 "llable=\"false\" /><Property Name=\"SalesOrderDetailID\" Type=\"Edm.Int32\" Nullable=\"" +
@@ -699,86 +699,86 @@ namespace LightSwitchApplication.Implementation
                 "htSwitchApplication.CustomerAddress\" Multiplicity=\"*\" /><ReferentialConstraint><" +
                 "Principal Role=\"Address\"><PropertyRef Name=\"AddressID\" /></Principal><Dependent " +
                 "Role=\"CustomerAddress\"><PropertyRef Name=\"AddressID\" /></Dependent></Referential" +
-                "Constraint></Association><Association Name=\"FK_CustomerAddress_Customer_Customer" +
-                "ID\"><End Role=\"Customer\" Type=\"LightSwitchApplication.Customer\" Multiplicity=\"1\"" +
-                " /><End Role=\"CustomerAddress\" Type=\"LightSwitchApplication.CustomerAddress\" Mul" +
-                "tiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Customer\"><PropertyRef N" +
-                "ame=\"CustomerID\" /></Principal><Dependent Role=\"CustomerAddress\"><PropertyRef Na" +
-                "me=\"CustomerID\" /></Dependent></ReferentialConstraint></Association><Association" +
-                " Name=\"FK_Product_ProductCategory_ProductCategoryID\"><End Role=\"ProductCategory\"" +
-                " Type=\"LightSwitchApplication.ProductCategory\" Multiplicity=\"0..1\" /><End Role=\"" +
-                "Product\" Type=\"LightSwitchApplication.Product\" Multiplicity=\"*\" /><ReferentialCo" +
-                "nstraint><Principal Role=\"ProductCategory\"><PropertyRef Name=\"ProductCategoryID\"" +
-                " /></Principal><Dependent Role=\"Product\"><PropertyRef Name=\"ProductCategoryID\" /" +
-                "></Dependent></ReferentialConstraint></Association><Association Name=\"FK_Product" +
-                "_ProductModel_ProductModelID\"><End Role=\"ProductModel\" Type=\"LightSwitchApplicat" +
-                "ion.ProductModel\" Multiplicity=\"0..1\" /><End Role=\"Product\" Type=\"LightSwitchApp" +
-                "lication.Product\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Pro" +
-                "ductModel\"><PropertyRef Name=\"ProductModelID\" /></Principal><Dependent Role=\"Pro" +
-                "duct\"><PropertyRef Name=\"ProductModelID\" /></Dependent></ReferentialConstraint><" +
-                "/Association><Association Name=\"FK_ProductCategory_ProductCategory_ParentProduct" +
-                "CategoryID_Produ\"><End Role=\"ProductCategory\" Type=\"LightSwitchApplication.Produ" +
-                "ctCategory\" Multiplicity=\"0..1\" /><End Role=\"ProductCategory1\" Type=\"LightSwitch" +
-                "Application.ProductCategory\" Multiplicity=\"*\" /><ReferentialConstraint><Principa" +
-                "l Role=\"ProductCategory\"><PropertyRef Name=\"ProductCategoryID\" /></Principal><De" +
-                "pendent Role=\"ProductCategory1\"><PropertyRef Name=\"ParentProductCategoryID\" /></" +
-                "Dependent></ReferentialConstraint></Association><Association Name=\"FK_ProductMod" +
-                "elProductDescription_ProductDescription_ProductDesc\"><End Role=\"ProductDescripti" +
-                "on\" Type=\"LightSwitchApplication.ProductDescription\" Multip";
+                "Constraint></Association><Association Name=\"FK_SalesOrderHeader_Address_BillTo_A" +
+                "ddressID\"><End Role=\"Address\" Type=\"LightSwitchApplication.Address\" Multiplicity" +
+                "=\"0..1\" /><End Role=\"SalesOrderHeader\" Type=\"LightSwitchApplication.SalesOrderHe" +
+                "ader\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Address\"><Prope" +
+                "rtyRef Name=\"AddressID\" /></Principal><Dependent Role=\"SalesOrderHeader\"><Proper" +
+                "tyRef Name=\"BillToAddressID\" /></Dependent></ReferentialConstraint></Association" +
+                "><Association Name=\"FK_SalesOrderHeader_Address_ShipTo_AddressID\"><End Role=\"Add" +
+                "ress\" Type=\"LightSwitchApplication.Address\" Multiplicity=\"0..1\" /><End Role=\"Sal" +
+                "esOrderHeader\" Type=\"LightSwitchApplication.SalesOrderHeader\" Multiplicity=\"*\" /" +
+                "><ReferentialConstraint><Principal Role=\"Address\"><PropertyRef Name=\"AddressID\" " +
+                "/></Principal><Dependent Role=\"SalesOrderHeader\"><PropertyRef Name=\"ShipToAddres" +
+                "sID\" /></Dependent></ReferentialConstraint></Association><Association Name=\"FK_C" +
+                "ustomerAddress_Customer_CustomerID\"><End Role=\"Customer\" Type=\"LightSwitchApplic" +
+                "ation.Customer\" Multiplicity=\"1\" /><End Role=\"CustomerAddress\" Type=\"LightSwitch" +
+                "Application.CustomerAddress\" Multiplicity=\"*\" /><ReferentialConstraint><Principa" +
+                "l Role=\"Customer\"><PropertyRef Name=\"CustomerID\" /></Principal><Dependent Role=\"" +
+                "CustomerAddress\"><PropertyRef Name=\"CustomerID\" /></Dependent></ReferentialConst" +
+                "raint></Association><Association Name=\"FK_SalesOrderHeader_Customer_CustomerID\">" +
+                "<End Role=\"Customer\" Type=\"LightSwitchApplication.Customer\" Multiplicity=\"1\" /><" +
+                "End Role=\"SalesOrderHeader\" Type=\"LightSwitchApplication.SalesOrderHeader\" Multi" +
+                "plicity=\"*\" /><ReferentialConstraint><Principal Role=\"Customer\"><PropertyRef Nam" +
+                "e=\"CustomerID\" /></Principal><Dependent Role=\"SalesOrderHeader\"><PropertyRef Nam" +
+                "e=\"CustomerID\" /></Dependent></ReferentialConstraint></Association><Association " +
+                "Name=\"FK_Product_ProductCategory_ProductCategoryID\"><End Role=\"ProductCategory\" " +
+                "Type=\"LightSwitchApplication.ProductCategory\" Multiplicity=\"0..1\" /><End Role=\"P" +
+                "roduct\" Type=\"LightSwitchApplication.Product\" Multiplicity=";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart3 = "licity=\"1\" /><End Role=\"ProductModelProductDescription\" Type=\"LightSwitchApplicat" +
-                "ion.ProductModelProductDescription\" Multiplicity=\"*\" /><ReferentialConstraint><P" +
-                "rincipal Role=\"ProductDescription\"><PropertyRef Name=\"ProductDescriptionID\" /></" +
-                "Principal><Dependent Role=\"ProductModelProductDescription\"><PropertyRef Name=\"Pr" +
-                "oductDescriptionID\" /></Dependent></ReferentialConstraint></Association><Associa" +
-                "tion Name=\"FK_ProductModelProductDescription_ProductModel_ProductModelID\"><End R" +
-                "ole=\"ProductModel\" Type=\"LightSwitchApplication.ProductModel\" Multiplicity=\"1\" /" +
-                "><End Role=\"ProductModelProductDescription\" Type=\"LightSwitchApplication.Product" +
-                "ModelProductDescription\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Ro" +
-                "le=\"ProductModel\"><PropertyRef Name=\"ProductModelID\" /></Principal><Dependent Ro" +
-                "le=\"ProductModelProductDescription\"><PropertyRef Name=\"ProductModelID\" /></Depen" +
-                "dent></ReferentialConstraint></Association><Association Name=\"FK_SalesOrderDetai" +
-                "l_Product_ProductID\"><End Role=\"Product\" Type=\"LightSwitchApplication.Product\" M" +
-                "ultiplicity=\"1\" /><End Role=\"SalesOrderDetail\" Type=\"LightSwitchApplication.Sale" +
-                "sOrderDetail\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Product" +
-                "\"><PropertyRef Name=\"ProductID\" /></Principal><Dependent Role=\"SalesOrderDetail\"" +
-                "><PropertyRef Name=\"ProductID\" /></Dependent></ReferentialConstraint></Associati" +
-                "on><Association Name=\"FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID\"><End Ro" +
-                "le=\"SalesOrderHeader\" Type=\"LightSwitchApplication.SalesOrderHeader\" Multiplicit" +
-                "y=\"1\"><OnDelete Action=\"Cascade\" /></End><End Role=\"SalesOrderDetail\" Type=\"Ligh" +
-                "tSwitchApplication.SalesOrderDetail\" Multiplicity=\"*\" /><ReferentialConstraint><" +
-                "Principal Role=\"SalesOrderHeader\"><PropertyRef Name=\"SalesOrderID\" /></Principal" +
-                "><Dependent Role=\"SalesOrderDetail\"><PropertyRef Name=\"SalesOrderID\" /></Depende" +
-                "nt></ReferentialConstraint></Association><Association Name=\"FK_SalesOrderHeader_" +
-                "Address_BillTo_AddressID\"><End Role=\"Address\" Type=\"LightSwitchApplication.Addre" +
-                "ss\" Multiplicity=\"0..1\" /><End Role=\"SalesOrderHeader\" Type=\"LightSwitchApplicat" +
-                "ion.SalesOrderHeader\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=" +
-                "\"Address\"><PropertyRef Name=\"AddressID\" /></Principal><Dependent Role=\"SalesOrde" +
-                "rHeader\"><PropertyRef Name=\"BillToAddressID\" /></Dependent></ReferentialConstrai" +
-                "nt></Association><Association Name=\"FK_SalesOrderHeader_Address_ShipTo_AddressID" +
-                "\"><End Role=\"Address\" Type=\"LightSwitchApplication.Address\" Multiplicity=\"0..1\" " +
-                "/><End Role=\"SalesOrderHeader\" Type=\"LightSwitchApplication.SalesOrderHeader\" Mu" +
-                "ltiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Address\"><PropertyRef N" +
-                "ame=\"AddressID\" /></Principal><Dependent Role=\"SalesOrderHeader\"><PropertyRef Na" +
-                "me=\"ShipToAddressID\" /></Dependent></ReferentialConstraint></Association><Associ" +
-                "ation Name=\"FK_SalesOrderHeader_Customer_CustomerID\"><End Role=\"Customer\" Type=\"" +
-                "LightSwitchApplication.Customer\" Multiplicity=\"1\" /><End Role=\"SalesOrderHeader\"" +
-                " Type=\"LightSwitchApplication.SalesOrderHeader\" Multiplicity=\"*\" /><ReferentialC" +
-                "onstraint><Principal Role=\"Customer\"><PropertyRef Name=\"CustomerID\" /></Principa" +
-                "l><Dependent Role=\"SalesOrderHeader\"><PropertyRef Name=\"CustomerID\" /></Dependen" +
+            private const string ModelPart3 = "\"*\" /><ReferentialConstraint><Principal Role=\"ProductCategory\"><PropertyRef Name=" +
+                "\"ProductCategoryID\" /></Principal><Dependent Role=\"Product\"><PropertyRef Name=\"P" +
+                "roductCategoryID\" /></Dependent></ReferentialConstraint></Association><Associati" +
+                "on Name=\"FK_ProductCategory_ProductCategory_ParentProductCategoryID_Produ\"><End " +
+                "Role=\"ProductCategory\" Type=\"LightSwitchApplication.ProductCategory\" Multiplicit" +
+                "y=\"0..1\" /><End Role=\"ProductCategory1\" Type=\"LightSwitchApplication.ProductCate" +
+                "gory\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"ProductCategory" +
+                "\"><PropertyRef Name=\"ProductCategoryID\" /></Principal><Dependent Role=\"ProductCa" +
+                "tegory1\"><PropertyRef Name=\"ParentProductCategoryID\" /></Dependent></Referential" +
+                "Constraint></Association><Association Name=\"FK_ProductModelProductDescription_Pr" +
+                "oductDescription_ProductDesc\"><End Role=\"ProductDescription\" Type=\"LightSwitchAp" +
+                "plication.ProductDescription\" Multiplicity=\"1\" /><End Role=\"ProductModelProductD" +
+                "escription\" Type=\"LightSwitchApplication.ProductModelProductDescription\" Multipl" +
+                "icity=\"*\" /><ReferentialConstraint><Principal Role=\"ProductDescription\"><Propert" +
+                "yRef Name=\"ProductDescriptionID\" /></Principal><Dependent Role=\"ProductModelProd" +
+                "uctDescription\"><PropertyRef Name=\"ProductDescriptionID\" /></Dependent></Referen" +
+                "tialConstraint></Association><Association Name=\"FK_Product_ProductModel_ProductM" +
+                "odelID\"><End Role=\"ProductModel\" Type=\"LightSwitchApplication.ProductModel\" Mult" +
+                "iplicity=\"0..1\" /><End Role=\"Product\" Type=\"LightSwitchApplication.Product\" Mult" +
+                "iplicity=\"*\" /><ReferentialConstraint><Principal Role=\"ProductModel\"><PropertyRe" +
+                "f Name=\"ProductModelID\" /></Principal><Dependent Role=\"Product\"><PropertyRef Nam" +
+                "e=\"ProductModelID\" /></Dependent></ReferentialConstraint></Association><Associat" +
+                "ion Name=\"FK_ProductModelProductDescription_ProductModel_ProductModelID\"><End Ro" +
+                "le=\"ProductModel\" Type=\"LightSwitchApplication.ProductModel\" Multiplicity=\"1\" />" +
+                "<End Role=\"ProductModelProductDescription\" Type=\"LightSwitchApplication.ProductM" +
+                "odelProductDescription\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Rol" +
+                "e=\"ProductModel\"><PropertyRef Name=\"ProductModelID\" /></Principal><Dependent Rol" +
+                "e=\"ProductModelProductDescription\"><PropertyRef Name=\"ProductModelID\" /></Depend" +
+                "ent></ReferentialConstraint></Association><Association Name=\"FK_SalesOrderDetail" +
+                "_Product_ProductID\"><End Role=\"Product\" Type=\"LightSwitchApplication.Product\" Mu" +
+                "ltiplicity=\"1\" /><End Role=\"SalesOrderDetail\" Type=\"LightSwitchApplication.Sales" +
+                "OrderDetail\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Product\"" +
+                "><PropertyRef Name=\"ProductID\" /></Principal><Dependent Role=\"SalesOrderDetail\">" +
+                "<PropertyRef Name=\"ProductID\" /></Dependent></ReferentialConstraint></Associatio" +
+                "n><Association Name=\"FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID\"><End Rol" +
+                "e=\"SalesOrderHeader\" Type=\"LightSwitchApplication.SalesOrderHeader\" Multiplicity" +
+                "=\"1\"><OnDelete Action=\"Cascade\" /></End><End Role=\"SalesOrderDetail\" Type=\"Light" +
+                "SwitchApplication.SalesOrderDetail\" Multiplicity=\"*\" /><ReferentialConstraint><P" +
+                "rincipal Role=\"SalesOrderHeader\"><PropertyRef Name=\"SalesOrderID\" /></Principal>" +
+                "<Dependent Role=\"SalesOrderDetail\"><PropertyRef Name=\"SalesOrderID\" /></Dependen" +
                 "t></ReferentialConstraint></Association><EntityContainer Name=\"AdventureWorksLT2" +
-                "017Data\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"BuildVersions\" Entit" +
-                "yType=\"LightSwitchApplication.BuildVersion\" /><EntitySet Name=\"ErrorLogs\" Entity" +
-                "Type=\"LightSwitchApplication.ErrorLog\" /><EntitySet Name=\"Addresses\" EntityType=" +
-                "\"LightSwitchApplication.Address\" /><EntitySet Name=\"Customers\" EntityType=\"Light" +
-                "SwitchApplication.Customer\" /><EntitySet Name=\"CustomerAddresses\" EntityType=\"Li" +
-                "ghtSwitchApplication.CustomerAddress\" /><EntitySet Name=\"Products\" EntityType=\"L" +
-                "ightSwitchApplication.Product\" /><EntitySet Name=\"ProductCategories\" EntityType=" +
-                "\"LightSwitchApplication.ProductCategory\" /><EntitySet Name=\"ProductDescriptions\"" +
-                " EntityType=\"LightSwitchApplication.ProductDescription\" /><EntitySet Name=\"Produ" +
-                "ctModels\" EntityType=\"LightSwitchApplication.ProductModel\" /><EntitySet Name=\"Pr" +
-                "oductModelProductDescriptions\" EntityType=\"LightSwitchApplication.ProductModelPr" +
-                "oductDescription\" /><EntitySet Name=\"SalesOrderDetails\" EntityType=\"LightSwitchA" +
+                "017Data\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Addresses\" EntityTyp" +
+                "e=\"LightSwitchApplication.Address\" /><EntitySet Name=\"BuildVersions\" EntityType=" +
+                "\"LightSwitchApplication.BuildVersion\" /><EntitySet Name=\"CustomerAddresses\" Enti" +
+                "tyType=\"LightSwitchApplication.CustomerAddress\" /><EntitySet Name=\"Customers\" En" +
+                "tityType=\"LightSwitchApplication.Customer\" /><EntitySet Name=\"ErrorLogs\" EntityT" +
+                "ype=\"LightSwitchApplication.ErrorLog\" /><EntitySet Name=\"ProductCategories\" Enti" +
+                "tyType=\"LightSwitchApplication.ProductCategory\" /><EntitySet Name=\"ProductDescri" +
+                "ptions\" EntityType=\"LightSwitchApplication.ProductDescription\" /><EntitySet Name" +
+                "=\"ProductModelProductDescriptions\" EntityType=\"LightSwitchApplication.ProductMod" +
+                "elProductDescription\" /><EntitySet Name=\"ProductModels\" EntityType=\"LightSwitchA" +
+                "pplication.ProductModel\" /><EntitySet Name=\"Products\" EntityType=\"LightSwitchApp" +
+                "lication.Product\" /><EntitySet Name=\"SalesOrderDetails\" EntityType=\"LightSwitchA" +
                 "pplication.SalesOrderDetail\" /><EntitySet Name=\"SalesOrderHeaders\" EntityType=\"L" +
                 "ightSwitchApplication.SalesOrderHeader\" /><EntitySet Name=\"vGetAllCategories\" En" +
                 "tityType=\"LightSwitchApplication.vGetAllCategory\" /><EntitySet Name=\"vProductAnd" +
@@ -787,41 +787,41 @@ namespace LightSwitchApplication.Implementation
                 ".vProductModelCatalogDescription\" /><AssociationSet Name=\"FK_CustomerAddress_Add" +
                 "ress_AddressID\" Association=\"LightSwitchApplication.FK_CustomerAddress_Address_A" +
                 "ddressID\"><End Role=\"Address\" EntitySet=\"Addresses\" /><End Role=\"CustomerAddress" +
-                "\" EntitySet=\"CustomerAddresses\" /></AssociationSet><AssociationSet Name=\"FK_Cust" +
-                "omerAddress_Customer_CustomerID\" Association=\"LightSwitchApplication.FK_Customer" +
-                "Address_Customer_CustomerID\"><End Role=\"Customer\" EntitySet=\"Customers\" /><End R" +
-                "ole=\"CustomerAddress\" EntitySet=\"CustomerAddresses\" /></AssociationSet><Associat" +
-                "ionSet Name=\"FK_Product_ProductCategory_ProductCategoryID\" Association=\"LightSwi" +
-                "tchApplication.FK_Product_ProductCategory_ProductCategoryID\"><End Role=\"ProductC" +
-                "ategory\" EntitySet=\"ProductCategories\" /><End Role=\"Product\" EntitySet=\"Products" +
-                "\" /></AssociationSet><AssociationSet Name=\"FK_Product_ProductModel_ProductModelI" +
-                "D\" Association=\"LightSwitchApplication.FK_Product_ProductModel_ProductModelID\"><" +
-                "End Role=\"ProductModel\" EntitySet=\"ProductModels\" /><End Role=\"Product\" EntitySe" +
-                "t=\"Products\" /></AssociationSet><AssociationSet Name=\"FK_ProductCategory_Product" +
-                "Category_ParentProductCategoryID_Produ\" Association=\"LightSwitchApplication.FK_P" +
-                "roductCategory_ProductCategory_ParentProductCategoryID_Produ\"><End Role=\"Product" +
-                "Category\" EntitySet=\"ProductCategories\" /><End Role=\"ProductCategory1\" EntitySet" +
-                "=\"ProductCategories\" /></AssociationSet><AssociationSet Name=\"FK_ProductModelPro" +
-                "ductDescription_ProductDescription_ProductDesc\" Association=\"LightSwitchApplicat" +
-                "ion.FK_ProductModelProductDescription_ProductDescription_ProductDesc\"><End Role=" +
-                "\"ProductDescription\" EntitySet=\"ProductDescriptions\" /><End Role=\"ProductModelPr" +
-                "oductDescription\" EntitySet=\"ProductModelProductDescriptions\" /></AssociationSet" +
-                "><AssociationSet Name=\"FK_ProductModelProductDescription_ProductModel_ProductMod" +
-                "elID\" Association=\"LightSwitchApplication.FK_ProductModelProductDescription_Prod" +
-                "uctModel_ProductModelID\"><End Role=\"ProductModel\" EntitySet=\"ProductModels\" /><E" +
-                "nd Role=\"ProductModelProductDescription\" EntitySet=\"ProductModelProductDescripti" +
-                "ons\" /></AssociationSet><AssociationSet Name=\"FK_SalesOrderDetail_Product_Produc" +
-                "tID\" Association=\"LightSwitchApplication.FK_SalesOrderDetail_Product_ProductID\">" +
-                "<End Role=\"Product\" EntitySet=\"Products\" /><End Role=\"SalesOrderDetail\" EntitySe" +
-                "t=\"SalesOrderDetails\" /></AssociationSet><AssociationSet Name=\"FK_SalesOrderDeta" +
-                "il_SalesOrderHeader_SalesOrderID\" Association=\"LightSwitchApplication.FK_SalesOr" +
-                "derDetail_SalesOrderHeader_SalesOrderID\"><End Role=\"SalesOrderHeader\" EntitySet=" +
-                "\"SalesOrderHeaders\" /><End Role=\"SalesOrderDetail\" EntitySet=\"SalesOrderDetails\"" +
-                " /></AssociationSet><AssociationSet Name=\"FK_SalesOrderHeader_Address_BillTo_Add" +
-                "ressID\" Association=\"LightSwitchApplication.FK_SalesOrderHeader_Address_BillTo_A" +
-                "ddressID\"><End Role=\"Address\" EntitySet=\"Addresses\" /><End ";
+                "\" EntitySet=\"CustomerAddresses\" /></AssociationSet><AssociationSet Name=\"FK_Sale" +
+                "sOrderHeader_Address_BillTo_AddressID\" Association=\"LightSwitchApplication.FK_Sa" +
+                "lesOrderHeader_Address_BillTo_AddressID\"><End Role=\"Address\" EntitySet=\"Addresse" +
+                "s\" /><End Role=\"SalesOrderHeader\" EntitySet=\"SalesOrderHeaders\" /></AssociationS" +
+                "et><AssociationSet Name=\"FK_SalesOrderHeader_Address_ShipTo_AddressID\" Associati" +
+                "on=\"LightSwitchApplication.FK_SalesOrderHeader_Address_ShipTo_AddressID\"><End Ro" +
+                "le=\"Address\" EntitySet=\"Addresses\" /><End Role=\"SalesOrderHeader\" EntitySet=\"Sal" +
+                "esOrderHeaders\" /></AssociationSet><AssociationSet Name=\"FK_CustomerAddress_Cust" +
+                "omer_CustomerID\" Association=\"LightSwitchApplication.FK_CustomerAddress_Customer" +
+                "_CustomerID\"><End Role=\"Customer\" EntitySet=\"Customers\" /><End Role=\"CustomerAdd" +
+                "ress\" EntitySet=\"CustomerAddresses\" /></AssociationSet><AssociationSet Name=\"FK_" +
+                "SalesOrderHeader_Customer_CustomerID\" Association=\"LightSwitchApplication.FK_Sal" +
+                "esOrderHeader_Customer_CustomerID\"><End Role=\"Customer\" EntitySet=\"Customers\" />" +
+                "<End Role=\"SalesOrderHeader\" EntitySet=\"SalesOrderHeaders\" /></AssociationSet><A" +
+                "ssociationSet Name=\"FK_Product_ProductCategory_ProductCategoryID\" Association=\"L" +
+                "ightSwitchApplication.FK_Product_ProductCategory_ProductCategoryID\"><End Role=\"P" +
+                "roductCategory\" EntitySet=\"ProductCategories\" /><End Role=\"Product\" EntitySet=\"P" +
+                "roducts\" /></AssociationSet><AssociationSet Name=\"FK_ProductCategory_ProductCate" +
+                "gory_ParentProductCategoryID_Produ\" Association=\"LightSwitchApplication.FK_Produ" +
+                "ctCategory_ProductCategory_ParentProductCategoryID_Produ\"><End Role=\"ProductCate" +
+                "gory\" EntitySet=\"ProductCategories\" /><End Role=\"ProductCategory1\" EntitySet=\"Pr" +
+                "oductCategories\" /></AssociationSet><AssociationSet Name=\"FK_ProductModelProduct" +
+                "Description_ProductDescription_ProductDesc\" Association=\"LightSwitchApplication." +
+                "FK_ProductModelProductDescription_ProductDescription_ProductDesc\"><End Role=\"Pro" +
+                "ductDescription\" EntitySet=\"ProductDescriptions\" /><End Role=\"ProductModelProduc" +
+                "tDescription\" EntitySet=\"ProductModelProductDescriptions\" /></AssociationSet><As" +
+                "sociationSet Name=\"FK_Product_ProductModel_ProductModelID\" Association=\"LightSwi" +
+                "tchApplication.FK_Product_ProductModel_ProductModelID\"><End Role=\"ProductModel\" " +
+                "EntitySet=\"ProductModels\" /><End Role=\"Product\" EntitySet=\"Products\" /></Associa" +
+                "tionSet><AssociationSet Name=\"FK_ProductModelProductDescription_ProductModel_Pro" +
+                "ductModelID\" Association=\"LightSwitchApplication.FK_ProductModelProductDescripti" +
+                "on_ProductModel_ProductModelID\"><End Role=\"ProductModel\" EntitySet=\"ProductModel" +
+                "s\" /><End Role=\"ProductModelProductDescription\" EntitySet=\"";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart4 = @"Role=""SalesOrderHeader"" EntitySet=""SalesOrderHeaders"" /></AssociationSet><AssociationSet Name=""FK_SalesOrderHeader_Address_ShipTo_AddressID"" Association=""LightSwitchApplication.FK_SalesOrderHeader_Address_ShipTo_AddressID""><End Role=""Address"" EntitySet=""Addresses"" /><End Role=""SalesOrderHeader"" EntitySet=""SalesOrderHeaders"" /></AssociationSet><AssociationSet Name=""FK_SalesOrderHeader_Customer_CustomerID"" Association=""LightSwitchApplication.FK_SalesOrderHeader_Customer_CustomerID""><End Role=""Customer"" EntitySet=""Customers"" /><End Role=""SalesOrderHeader"" EntitySet=""SalesOrderHeaders"" /></AssociationSet><FunctionImport Name=""Microsoft_LightSwitch_GetCanInformation"" ReturnType=""Edm.String"" m:HttpMethod=""GET""><Parameter Name=""dataServiceMembers"" Type=""Edm.String"" Mode=""In"" /></FunctionImport></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+            private const string ModelPart4 = @"ProductModelProductDescriptions"" /></AssociationSet><AssociationSet Name=""FK_SalesOrderDetail_Product_ProductID"" Association=""LightSwitchApplication.FK_SalesOrderDetail_Product_ProductID""><End Role=""Product"" EntitySet=""Products"" /><End Role=""SalesOrderDetail"" EntitySet=""SalesOrderDetails"" /></AssociationSet><AssociationSet Name=""FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID"" Association=""LightSwitchApplication.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID""><End Role=""SalesOrderHeader"" EntitySet=""SalesOrderHeaders"" /><End Role=""SalesOrderDetail"" EntitySet=""SalesOrderDetails"" /></AssociationSet><FunctionImport Name=""Microsoft_LightSwitch_GetCanInformation"" ReturnType=""Edm.String"" m:HttpMethod=""GET""><Parameter Name=""dataServiceMembers"" Type=""Edm.String"" Mode=""In"" /></FunctionImport></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -850,425 +850,6 @@ namespace LightSwitchApplication.Implementation
             private static global::System.Xml.XmlReader CreateXmlReader(string edmxToParse)
             {
                 return global::System.Xml.XmlReader.Create(new global::System.IO.StringReader(edmxToParse));
-            }
-        }
-    }
-    /// <summary>
-    /// There are no comments for LightSwitchApplication.BuildVersion in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// SystemInformationID
-    /// Database_Version
-    /// VersionDate
-    /// ModifiedDate
-    /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("BuildVersions")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("SystemInformationID", "Database_Version", "VersionDate", "ModifiedDate")]
-    public partial class BuildVersion : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Create a new BuildVersion object.
-        /// </summary>
-        /// <param name="systemInformationID">Initial value of SystemInformationID.</param>
-        /// <param name="database_Version">Initial value of Database_Version.</param>
-        /// <param name="versionDate">Initial value of VersionDate.</param>
-        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static BuildVersion CreateBuildVersion(byte systemInformationID, string database_Version, global::System.DateTime versionDate, global::System.DateTime modifiedDate)
-        {
-            BuildVersion buildVersion = new BuildVersion();
-            buildVersion.SystemInformationID = systemInformationID;
-            buildVersion.Database_Version = database_Version;
-            buildVersion.VersionDate = versionDate;
-            buildVersion.ModifiedDate = modifiedDate;
-            return buildVersion;
-        }
-        /// <summary>
-        /// There are no comments for Property SystemInformationID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public byte SystemInformationID
-        {
-            get
-            {
-                return this._SystemInformationID;
-            }
-            set
-            {
-                this.OnSystemInformationIDChanging(value);
-                if (object.Equals(this.SystemInformationID, value))
-                {
-                    return;
-                }
-                this._SystemInformationID = value;
-                this.OnSystemInformationIDChanged();
-                this.OnPropertyChanged("SystemInformationID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private byte _SystemInformationID;
-        partial void OnSystemInformationIDChanging(byte value);
-        partial void OnSystemInformationIDChanged();
-        /// <summary>
-        /// There are no comments for Property Database_Version in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Database_Version
-        {
-            get
-            {
-                return this._Database_Version;
-            }
-            set
-            {
-                this.OnDatabase_VersionChanging(value);
-                if (object.Equals(this.Database_Version, value))
-                {
-                    return;
-                }
-                this._Database_Version = value;
-                this.OnDatabase_VersionChanged();
-                this.OnPropertyChanged("Database_Version");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Database_Version;
-        partial void OnDatabase_VersionChanging(string value);
-        partial void OnDatabase_VersionChanged();
-        /// <summary>
-        /// There are no comments for Property VersionDate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime VersionDate
-        {
-            get
-            {
-                return this._VersionDate;
-            }
-            set
-            {
-                this.OnVersionDateChanging(value);
-                if (object.Equals(this.VersionDate, value))
-                {
-                    return;
-                }
-                this._VersionDate = value;
-                this.OnVersionDateChanged();
-                this.OnPropertyChanged("VersionDate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _VersionDate;
-        partial void OnVersionDateChanging(global::System.DateTime value);
-        partial void OnVersionDateChanged();
-        /// <summary>
-        /// There are no comments for Property ModifiedDate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime ModifiedDate
-        {
-            get
-            {
-                return this._ModifiedDate;
-            }
-            set
-            {
-                this.OnModifiedDateChanging(value);
-                if (object.Equals(this.ModifiedDate, value))
-                {
-                    return;
-                }
-                this._ModifiedDate = value;
-                this.OnModifiedDateChanged();
-                this.OnPropertyChanged("ModifiedDate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _ModifiedDate;
-        partial void OnModifiedDateChanging(global::System.DateTime value);
-        partial void OnModifiedDateChanged();
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        protected virtual void OnPropertyChanged(string property)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
-            }
-        }
-    }
-    /// <summary>
-    /// There are no comments for LightSwitchApplication.ErrorLog in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// ErrorLogID
-    /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("ErrorLogs")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("ErrorLogID")]
-    public partial class ErrorLog : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Create a new ErrorLog object.
-        /// </summary>
-        /// <param name="errorLogID">Initial value of ErrorLogID.</param>
-        /// <param name="errorTime">Initial value of ErrorTime.</param>
-        /// <param name="userName">Initial value of UserName.</param>
-        /// <param name="errorNumber">Initial value of ErrorNumber.</param>
-        /// <param name="errorMessage">Initial value of ErrorMessage.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static ErrorLog CreateErrorLog(int errorLogID, global::System.DateTime errorTime, string userName, int errorNumber, string errorMessage)
-        {
-            ErrorLog errorLog = new ErrorLog();
-            errorLog.ErrorLogID = errorLogID;
-            errorLog.ErrorTime = errorTime;
-            errorLog.UserName = userName;
-            errorLog.ErrorNumber = errorNumber;
-            errorLog.ErrorMessage = errorMessage;
-            return errorLog;
-        }
-        /// <summary>
-        /// There are no comments for Property ErrorLogID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ErrorLogID
-        {
-            get
-            {
-                return this._ErrorLogID;
-            }
-            set
-            {
-                this.OnErrorLogIDChanging(value);
-                if (object.Equals(this.ErrorLogID, value))
-                {
-                    return;
-                }
-                this._ErrorLogID = value;
-                this.OnErrorLogIDChanged();
-                this.OnPropertyChanged("ErrorLogID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ErrorLogID;
-        partial void OnErrorLogIDChanging(int value);
-        partial void OnErrorLogIDChanged();
-        /// <summary>
-        /// There are no comments for Property ErrorTime in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime ErrorTime
-        {
-            get
-            {
-                return this._ErrorTime;
-            }
-            set
-            {
-                this.OnErrorTimeChanging(value);
-                if (object.Equals(this.ErrorTime, value))
-                {
-                    return;
-                }
-                this._ErrorTime = value;
-                this.OnErrorTimeChanged();
-                this.OnPropertyChanged("ErrorTime");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _ErrorTime;
-        partial void OnErrorTimeChanging(global::System.DateTime value);
-        partial void OnErrorTimeChanged();
-        /// <summary>
-        /// There are no comments for Property UserName in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string UserName
-        {
-            get
-            {
-                return this._UserName;
-            }
-            set
-            {
-                this.OnUserNameChanging(value);
-                if (object.Equals(this.UserName, value))
-                {
-                    return;
-                }
-                this._UserName = value;
-                this.OnUserNameChanged();
-                this.OnPropertyChanged("UserName");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _UserName;
-        partial void OnUserNameChanging(string value);
-        partial void OnUserNameChanged();
-        /// <summary>
-        /// There are no comments for Property ErrorNumber in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ErrorNumber
-        {
-            get
-            {
-                return this._ErrorNumber;
-            }
-            set
-            {
-                this.OnErrorNumberChanging(value);
-                if (object.Equals(this.ErrorNumber, value))
-                {
-                    return;
-                }
-                this._ErrorNumber = value;
-                this.OnErrorNumberChanged();
-                this.OnPropertyChanged("ErrorNumber");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ErrorNumber;
-        partial void OnErrorNumberChanging(int value);
-        partial void OnErrorNumberChanged();
-        /// <summary>
-        /// There are no comments for Property ErrorSeverity in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> ErrorSeverity
-        {
-            get
-            {
-                return this._ErrorSeverity;
-            }
-            set
-            {
-                this.OnErrorSeverityChanging(value);
-                if (object.Equals(this.ErrorSeverity, value))
-                {
-                    return;
-                }
-                this._ErrorSeverity = value;
-                this.OnErrorSeverityChanged();
-                this.OnPropertyChanged("ErrorSeverity");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _ErrorSeverity;
-        partial void OnErrorSeverityChanging(global::System.Nullable<int> value);
-        partial void OnErrorSeverityChanged();
-        /// <summary>
-        /// There are no comments for Property ErrorState in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> ErrorState
-        {
-            get
-            {
-                return this._ErrorState;
-            }
-            set
-            {
-                this.OnErrorStateChanging(value);
-                if (object.Equals(this.ErrorState, value))
-                {
-                    return;
-                }
-                this._ErrorState = value;
-                this.OnErrorStateChanged();
-                this.OnPropertyChanged("ErrorState");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _ErrorState;
-        partial void OnErrorStateChanging(global::System.Nullable<int> value);
-        partial void OnErrorStateChanged();
-        /// <summary>
-        /// There are no comments for Property ErrorProcedure in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string ErrorProcedure
-        {
-            get
-            {
-                return this._ErrorProcedure;
-            }
-            set
-            {
-                this.OnErrorProcedureChanging(value);
-                if (object.Equals(this.ErrorProcedure, value))
-                {
-                    return;
-                }
-                this._ErrorProcedure = value;
-                this.OnErrorProcedureChanged();
-                this.OnPropertyChanged("ErrorProcedure");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _ErrorProcedure;
-        partial void OnErrorProcedureChanging(string value);
-        partial void OnErrorProcedureChanged();
-        /// <summary>
-        /// There are no comments for Property ErrorLine in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> ErrorLine
-        {
-            get
-            {
-                return this._ErrorLine;
-            }
-            set
-            {
-                this.OnErrorLineChanging(value);
-                if (object.Equals(this.ErrorLine, value))
-                {
-                    return;
-                }
-                this._ErrorLine = value;
-                this.OnErrorLineChanged();
-                this.OnPropertyChanged("ErrorLine");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _ErrorLine;
-        partial void OnErrorLineChanging(global::System.Nullable<int> value);
-        partial void OnErrorLineChanged();
-        /// <summary>
-        /// There are no comments for Property ErrorMessage in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string ErrorMessage
-        {
-            get
-            {
-                return this._ErrorMessage;
-            }
-            set
-            {
-                this.OnErrorMessageChanging(value);
-                if (object.Equals(this.ErrorMessage, value))
-                {
-                    return;
-                }
-                this._ErrorMessage = value;
-                this.OnErrorMessageChanged();
-                this.OnPropertyChanged("ErrorMessage");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _ErrorMessage;
-        partial void OnErrorMessageChanging(string value);
-        partial void OnErrorMessageChanged();
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        protected virtual void OnPropertyChanged(string property)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
             }
         }
     }
@@ -1610,6 +1191,416 @@ namespace LightSwitchApplication.Implementation
         }
     }
     /// <summary>
+    /// There are no comments for LightSwitchApplication.BuildVersion in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// SystemInformationID
+    /// Database_Version
+    /// VersionDate
+    /// ModifiedDate
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("BuildVersions")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("SystemInformationID", "Database_Version", "VersionDate", "ModifiedDate")]
+    public partial class BuildVersion : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new BuildVersion object.
+        /// </summary>
+        /// <param name="systemInformationID">Initial value of SystemInformationID.</param>
+        /// <param name="database_Version">Initial value of Database_Version.</param>
+        /// <param name="versionDate">Initial value of VersionDate.</param>
+        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static BuildVersion CreateBuildVersion(byte systemInformationID, string database_Version, global::System.DateTime versionDate, global::System.DateTime modifiedDate)
+        {
+            BuildVersion buildVersion = new BuildVersion();
+            buildVersion.SystemInformationID = systemInformationID;
+            buildVersion.Database_Version = database_Version;
+            buildVersion.VersionDate = versionDate;
+            buildVersion.ModifiedDate = modifiedDate;
+            return buildVersion;
+        }
+        /// <summary>
+        /// There are no comments for Property SystemInformationID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte SystemInformationID
+        {
+            get
+            {
+                return this._SystemInformationID;
+            }
+            set
+            {
+                this.OnSystemInformationIDChanging(value);
+                if (object.Equals(this.SystemInformationID, value))
+                {
+                    return;
+                }
+                this._SystemInformationID = value;
+                this.OnSystemInformationIDChanged();
+                this.OnPropertyChanged("SystemInformationID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte _SystemInformationID;
+        partial void OnSystemInformationIDChanging(byte value);
+        partial void OnSystemInformationIDChanged();
+        /// <summary>
+        /// There are no comments for Property Database_Version in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Database_Version
+        {
+            get
+            {
+                return this._Database_Version;
+            }
+            set
+            {
+                this.OnDatabase_VersionChanging(value);
+                if (object.Equals(this.Database_Version, value))
+                {
+                    return;
+                }
+                this._Database_Version = value;
+                this.OnDatabase_VersionChanged();
+                this.OnPropertyChanged("Database_Version");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Database_Version;
+        partial void OnDatabase_VersionChanging(string value);
+        partial void OnDatabase_VersionChanged();
+        /// <summary>
+        /// There are no comments for Property VersionDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime VersionDate
+        {
+            get
+            {
+                return this._VersionDate;
+            }
+            set
+            {
+                this.OnVersionDateChanging(value);
+                if (object.Equals(this.VersionDate, value))
+                {
+                    return;
+                }
+                this._VersionDate = value;
+                this.OnVersionDateChanged();
+                this.OnPropertyChanged("VersionDate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _VersionDate;
+        partial void OnVersionDateChanging(global::System.DateTime value);
+        partial void OnVersionDateChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return this._ModifiedDate;
+            }
+            set
+            {
+                this.OnModifiedDateChanging(value);
+                if (object.Equals(this.ModifiedDate, value))
+                {
+                    return;
+                }
+                this._ModifiedDate = value;
+                this.OnModifiedDateChanged();
+                this.OnPropertyChanged("ModifiedDate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for LightSwitchApplication.CustomerAddress in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// CustomerID
+    /// AddressID
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("CustomerAddresses")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("CustomerID", "AddressID")]
+    public partial class CustomerAddress : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new CustomerAddress object.
+        /// </summary>
+        /// <param name="customerID">Initial value of CustomerID.</param>
+        /// <param name="addressID">Initial value of AddressID.</param>
+        /// <param name="addressType">Initial value of AddressType.</param>
+        /// <param name="rowguid">Initial value of rowguid.</param>
+        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static CustomerAddress CreateCustomerAddress(int customerID, int addressID, string addressType, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        {
+            CustomerAddress customerAddress = new CustomerAddress();
+            customerAddress.CustomerID = customerID;
+            customerAddress.AddressID = addressID;
+            customerAddress.AddressType = addressType;
+            customerAddress.rowguid = rowguid;
+            customerAddress.ModifiedDate = modifiedDate;
+            return customerAddress;
+        }
+        /// <summary>
+        /// There are no comments for Property CustomerID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int CustomerID
+        {
+            get
+            {
+                return this._CustomerID;
+            }
+            set
+            {
+                this.OnCustomerIDChanging(value);
+                if (object.Equals(this.CustomerID, value))
+                {
+                    return;
+                }
+                this._CustomerID = value;
+                this.OnCustomerIDChanged();
+                this.OnPropertyChanged("CustomerID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _CustomerID;
+        partial void OnCustomerIDChanging(int value);
+        partial void OnCustomerIDChanged();
+        /// <summary>
+        /// There are no comments for Property AddressID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int AddressID
+        {
+            get
+            {
+                return this._AddressID;
+            }
+            set
+            {
+                this.OnAddressIDChanging(value);
+                if (object.Equals(this.AddressID, value))
+                {
+                    return;
+                }
+                this._AddressID = value;
+                this.OnAddressIDChanged();
+                this.OnPropertyChanged("AddressID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _AddressID;
+        partial void OnAddressIDChanging(int value);
+        partial void OnAddressIDChanged();
+        /// <summary>
+        /// There are no comments for Property AddressType in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string AddressType
+        {
+            get
+            {
+                return this._AddressType;
+            }
+            set
+            {
+                this.OnAddressTypeChanging(value);
+                if (object.Equals(this.AddressType, value))
+                {
+                    return;
+                }
+                this._AddressType = value;
+                this.OnAddressTypeChanged();
+                this.OnPropertyChanged("AddressType");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _AddressType;
+        partial void OnAddressTypeChanging(string value);
+        partial void OnAddressTypeChanged();
+        /// <summary>
+        /// There are no comments for Property rowguid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Guid rowguid
+        {
+            get
+            {
+                return this._rowguid;
+            }
+            set
+            {
+                this.OnrowguidChanging(value);
+                if (object.Equals(this.rowguid, value))
+                {
+                    return;
+                }
+                this._rowguid = value;
+                this.OnrowguidChanged();
+                this.OnPropertyChanged("rowguid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Guid _rowguid;
+        partial void OnrowguidChanging(global::System.Guid value);
+        partial void OnrowguidChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return this._ModifiedDate;
+            }
+            set
+            {
+                this.OnModifiedDateChanging(value);
+                if (object.Equals(this.ModifiedDate, value))
+                {
+                    return;
+                }
+                this._ModifiedDate = value;
+                this.OnModifiedDateChanged();
+                this.OnPropertyChanged("ModifiedDate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+        /// <summary>
+        /// There are no comments for Address in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Address Address
+        {
+            get
+            {
+                this.@__Address.EnsureValueInitialized();
+                return this._Address;
+            }
+            set
+            {
+                Address previous = this.Address;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._Address = null;
+                    this.@__Address.OnValueSet();
+                    previous.CustomerAddresses.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.AddressID = value.AddressID;
+                    }
+                    else
+                    {
+                        this.AddressID = default(int);
+                    }
+                }
+                this._Address = value;
+                this.@__Address.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__CustomerAddresses.Add(this);
+                }
+                this.___OnPropertyChanged("Address");
+                this.OnPropertyChanged("Address");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Address _Address;
+        /// <summary>
+        /// There are no comments for Customer in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Customer Customer
+        {
+            get
+            {
+                this.@__Customer.EnsureValueInitialized();
+                return this._Customer;
+            }
+            set
+            {
+                Customer previous = this.Customer;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._Customer = null;
+                    this.@__Customer.OnValueSet();
+                    previous.CustomerAddresses.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.CustomerID = value.CustomerID;
+                    }
+                    else
+                    {
+                        this.CustomerID = default(int);
+                    }
+                }
+                this._Customer = value;
+                this.@__Customer.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__CustomerAddresses.Add(this);
+                }
+                this.___OnPropertyChanged("Customer");
+                this.OnPropertyChanged("Customer");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Customer _Customer;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
     /// There are no comments for LightSwitchApplication.Customer in the schema.
     /// </summary>
     /// <KeyProperties>
@@ -1697,32 +1688,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnNameStyleChanging(bool value);
         partial void OnNameStyleChanged();
         /// <summary>
-        /// There are no comments for Property Title in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Title
-        {
-            get
-            {
-                return this._Title;
-            }
-            set
-            {
-                this.OnTitleChanging(value);
-                if (object.Equals(this.Title, value))
-                {
-                    return;
-                }
-                this._Title = value;
-                this.OnTitleChanged();
-                this.OnPropertyChanged("Title");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Title;
-        partial void OnTitleChanging(string value);
-        partial void OnTitleChanged();
-        /// <summary>
         /// There are no comments for Property FirstName in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1748,6 +1713,32 @@ namespace LightSwitchApplication.Implementation
         private string _FirstName;
         partial void OnFirstNameChanging(string value);
         partial void OnFirstNameChanged();
+        /// <summary>
+        /// There are no comments for Property Title in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Title
+        {
+            get
+            {
+                return this._Title;
+            }
+            set
+            {
+                this.OnTitleChanging(value);
+                if (object.Equals(this.Title, value))
+                {
+                    return;
+                }
+                this._Title = value;
+                this.OnTitleChanged();
+                this.OnPropertyChanged("Title");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Title;
+        partial void OnTitleChanging(string value);
+        partial void OnTitleChanged();
         /// <summary>
         /// There are no comments for Property MiddleName in the schema.
         /// </summary>
@@ -2084,113 +2075,358 @@ namespace LightSwitchApplication.Implementation
         }
     }
     /// <summary>
-    /// There are no comments for LightSwitchApplication.CustomerAddress in the schema.
+    /// There are no comments for LightSwitchApplication.ErrorLog in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// CustomerID
-    /// AddressID
+    /// ErrorLogID
     /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("CustomerAddresses")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("CustomerID", "AddressID")]
-    public partial class CustomerAddress : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    [global::System.Data.Services.Common.EntitySetAttribute("ErrorLogs")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ErrorLogID")]
+    public partial class ErrorLog : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
-        /// Create a new CustomerAddress object.
+        /// Create a new ErrorLog object.
         /// </summary>
-        /// <param name="customerID">Initial value of CustomerID.</param>
-        /// <param name="addressID">Initial value of AddressID.</param>
-        /// <param name="addressType">Initial value of AddressType.</param>
+        /// <param name="errorLogID">Initial value of ErrorLogID.</param>
+        /// <param name="errorTime">Initial value of ErrorTime.</param>
+        /// <param name="userName">Initial value of UserName.</param>
+        /// <param name="errorNumber">Initial value of ErrorNumber.</param>
+        /// <param name="errorMessage">Initial value of ErrorMessage.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static ErrorLog CreateErrorLog(int errorLogID, global::System.DateTime errorTime, string userName, int errorNumber, string errorMessage)
+        {
+            ErrorLog errorLog = new ErrorLog();
+            errorLog.ErrorLogID = errorLogID;
+            errorLog.ErrorTime = errorTime;
+            errorLog.UserName = userName;
+            errorLog.ErrorNumber = errorNumber;
+            errorLog.ErrorMessage = errorMessage;
+            return errorLog;
+        }
+        /// <summary>
+        /// There are no comments for Property ErrorLogID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ErrorLogID
+        {
+            get
+            {
+                return this._ErrorLogID;
+            }
+            set
+            {
+                this.OnErrorLogIDChanging(value);
+                if (object.Equals(this.ErrorLogID, value))
+                {
+                    return;
+                }
+                this._ErrorLogID = value;
+                this.OnErrorLogIDChanged();
+                this.OnPropertyChanged("ErrorLogID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ErrorLogID;
+        partial void OnErrorLogIDChanging(int value);
+        partial void OnErrorLogIDChanged();
+        /// <summary>
+        /// There are no comments for Property ErrorTime in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime ErrorTime
+        {
+            get
+            {
+                return this._ErrorTime;
+            }
+            set
+            {
+                this.OnErrorTimeChanging(value);
+                if (object.Equals(this.ErrorTime, value))
+                {
+                    return;
+                }
+                this._ErrorTime = value;
+                this.OnErrorTimeChanged();
+                this.OnPropertyChanged("ErrorTime");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _ErrorTime;
+        partial void OnErrorTimeChanging(global::System.DateTime value);
+        partial void OnErrorTimeChanged();
+        /// <summary>
+        /// There are no comments for Property UserName in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string UserName
+        {
+            get
+            {
+                return this._UserName;
+            }
+            set
+            {
+                this.OnUserNameChanging(value);
+                if (object.Equals(this.UserName, value))
+                {
+                    return;
+                }
+                this._UserName = value;
+                this.OnUserNameChanged();
+                this.OnPropertyChanged("UserName");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _UserName;
+        partial void OnUserNameChanging(string value);
+        partial void OnUserNameChanged();
+        /// <summary>
+        /// There are no comments for Property ErrorNumber in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ErrorNumber
+        {
+            get
+            {
+                return this._ErrorNumber;
+            }
+            set
+            {
+                this.OnErrorNumberChanging(value);
+                if (object.Equals(this.ErrorNumber, value))
+                {
+                    return;
+                }
+                this._ErrorNumber = value;
+                this.OnErrorNumberChanged();
+                this.OnPropertyChanged("ErrorNumber");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ErrorNumber;
+        partial void OnErrorNumberChanging(int value);
+        partial void OnErrorNumberChanged();
+        /// <summary>
+        /// There are no comments for Property ErrorSeverity in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> ErrorSeverity
+        {
+            get
+            {
+                return this._ErrorSeverity;
+            }
+            set
+            {
+                this.OnErrorSeverityChanging(value);
+                if (object.Equals(this.ErrorSeverity, value))
+                {
+                    return;
+                }
+                this._ErrorSeverity = value;
+                this.OnErrorSeverityChanged();
+                this.OnPropertyChanged("ErrorSeverity");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _ErrorSeverity;
+        partial void OnErrorSeverityChanging(global::System.Nullable<int> value);
+        partial void OnErrorSeverityChanged();
+        /// <summary>
+        /// There are no comments for Property ErrorState in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> ErrorState
+        {
+            get
+            {
+                return this._ErrorState;
+            }
+            set
+            {
+                this.OnErrorStateChanging(value);
+                if (object.Equals(this.ErrorState, value))
+                {
+                    return;
+                }
+                this._ErrorState = value;
+                this.OnErrorStateChanged();
+                this.OnPropertyChanged("ErrorState");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _ErrorState;
+        partial void OnErrorStateChanging(global::System.Nullable<int> value);
+        partial void OnErrorStateChanged();
+        /// <summary>
+        /// There are no comments for Property ErrorProcedure in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ErrorProcedure
+        {
+            get
+            {
+                return this._ErrorProcedure;
+            }
+            set
+            {
+                this.OnErrorProcedureChanging(value);
+                if (object.Equals(this.ErrorProcedure, value))
+                {
+                    return;
+                }
+                this._ErrorProcedure = value;
+                this.OnErrorProcedureChanged();
+                this.OnPropertyChanged("ErrorProcedure");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ErrorProcedure;
+        partial void OnErrorProcedureChanging(string value);
+        partial void OnErrorProcedureChanged();
+        /// <summary>
+        /// There are no comments for Property ErrorLine in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> ErrorLine
+        {
+            get
+            {
+                return this._ErrorLine;
+            }
+            set
+            {
+                this.OnErrorLineChanging(value);
+                if (object.Equals(this.ErrorLine, value))
+                {
+                    return;
+                }
+                this._ErrorLine = value;
+                this.OnErrorLineChanged();
+                this.OnPropertyChanged("ErrorLine");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _ErrorLine;
+        partial void OnErrorLineChanging(global::System.Nullable<int> value);
+        partial void OnErrorLineChanged();
+        /// <summary>
+        /// There are no comments for Property ErrorMessage in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ErrorMessage
+        {
+            get
+            {
+                return this._ErrorMessage;
+            }
+            set
+            {
+                this.OnErrorMessageChanging(value);
+                if (object.Equals(this.ErrorMessage, value))
+                {
+                    return;
+                }
+                this._ErrorMessage = value;
+                this.OnErrorMessageChanged();
+                this.OnPropertyChanged("ErrorMessage");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ErrorMessage;
+        partial void OnErrorMessageChanging(string value);
+        partial void OnErrorMessageChanged();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for LightSwitchApplication.ProductCategory in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// ProductCategoryID
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("ProductCategories")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductCategoryID")]
+    public partial class ProductCategory : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new ProductCategory object.
+        /// </summary>
+        /// <param name="productCategoryID">Initial value of ProductCategoryID.</param>
+        /// <param name="name">Initial value of Name.</param>
         /// <param name="rowguid">Initial value of rowguid.</param>
         /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static CustomerAddress CreateCustomerAddress(int customerID, int addressID, string addressType, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        public static ProductCategory CreateProductCategory(int productCategoryID, string name, global::System.Guid rowguid, global::System.DateTime modifiedDate)
         {
-            CustomerAddress customerAddress = new CustomerAddress();
-            customerAddress.CustomerID = customerID;
-            customerAddress.AddressID = addressID;
-            customerAddress.AddressType = addressType;
-            customerAddress.rowguid = rowguid;
-            customerAddress.ModifiedDate = modifiedDate;
-            return customerAddress;
+            ProductCategory productCategory = new ProductCategory();
+            productCategory.ProductCategoryID = productCategoryID;
+            productCategory.Name = name;
+            productCategory.rowguid = rowguid;
+            productCategory.ModifiedDate = modifiedDate;
+            return productCategory;
         }
         /// <summary>
-        /// There are no comments for Property CustomerID in the schema.
+        /// There are no comments for Property ProductCategoryID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int CustomerID
+        public int ProductCategoryID
         {
             get
             {
-                return this._CustomerID;
+                return this._ProductCategoryID;
             }
             set
             {
-                this.OnCustomerIDChanging(value);
-                if (object.Equals(this.CustomerID, value))
+                this.OnProductCategoryIDChanging(value);
+                if (object.Equals(this.ProductCategoryID, value))
                 {
                     return;
                 }
-                this._CustomerID = value;
-                this.OnCustomerIDChanged();
-                this.OnPropertyChanged("CustomerID");
+                this._ProductCategoryID = value;
+                this.OnProductCategoryIDChanged();
+                this.OnPropertyChanged("ProductCategoryID");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _CustomerID;
-        partial void OnCustomerIDChanging(int value);
-        partial void OnCustomerIDChanged();
+        private int _ProductCategoryID;
+        partial void OnProductCategoryIDChanging(int value);
+        partial void OnProductCategoryIDChanged();
         /// <summary>
-        /// There are no comments for Property AddressID in the schema.
+        /// There are no comments for Property Name in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int AddressID
+        public string Name
         {
             get
             {
-                return this._AddressID;
+                return this._Name;
             }
             set
             {
-                this.OnAddressIDChanging(value);
-                if (object.Equals(this.AddressID, value))
+                this.OnNameChanging(value);
+                if (object.Equals(this.Name, value))
                 {
                     return;
                 }
-                this._AddressID = value;
-                this.OnAddressIDChanged();
-                this.OnPropertyChanged("AddressID");
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _AddressID;
-        partial void OnAddressIDChanging(int value);
-        partial void OnAddressIDChanged();
-        /// <summary>
-        /// There are no comments for Property AddressType in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string AddressType
-        {
-            get
-            {
-                return this._AddressType;
-            }
-            set
-            {
-                this.OnAddressTypeChanging(value);
-                if (object.Equals(this.AddressType, value))
-                {
-                    return;
-                }
-                this._AddressType = value;
-                this.OnAddressTypeChanged();
-                this.OnPropertyChanged("AddressType");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _AddressType;
-        partial void OnAddressTypeChanging(string value);
-        partial void OnAddressTypeChanged();
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
         /// <summary>
         /// There are no comments for Property rowguid in the schema.
         /// </summary>
@@ -2244,99 +2480,749 @@ namespace LightSwitchApplication.Implementation
         partial void OnModifiedDateChanging(global::System.DateTime value);
         partial void OnModifiedDateChanged();
         /// <summary>
-        /// There are no comments for Address in the schema.
+        /// There are no comments for Property ParentProductCategoryID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Address Address
+        public global::System.Nullable<int> ParentProductCategoryID
         {
             get
             {
-                this.@__Address.EnsureValueInitialized();
-                return this._Address;
+                return this._ParentProductCategoryID;
             }
             set
             {
-                Address previous = this.Address;
-                if ((previous == value))
+                this.OnParentProductCategoryIDChanging(value);
+                if (object.Equals(this.ParentProductCategoryID, value))
                 {
                     return;
                 }
-                if ((previous != null))
-                {
-                    this._Address = null;
-                    this.@__Address.OnValueSet();
-                    previous.CustomerAddresses.Remove(this);
-                }
-                if ((this.___Host != null))
-                {
-                    if ((value != null))
-                    {
-                        this.AddressID = value.AddressID;
-                    }
-                    else
-                    {
-                        this.AddressID = default(int);
-                    }
-                }
-                this._Address = value;
-                this.@__Address.OnValueSet();
-                if ((value != null))
-                {
-                    value.@__CustomerAddresses.Add(this);
-                }
-                this.___OnPropertyChanged("Address");
-                this.OnPropertyChanged("Address");
+                this._ParentProductCategoryID = value;
+                this.OnParentProductCategoryIDChanged();
+                this.OnPropertyChanged("ParentProductCategoryID");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private Address _Address;
+        private global::System.Nullable<int> _ParentProductCategoryID;
+        partial void OnParentProductCategoryIDChanging(global::System.Nullable<int> value);
+        partial void OnParentProductCategoryIDChanged();
         /// <summary>
-        /// There are no comments for Customer in the schema.
+        /// There are no comments for Products in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Customer Customer
+        public global::System.Data.Services.Client.DataServiceCollection<Product> Products
         {
             get
             {
-                this.@__Customer.EnsureValueInitialized();
-                return this._Customer;
+                this.@__Products.EnsureValueInitialized();
+                return this._Products;
             }
             set
             {
-                Customer previous = this.Customer;
+                this._Products = value;
+                this.OnPropertyChanged("Products");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Product> _Products = new global::System.Data.Services.Client.DataServiceCollection<Product>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for ProductCategories in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<ProductCategory> ProductCategories
+        {
+            get
+            {
+                this.@__ProductCategories.EnsureValueInitialized();
+                return this._ProductCategories;
+            }
+            set
+            {
+                this._ProductCategories = value;
+                this.OnPropertyChanged("ProductCategories");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<ProductCategory> _ProductCategories = new global::System.Data.Services.Client.DataServiceCollection<ProductCategory>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for ProductCategory1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public ProductCategory ProductCategory1
+        {
+            get
+            {
+                this.@__ProductCategory1.EnsureValueInitialized();
+                return this._ProductCategory1;
+            }
+            set
+            {
+                ProductCategory previous = this.ProductCategory1;
                 if ((previous == value))
                 {
                     return;
                 }
                 if ((previous != null))
                 {
-                    this._Customer = null;
-                    this.@__Customer.OnValueSet();
-                    previous.CustomerAddresses.Remove(this);
+                    this._ProductCategory1 = null;
+                    this.@__ProductCategory1.OnValueSet();
+                    previous.ProductCategories.Remove(this);
                 }
                 if ((this.___Host != null))
                 {
                     if ((value != null))
                     {
-                        this.CustomerID = value.CustomerID;
+                        this.ParentProductCategoryID = value.ProductCategoryID;
                     }
                     else
                     {
-                        this.CustomerID = default(int);
+                        this.ParentProductCategoryID = default(global::System.Nullable<int>);
                     }
                 }
-                this._Customer = value;
-                this.@__Customer.OnValueSet();
+                this._ProductCategory1 = value;
+                this.@__ProductCategory1.OnValueSet();
                 if ((value != null))
                 {
-                    value.@__CustomerAddresses.Add(this);
+                    value.@__ProductCategories.Add(this);
                 }
-                this.___OnPropertyChanged("Customer");
-                this.OnPropertyChanged("Customer");
+                this.___OnPropertyChanged("ProductCategory1");
+                this.OnPropertyChanged("ProductCategory1");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private Customer _Customer;
+        private ProductCategory _ProductCategory1;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for LightSwitchApplication.ProductDescription in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// ProductDescriptionID
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("ProductDescriptions")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductDescriptionID")]
+    public partial class ProductDescription : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new ProductDescription object.
+        /// </summary>
+        /// <param name="productDescriptionID">Initial value of ProductDescriptionID.</param>
+        /// <param name="description">Initial value of Description.</param>
+        /// <param name="rowguid">Initial value of rowguid.</param>
+        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static ProductDescription CreateProductDescription(int productDescriptionID, string description, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        {
+            ProductDescription productDescription = new ProductDescription();
+            productDescription.ProductDescriptionID = productDescriptionID;
+            productDescription.Description = description;
+            productDescription.rowguid = rowguid;
+            productDescription.ModifiedDate = modifiedDate;
+            return productDescription;
+        }
+        /// <summary>
+        /// There are no comments for Property ProductDescriptionID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ProductDescriptionID
+        {
+            get
+            {
+                return this._ProductDescriptionID;
+            }
+            set
+            {
+                this.OnProductDescriptionIDChanging(value);
+                if (object.Equals(this.ProductDescriptionID, value))
+                {
+                    return;
+                }
+                this._ProductDescriptionID = value;
+                this.OnProductDescriptionIDChanged();
+                this.OnPropertyChanged("ProductDescriptionID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ProductDescriptionID;
+        partial void OnProductDescriptionIDChanging(int value);
+        partial void OnProductDescriptionIDChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                if (object.Equals(this.Description, value))
+                {
+                    return;
+                }
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property rowguid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Guid rowguid
+        {
+            get
+            {
+                return this._rowguid;
+            }
+            set
+            {
+                this.OnrowguidChanging(value);
+                if (object.Equals(this.rowguid, value))
+                {
+                    return;
+                }
+                this._rowguid = value;
+                this.OnrowguidChanged();
+                this.OnPropertyChanged("rowguid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Guid _rowguid;
+        partial void OnrowguidChanging(global::System.Guid value);
+        partial void OnrowguidChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return this._ModifiedDate;
+            }
+            set
+            {
+                this.OnModifiedDateChanging(value);
+                if (object.Equals(this.ModifiedDate, value))
+                {
+                    return;
+                }
+                this._ModifiedDate = value;
+                this.OnModifiedDateChanged();
+                this.OnPropertyChanged("ModifiedDate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+        /// <summary>
+        /// There are no comments for ProductModelProductDescriptions in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> ProductModelProductDescriptions
+        {
+            get
+            {
+                this.@__ProductModelProductDescriptions.EnsureValueInitialized();
+                return this._ProductModelProductDescriptions;
+            }
+            set
+            {
+                this._ProductModelProductDescriptions = value;
+                this.OnPropertyChanged("ProductModelProductDescriptions");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> _ProductModelProductDescriptions = new global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription>(null, global::System.Data.Services.Client.TrackingMode.None);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for LightSwitchApplication.ProductModelProductDescription in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// ProductModelID
+    /// ProductDescriptionID
+    /// Culture
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("ProductModelProductDescriptions")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductModelID", "ProductDescriptionID", "Culture")]
+    public partial class ProductModelProductDescription : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new ProductModelProductDescription object.
+        /// </summary>
+        /// <param name="productModelID">Initial value of ProductModelID.</param>
+        /// <param name="productDescriptionID">Initial value of ProductDescriptionID.</param>
+        /// <param name="culture">Initial value of Culture.</param>
+        /// <param name="rowguid">Initial value of rowguid.</param>
+        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static ProductModelProductDescription CreateProductModelProductDescription(int productModelID, int productDescriptionID, string culture, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        {
+            ProductModelProductDescription productModelProductDescription = new ProductModelProductDescription();
+            productModelProductDescription.ProductModelID = productModelID;
+            productModelProductDescription.ProductDescriptionID = productDescriptionID;
+            productModelProductDescription.Culture = culture;
+            productModelProductDescription.rowguid = rowguid;
+            productModelProductDescription.ModifiedDate = modifiedDate;
+            return productModelProductDescription;
+        }
+        /// <summary>
+        /// There are no comments for Property ProductModelID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ProductModelID
+        {
+            get
+            {
+                return this._ProductModelID;
+            }
+            set
+            {
+                this.OnProductModelIDChanging(value);
+                if (object.Equals(this.ProductModelID, value))
+                {
+                    return;
+                }
+                this._ProductModelID = value;
+                this.OnProductModelIDChanged();
+                this.OnPropertyChanged("ProductModelID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ProductModelID;
+        partial void OnProductModelIDChanging(int value);
+        partial void OnProductModelIDChanged();
+        /// <summary>
+        /// There are no comments for Property ProductDescriptionID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ProductDescriptionID
+        {
+            get
+            {
+                return this._ProductDescriptionID;
+            }
+            set
+            {
+                this.OnProductDescriptionIDChanging(value);
+                if (object.Equals(this.ProductDescriptionID, value))
+                {
+                    return;
+                }
+                this._ProductDescriptionID = value;
+                this.OnProductDescriptionIDChanged();
+                this.OnPropertyChanged("ProductDescriptionID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ProductDescriptionID;
+        partial void OnProductDescriptionIDChanging(int value);
+        partial void OnProductDescriptionIDChanged();
+        /// <summary>
+        /// There are no comments for Property Culture in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Culture
+        {
+            get
+            {
+                return this._Culture;
+            }
+            set
+            {
+                this.OnCultureChanging(value);
+                if (object.Equals(this.Culture, value))
+                {
+                    return;
+                }
+                this._Culture = value;
+                this.OnCultureChanged();
+                this.OnPropertyChanged("Culture");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Culture;
+        partial void OnCultureChanging(string value);
+        partial void OnCultureChanged();
+        /// <summary>
+        /// There are no comments for Property rowguid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Guid rowguid
+        {
+            get
+            {
+                return this._rowguid;
+            }
+            set
+            {
+                this.OnrowguidChanging(value);
+                if (object.Equals(this.rowguid, value))
+                {
+                    return;
+                }
+                this._rowguid = value;
+                this.OnrowguidChanged();
+                this.OnPropertyChanged("rowguid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Guid _rowguid;
+        partial void OnrowguidChanging(global::System.Guid value);
+        partial void OnrowguidChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return this._ModifiedDate;
+            }
+            set
+            {
+                this.OnModifiedDateChanging(value);
+                if (object.Equals(this.ModifiedDate, value))
+                {
+                    return;
+                }
+                this._ModifiedDate = value;
+                this.OnModifiedDateChanged();
+                this.OnPropertyChanged("ModifiedDate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+        /// <summary>
+        /// There are no comments for ProductDescription in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public ProductDescription ProductDescription
+        {
+            get
+            {
+                this.@__ProductDescription.EnsureValueInitialized();
+                return this._ProductDescription;
+            }
+            set
+            {
+                ProductDescription previous = this.ProductDescription;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._ProductDescription = null;
+                    this.@__ProductDescription.OnValueSet();
+                    previous.ProductModelProductDescriptions.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.ProductDescriptionID = value.ProductDescriptionID;
+                    }
+                    else
+                    {
+                        this.ProductDescriptionID = default(int);
+                    }
+                }
+                this._ProductDescription = value;
+                this.@__ProductDescription.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__ProductModelProductDescriptions.Add(this);
+                }
+                this.___OnPropertyChanged("ProductDescription");
+                this.OnPropertyChanged("ProductDescription");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private ProductDescription _ProductDescription;
+        /// <summary>
+        /// There are no comments for ProductModel in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public ProductModel ProductModel
+        {
+            get
+            {
+                this.@__ProductModel.EnsureValueInitialized();
+                return this._ProductModel;
+            }
+            set
+            {
+                ProductModel previous = this.ProductModel;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._ProductModel = null;
+                    this.@__ProductModel.OnValueSet();
+                    previous.ProductModelProductDescriptions.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.ProductModelID = value.ProductModelID;
+                    }
+                    else
+                    {
+                        this.ProductModelID = default(int);
+                    }
+                }
+                this._ProductModel = value;
+                this.@__ProductModel.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__ProductModelProductDescriptions.Add(this);
+                }
+                this.___OnPropertyChanged("ProductModel");
+                this.OnPropertyChanged("ProductModel");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private ProductModel _ProductModel;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for LightSwitchApplication.ProductModel in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// ProductModelID
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("ProductModels")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductModelID")]
+    public partial class ProductModel : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new ProductModel object.
+        /// </summary>
+        /// <param name="productModelID">Initial value of ProductModelID.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="rowguid">Initial value of rowguid.</param>
+        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static ProductModel CreateProductModel(int productModelID, string name, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        {
+            ProductModel productModel = new ProductModel();
+            productModel.ProductModelID = productModelID;
+            productModel.Name = name;
+            productModel.rowguid = rowguid;
+            productModel.ModifiedDate = modifiedDate;
+            return productModel;
+        }
+        /// <summary>
+        /// There are no comments for Property ProductModelID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ProductModelID
+        {
+            get
+            {
+                return this._ProductModelID;
+            }
+            set
+            {
+                this.OnProductModelIDChanging(value);
+                if (object.Equals(this.ProductModelID, value))
+                {
+                    return;
+                }
+                this._ProductModelID = value;
+                this.OnProductModelIDChanged();
+                this.OnPropertyChanged("ProductModelID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ProductModelID;
+        partial void OnProductModelIDChanging(int value);
+        partial void OnProductModelIDChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                if (object.Equals(this.Name, value))
+                {
+                    return;
+                }
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property CatalogDescription in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CatalogDescription
+        {
+            get
+            {
+                return this._CatalogDescription;
+            }
+            set
+            {
+                this.OnCatalogDescriptionChanging(value);
+                if (object.Equals(this.CatalogDescription, value))
+                {
+                    return;
+                }
+                this._CatalogDescription = value;
+                this.OnCatalogDescriptionChanged();
+                this.OnPropertyChanged("CatalogDescription");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CatalogDescription;
+        partial void OnCatalogDescriptionChanging(string value);
+        partial void OnCatalogDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property rowguid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Guid rowguid
+        {
+            get
+            {
+                return this._rowguid;
+            }
+            set
+            {
+                this.OnrowguidChanging(value);
+                if (object.Equals(this.rowguid, value))
+                {
+                    return;
+                }
+                this._rowguid = value;
+                this.OnrowguidChanged();
+                this.OnPropertyChanged("rowguid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Guid _rowguid;
+        partial void OnrowguidChanging(global::System.Guid value);
+        partial void OnrowguidChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return this._ModifiedDate;
+            }
+            set
+            {
+                this.OnModifiedDateChanging(value);
+                if (object.Equals(this.ModifiedDate, value))
+                {
+                    return;
+                }
+                this._ModifiedDate = value;
+                this.OnModifiedDateChanged();
+                this.OnPropertyChanged("ModifiedDate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+        /// <summary>
+        /// There are no comments for Products in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<Product> Products
+        {
+            get
+            {
+                this.@__Products.EnsureValueInitialized();
+                return this._Products;
+            }
+            set
+            {
+                this._Products = value;
+                this.OnPropertyChanged("Products");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Product> _Products = new global::System.Data.Services.Client.DataServiceCollection<Product>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for ProductModelProductDescriptions in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> ProductModelProductDescriptions
+        {
+            get
+            {
+                this.@__ProductModelProductDescriptions.EnsureValueInitialized();
+                return this._ProductModelProductDescriptions;
+            }
+            set
+            {
+                this._ProductModelProductDescriptions = value;
+                this.OnPropertyChanged("ProductModelProductDescriptions");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> _ProductModelProductDescriptions = new global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription>(null, global::System.Data.Services.Client.TrackingMode.None);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -2945,892 +3831,6 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceCollection<SalesOrderDetail> _SalesOrderDetails = new global::System.Data.Services.Client.DataServiceCollection<SalesOrderDetail>(null, global::System.Data.Services.Client.TrackingMode.None);
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        protected virtual void OnPropertyChanged(string property)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
-            }
-        }
-    }
-    /// <summary>
-    /// There are no comments for LightSwitchApplication.ProductCategory in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// ProductCategoryID
-    /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("ProductCategories")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductCategoryID")]
-    public partial class ProductCategory : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Create a new ProductCategory object.
-        /// </summary>
-        /// <param name="productCategoryID">Initial value of ProductCategoryID.</param>
-        /// <param name="name">Initial value of Name.</param>
-        /// <param name="rowguid">Initial value of rowguid.</param>
-        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static ProductCategory CreateProductCategory(int productCategoryID, string name, global::System.Guid rowguid, global::System.DateTime modifiedDate)
-        {
-            ProductCategory productCategory = new ProductCategory();
-            productCategory.ProductCategoryID = productCategoryID;
-            productCategory.Name = name;
-            productCategory.rowguid = rowguid;
-            productCategory.ModifiedDate = modifiedDate;
-            return productCategory;
-        }
-        /// <summary>
-        /// There are no comments for Property ProductCategoryID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ProductCategoryID
-        {
-            get
-            {
-                return this._ProductCategoryID;
-            }
-            set
-            {
-                this.OnProductCategoryIDChanging(value);
-                if (object.Equals(this.ProductCategoryID, value))
-                {
-                    return;
-                }
-                this._ProductCategoryID = value;
-                this.OnProductCategoryIDChanged();
-                this.OnPropertyChanged("ProductCategoryID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ProductCategoryID;
-        partial void OnProductCategoryIDChanging(int value);
-        partial void OnProductCategoryIDChanged();
-        /// <summary>
-        /// There are no comments for Property Name in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Name
-        {
-            get
-            {
-                return this._Name;
-            }
-            set
-            {
-                this.OnNameChanging(value);
-                if (object.Equals(this.Name, value))
-                {
-                    return;
-                }
-                this._Name = value;
-                this.OnNameChanged();
-                this.OnPropertyChanged("Name");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Name;
-        partial void OnNameChanging(string value);
-        partial void OnNameChanged();
-        /// <summary>
-        /// There are no comments for Property rowguid in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Guid rowguid
-        {
-            get
-            {
-                return this._rowguid;
-            }
-            set
-            {
-                this.OnrowguidChanging(value);
-                if (object.Equals(this.rowguid, value))
-                {
-                    return;
-                }
-                this._rowguid = value;
-                this.OnrowguidChanged();
-                this.OnPropertyChanged("rowguid");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Guid _rowguid;
-        partial void OnrowguidChanging(global::System.Guid value);
-        partial void OnrowguidChanged();
-        /// <summary>
-        /// There are no comments for Property ModifiedDate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime ModifiedDate
-        {
-            get
-            {
-                return this._ModifiedDate;
-            }
-            set
-            {
-                this.OnModifiedDateChanging(value);
-                if (object.Equals(this.ModifiedDate, value))
-                {
-                    return;
-                }
-                this._ModifiedDate = value;
-                this.OnModifiedDateChanged();
-                this.OnPropertyChanged("ModifiedDate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _ModifiedDate;
-        partial void OnModifiedDateChanging(global::System.DateTime value);
-        partial void OnModifiedDateChanged();
-        /// <summary>
-        /// There are no comments for Property ParentProductCategoryID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> ParentProductCategoryID
-        {
-            get
-            {
-                return this._ParentProductCategoryID;
-            }
-            set
-            {
-                this.OnParentProductCategoryIDChanging(value);
-                if (object.Equals(this.ParentProductCategoryID, value))
-                {
-                    return;
-                }
-                this._ParentProductCategoryID = value;
-                this.OnParentProductCategoryIDChanged();
-                this.OnPropertyChanged("ParentProductCategoryID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _ParentProductCategoryID;
-        partial void OnParentProductCategoryIDChanging(global::System.Nullable<int> value);
-        partial void OnParentProductCategoryIDChanged();
-        /// <summary>
-        /// There are no comments for Products in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<Product> Products
-        {
-            get
-            {
-                this.@__Products.EnsureValueInitialized();
-                return this._Products;
-            }
-            set
-            {
-                this._Products = value;
-                this.OnPropertyChanged("Products");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<Product> _Products = new global::System.Data.Services.Client.DataServiceCollection<Product>(null, global::System.Data.Services.Client.TrackingMode.None);
-        /// <summary>
-        /// There are no comments for ProductCategories in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<ProductCategory> ProductCategories
-        {
-            get
-            {
-                this.@__ProductCategories.EnsureValueInitialized();
-                return this._ProductCategories;
-            }
-            set
-            {
-                this._ProductCategories = value;
-                this.OnPropertyChanged("ProductCategories");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<ProductCategory> _ProductCategories = new global::System.Data.Services.Client.DataServiceCollection<ProductCategory>(null, global::System.Data.Services.Client.TrackingMode.None);
-        /// <summary>
-        /// There are no comments for ProductCategory1 in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public ProductCategory ProductCategory1
-        {
-            get
-            {
-                this.@__ProductCategory1.EnsureValueInitialized();
-                return this._ProductCategory1;
-            }
-            set
-            {
-                ProductCategory previous = this.ProductCategory1;
-                if ((previous == value))
-                {
-                    return;
-                }
-                if ((previous != null))
-                {
-                    this._ProductCategory1 = null;
-                    this.@__ProductCategory1.OnValueSet();
-                    previous.ProductCategories.Remove(this);
-                }
-                if ((this.___Host != null))
-                {
-                    if ((value != null))
-                    {
-                        this.ParentProductCategoryID = value.ProductCategoryID;
-                    }
-                    else
-                    {
-                        this.ParentProductCategoryID = default(global::System.Nullable<int>);
-                    }
-                }
-                this._ProductCategory1 = value;
-                this.@__ProductCategory1.OnValueSet();
-                if ((value != null))
-                {
-                    value.@__ProductCategories.Add(this);
-                }
-                this.___OnPropertyChanged("ProductCategory1");
-                this.OnPropertyChanged("ProductCategory1");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private ProductCategory _ProductCategory1;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        protected virtual void OnPropertyChanged(string property)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
-            }
-        }
-    }
-    /// <summary>
-    /// There are no comments for LightSwitchApplication.ProductDescription in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// ProductDescriptionID
-    /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("ProductDescriptions")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductDescriptionID")]
-    public partial class ProductDescription : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Create a new ProductDescription object.
-        /// </summary>
-        /// <param name="productDescriptionID">Initial value of ProductDescriptionID.</param>
-        /// <param name="description">Initial value of Description.</param>
-        /// <param name="rowguid">Initial value of rowguid.</param>
-        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static ProductDescription CreateProductDescription(int productDescriptionID, string description, global::System.Guid rowguid, global::System.DateTime modifiedDate)
-        {
-            ProductDescription productDescription = new ProductDescription();
-            productDescription.ProductDescriptionID = productDescriptionID;
-            productDescription.Description = description;
-            productDescription.rowguid = rowguid;
-            productDescription.ModifiedDate = modifiedDate;
-            return productDescription;
-        }
-        /// <summary>
-        /// There are no comments for Property ProductDescriptionID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ProductDescriptionID
-        {
-            get
-            {
-                return this._ProductDescriptionID;
-            }
-            set
-            {
-                this.OnProductDescriptionIDChanging(value);
-                if (object.Equals(this.ProductDescriptionID, value))
-                {
-                    return;
-                }
-                this._ProductDescriptionID = value;
-                this.OnProductDescriptionIDChanged();
-                this.OnPropertyChanged("ProductDescriptionID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ProductDescriptionID;
-        partial void OnProductDescriptionIDChanging(int value);
-        partial void OnProductDescriptionIDChanged();
-        /// <summary>
-        /// There are no comments for Property Description in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Description
-        {
-            get
-            {
-                return this._Description;
-            }
-            set
-            {
-                this.OnDescriptionChanging(value);
-                if (object.Equals(this.Description, value))
-                {
-                    return;
-                }
-                this._Description = value;
-                this.OnDescriptionChanged();
-                this.OnPropertyChanged("Description");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Description;
-        partial void OnDescriptionChanging(string value);
-        partial void OnDescriptionChanged();
-        /// <summary>
-        /// There are no comments for Property rowguid in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Guid rowguid
-        {
-            get
-            {
-                return this._rowguid;
-            }
-            set
-            {
-                this.OnrowguidChanging(value);
-                if (object.Equals(this.rowguid, value))
-                {
-                    return;
-                }
-                this._rowguid = value;
-                this.OnrowguidChanged();
-                this.OnPropertyChanged("rowguid");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Guid _rowguid;
-        partial void OnrowguidChanging(global::System.Guid value);
-        partial void OnrowguidChanged();
-        /// <summary>
-        /// There are no comments for Property ModifiedDate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime ModifiedDate
-        {
-            get
-            {
-                return this._ModifiedDate;
-            }
-            set
-            {
-                this.OnModifiedDateChanging(value);
-                if (object.Equals(this.ModifiedDate, value))
-                {
-                    return;
-                }
-                this._ModifiedDate = value;
-                this.OnModifiedDateChanged();
-                this.OnPropertyChanged("ModifiedDate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _ModifiedDate;
-        partial void OnModifiedDateChanging(global::System.DateTime value);
-        partial void OnModifiedDateChanged();
-        /// <summary>
-        /// There are no comments for ProductModelProductDescriptions in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> ProductModelProductDescriptions
-        {
-            get
-            {
-                this.@__ProductModelProductDescriptions.EnsureValueInitialized();
-                return this._ProductModelProductDescriptions;
-            }
-            set
-            {
-                this._ProductModelProductDescriptions = value;
-                this.OnPropertyChanged("ProductModelProductDescriptions");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> _ProductModelProductDescriptions = new global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription>(null, global::System.Data.Services.Client.TrackingMode.None);
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        protected virtual void OnPropertyChanged(string property)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
-            }
-        }
-    }
-    /// <summary>
-    /// There are no comments for LightSwitchApplication.ProductModel in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// ProductModelID
-    /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("ProductModels")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductModelID")]
-    public partial class ProductModel : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Create a new ProductModel object.
-        /// </summary>
-        /// <param name="productModelID">Initial value of ProductModelID.</param>
-        /// <param name="name">Initial value of Name.</param>
-        /// <param name="rowguid">Initial value of rowguid.</param>
-        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static ProductModel CreateProductModel(int productModelID, string name, global::System.Guid rowguid, global::System.DateTime modifiedDate)
-        {
-            ProductModel productModel = new ProductModel();
-            productModel.ProductModelID = productModelID;
-            productModel.Name = name;
-            productModel.rowguid = rowguid;
-            productModel.ModifiedDate = modifiedDate;
-            return productModel;
-        }
-        /// <summary>
-        /// There are no comments for Property ProductModelID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ProductModelID
-        {
-            get
-            {
-                return this._ProductModelID;
-            }
-            set
-            {
-                this.OnProductModelIDChanging(value);
-                if (object.Equals(this.ProductModelID, value))
-                {
-                    return;
-                }
-                this._ProductModelID = value;
-                this.OnProductModelIDChanged();
-                this.OnPropertyChanged("ProductModelID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ProductModelID;
-        partial void OnProductModelIDChanging(int value);
-        partial void OnProductModelIDChanged();
-        /// <summary>
-        /// There are no comments for Property Name in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Name
-        {
-            get
-            {
-                return this._Name;
-            }
-            set
-            {
-                this.OnNameChanging(value);
-                if (object.Equals(this.Name, value))
-                {
-                    return;
-                }
-                this._Name = value;
-                this.OnNameChanged();
-                this.OnPropertyChanged("Name");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Name;
-        partial void OnNameChanging(string value);
-        partial void OnNameChanged();
-        /// <summary>
-        /// There are no comments for Property CatalogDescription in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string CatalogDescription
-        {
-            get
-            {
-                return this._CatalogDescription;
-            }
-            set
-            {
-                this.OnCatalogDescriptionChanging(value);
-                if (object.Equals(this.CatalogDescription, value))
-                {
-                    return;
-                }
-                this._CatalogDescription = value;
-                this.OnCatalogDescriptionChanged();
-                this.OnPropertyChanged("CatalogDescription");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _CatalogDescription;
-        partial void OnCatalogDescriptionChanging(string value);
-        partial void OnCatalogDescriptionChanged();
-        /// <summary>
-        /// There are no comments for Property rowguid in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Guid rowguid
-        {
-            get
-            {
-                return this._rowguid;
-            }
-            set
-            {
-                this.OnrowguidChanging(value);
-                if (object.Equals(this.rowguid, value))
-                {
-                    return;
-                }
-                this._rowguid = value;
-                this.OnrowguidChanged();
-                this.OnPropertyChanged("rowguid");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Guid _rowguid;
-        partial void OnrowguidChanging(global::System.Guid value);
-        partial void OnrowguidChanged();
-        /// <summary>
-        /// There are no comments for Property ModifiedDate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime ModifiedDate
-        {
-            get
-            {
-                return this._ModifiedDate;
-            }
-            set
-            {
-                this.OnModifiedDateChanging(value);
-                if (object.Equals(this.ModifiedDate, value))
-                {
-                    return;
-                }
-                this._ModifiedDate = value;
-                this.OnModifiedDateChanged();
-                this.OnPropertyChanged("ModifiedDate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _ModifiedDate;
-        partial void OnModifiedDateChanging(global::System.DateTime value);
-        partial void OnModifiedDateChanged();
-        /// <summary>
-        /// There are no comments for Products in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<Product> Products
-        {
-            get
-            {
-                this.@__Products.EnsureValueInitialized();
-                return this._Products;
-            }
-            set
-            {
-                this._Products = value;
-                this.OnPropertyChanged("Products");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<Product> _Products = new global::System.Data.Services.Client.DataServiceCollection<Product>(null, global::System.Data.Services.Client.TrackingMode.None);
-        /// <summary>
-        /// There are no comments for ProductModelProductDescriptions in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> ProductModelProductDescriptions
-        {
-            get
-            {
-                this.@__ProductModelProductDescriptions.EnsureValueInitialized();
-                return this._ProductModelProductDescriptions;
-            }
-            set
-            {
-                this._ProductModelProductDescriptions = value;
-                this.OnPropertyChanged("ProductModelProductDescriptions");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription> _ProductModelProductDescriptions = new global::System.Data.Services.Client.DataServiceCollection<ProductModelProductDescription>(null, global::System.Data.Services.Client.TrackingMode.None);
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        protected virtual void OnPropertyChanged(string property)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
-            }
-        }
-    }
-    /// <summary>
-    /// There are no comments for LightSwitchApplication.ProductModelProductDescription in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// ProductModelID
-    /// ProductDescriptionID
-    /// Culture
-    /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("ProductModelProductDescriptions")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("ProductModelID", "ProductDescriptionID", "Culture")]
-    public partial class ProductModelProductDescription : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Create a new ProductModelProductDescription object.
-        /// </summary>
-        /// <param name="productModelID">Initial value of ProductModelID.</param>
-        /// <param name="productDescriptionID">Initial value of ProductDescriptionID.</param>
-        /// <param name="culture">Initial value of Culture.</param>
-        /// <param name="rowguid">Initial value of rowguid.</param>
-        /// <param name="modifiedDate">Initial value of ModifiedDate.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static ProductModelProductDescription CreateProductModelProductDescription(int productModelID, int productDescriptionID, string culture, global::System.Guid rowguid, global::System.DateTime modifiedDate)
-        {
-            ProductModelProductDescription productModelProductDescription = new ProductModelProductDescription();
-            productModelProductDescription.ProductModelID = productModelID;
-            productModelProductDescription.ProductDescriptionID = productDescriptionID;
-            productModelProductDescription.Culture = culture;
-            productModelProductDescription.rowguid = rowguid;
-            productModelProductDescription.ModifiedDate = modifiedDate;
-            return productModelProductDescription;
-        }
-        /// <summary>
-        /// There are no comments for Property ProductModelID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ProductModelID
-        {
-            get
-            {
-                return this._ProductModelID;
-            }
-            set
-            {
-                this.OnProductModelIDChanging(value);
-                if (object.Equals(this.ProductModelID, value))
-                {
-                    return;
-                }
-                this._ProductModelID = value;
-                this.OnProductModelIDChanged();
-                this.OnPropertyChanged("ProductModelID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ProductModelID;
-        partial void OnProductModelIDChanging(int value);
-        partial void OnProductModelIDChanged();
-        /// <summary>
-        /// There are no comments for Property ProductDescriptionID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ProductDescriptionID
-        {
-            get
-            {
-                return this._ProductDescriptionID;
-            }
-            set
-            {
-                this.OnProductDescriptionIDChanging(value);
-                if (object.Equals(this.ProductDescriptionID, value))
-                {
-                    return;
-                }
-                this._ProductDescriptionID = value;
-                this.OnProductDescriptionIDChanged();
-                this.OnPropertyChanged("ProductDescriptionID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ProductDescriptionID;
-        partial void OnProductDescriptionIDChanging(int value);
-        partial void OnProductDescriptionIDChanged();
-        /// <summary>
-        /// There are no comments for Property Culture in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Culture
-        {
-            get
-            {
-                return this._Culture;
-            }
-            set
-            {
-                this.OnCultureChanging(value);
-                if (object.Equals(this.Culture, value))
-                {
-                    return;
-                }
-                this._Culture = value;
-                this.OnCultureChanged();
-                this.OnPropertyChanged("Culture");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Culture;
-        partial void OnCultureChanging(string value);
-        partial void OnCultureChanged();
-        /// <summary>
-        /// There are no comments for Property rowguid in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Guid rowguid
-        {
-            get
-            {
-                return this._rowguid;
-            }
-            set
-            {
-                this.OnrowguidChanging(value);
-                if (object.Equals(this.rowguid, value))
-                {
-                    return;
-                }
-                this._rowguid = value;
-                this.OnrowguidChanged();
-                this.OnPropertyChanged("rowguid");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Guid _rowguid;
-        partial void OnrowguidChanging(global::System.Guid value);
-        partial void OnrowguidChanged();
-        /// <summary>
-        /// There are no comments for Property ModifiedDate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime ModifiedDate
-        {
-            get
-            {
-                return this._ModifiedDate;
-            }
-            set
-            {
-                this.OnModifiedDateChanging(value);
-                if (object.Equals(this.ModifiedDate, value))
-                {
-                    return;
-                }
-                this._ModifiedDate = value;
-                this.OnModifiedDateChanged();
-                this.OnPropertyChanged("ModifiedDate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _ModifiedDate;
-        partial void OnModifiedDateChanging(global::System.DateTime value);
-        partial void OnModifiedDateChanged();
-        /// <summary>
-        /// There are no comments for ProductDescription in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public ProductDescription ProductDescription
-        {
-            get
-            {
-                this.@__ProductDescription.EnsureValueInitialized();
-                return this._ProductDescription;
-            }
-            set
-            {
-                ProductDescription previous = this.ProductDescription;
-                if ((previous == value))
-                {
-                    return;
-                }
-                if ((previous != null))
-                {
-                    this._ProductDescription = null;
-                    this.@__ProductDescription.OnValueSet();
-                    previous.ProductModelProductDescriptions.Remove(this);
-                }
-                if ((this.___Host != null))
-                {
-                    if ((value != null))
-                    {
-                        this.ProductDescriptionID = value.ProductDescriptionID;
-                    }
-                    else
-                    {
-                        this.ProductDescriptionID = default(int);
-                    }
-                }
-                this._ProductDescription = value;
-                this.@__ProductDescription.OnValueSet();
-                if ((value != null))
-                {
-                    value.@__ProductModelProductDescriptions.Add(this);
-                }
-                this.___OnPropertyChanged("ProductDescription");
-                this.OnPropertyChanged("ProductDescription");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private ProductDescription _ProductDescription;
-        /// <summary>
-        /// There are no comments for ProductModel in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public ProductModel ProductModel
-        {
-            get
-            {
-                this.@__ProductModel.EnsureValueInitialized();
-                return this._ProductModel;
-            }
-            set
-            {
-                ProductModel previous = this.ProductModel;
-                if ((previous == value))
-                {
-                    return;
-                }
-                if ((previous != null))
-                {
-                    this._ProductModel = null;
-                    this.@__ProductModel.OnValueSet();
-                    previous.ProductModelProductDescriptions.Remove(this);
-                }
-                if ((this.___Host != null))
-                {
-                    if ((value != null))
-                    {
-                        this.ProductModelID = value.ProductModelID;
-                    }
-                    else
-                    {
-                        this.ProductModelID = default(int);
-                    }
-                }
-                this._ProductModel = value;
-                this.@__ProductModel.OnValueSet();
-                if ((value != null))
-                {
-                    value.@__ProductModelProductDescriptions.Add(this);
-                }
-                this.___OnPropertyChanged("ProductModel");
-                this.OnPropertyChanged("ProductModel");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private ProductModel _ProductModel;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
