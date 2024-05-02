@@ -5,6 +5,8 @@
     <NoXamlPreprocessor>True</NoXamlPreprocessor>
     <OpenSilverType>5</OpenSilverType>
     <PublishTrimmed>true</PublishTrimmed>
+    <!--SIMD causes issues on mobile devices-->
+    <WasmEnableSIMD>false</WasmEnableSIMD>
     <!-- Uncomment to enable AOT compilation when publishing -->
     <!--<RunAOTCompilation>true</RunAOTCompilation>-->
   </PropertyGroup>
